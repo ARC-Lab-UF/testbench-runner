@@ -1,8 +1,5 @@
-"""
-Random number generator for student labs
-
-@author: keethsmith
-"""
+#!/usr/bin/env python
+__author__ = "Keeth Smith"
 
 import argparse
 import os
@@ -23,7 +20,6 @@ if __name__ == '__main__':
     parser.add_argument('-project_mpf','--project_mpf',default="../Tester 21/Lab4/Lab4.mpf",type=str,help='location of modelsim tb project mpf file', required=True)
 
     args = parser.parse_args()
-
 
 
     zip_opener(lab=args.lab, studentFile=args.studentFile, submissions=args.submissions)

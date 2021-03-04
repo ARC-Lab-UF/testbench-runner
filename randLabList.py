@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 """
 Random number generator for student labs
 

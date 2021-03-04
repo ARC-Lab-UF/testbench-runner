@@ -1,6 +1,7 @@
+#!/usr/bin/env python
+__author__ = "Keeth Smith"
+
 import os
-
-
 
 
 def tcl_function(tclFile, project_mpf, resultList):

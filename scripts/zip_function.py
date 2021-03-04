@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+__author__ = "Keeth Smith"
+
 import os
 import zipfile
 import shutil
