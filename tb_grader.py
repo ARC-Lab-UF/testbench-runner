@@ -31,4 +31,4 @@ if __name__ == '__main__':
     compile_modelsim(studentFile=args.studentFile, lab_dir = (os.path.join("Submissions",args.lab)), tclFile = args.tclFile, tclOutFile = args.tclOutFile, project_mpf = args.project_mpf, gui = args.gui)
 
 
-    # example: python submissionsZipOpener.py -lab Lab5 -submissions submissions.zip -tclOutFile "../Tester 21/Lab5/Lab5_out.tcl" -tclFile "lab_tcl/lab5.tcl" -studentFile "studentList.txt" -project_mpf "../Tester 21/Lab5/Lab5.mpf"
+# example: python tb_grader.py -lab Lab5 -submissions submissions.zip -tclOutFile "../Tester 21/Lab5/Lab5_out.tcl" -tclFile "lab_tcl/lab5.tcl" -studentFile "studentList.txt" -project_mpf "../Tester 21/Lab5/Lab5.mpf"

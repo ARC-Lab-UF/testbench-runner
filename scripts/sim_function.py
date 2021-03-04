@@ -47,9 +47,9 @@ def compile_modelsim(studentFile="studentList.txt", lab_dir = "Submissions/Lab4"
    
 
     if gui:
-        cmd  = f'''vsim -gui -do "{os.path.abspath(tclOutFile)}"'''
+        cmd  = f'''vsim -gui -l "" -do "{os.path.abspath(tclOutFile)}"'''
     else:
-        cmd  = f'''vsim -c -do "{os.path.abspath(tclOutFile)}"'''
+        cmd  = f'''vsim -c -l "" -do "{os.path.abspath(tclOutFile)}"'''
 
 
 

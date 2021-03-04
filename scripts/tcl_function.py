@@ -9,11 +9,10 @@ def tcl_function(tclFile, project_mpf, resultList):
         tclScript = f.read()
     
 
-    tcl = '''project open '''
-    tcl += '{' + f'{os.path.abspath(project_mpf)}' + '}\n\n'
+    tcl = 'project open {' + f'{os.path.abspath(project_mpf)}' + '}\n\n'
 
     for x in resultList:
-        tcl += '''transcript file ""\nonElabError {resume}\nonerror {resume}\nproc currStudent {lines { '''
+        tcl += '''onElabError {resume}\nonerror {resume}\nproc currStudent {lines { '''
     
         tcl += f'''message "\nEnter 'q' to exit\nEnter 'n' for next student\nPress Control-C to break out if stuck\nNow working on {x[1]} '''
 
