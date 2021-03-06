@@ -3,6 +3,8 @@ __pycache__/
 *.py[cod]
 
 /Submissions
-studentList.txt
+*studentList*.txt
+!studentList_TEMPLATE.txt
 *.zip
 transcript
+lab[0-9]*.tcl

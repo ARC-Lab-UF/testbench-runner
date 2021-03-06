@@ -12,16 +12,27 @@ def tcl_function(tclFile, project_mpf, resultList):
 
     tcl = 'project open {' + f'{os.path.abspath(project_mpf)}' + '}\n\n'
 
-    for x in resultList:
-        tcl += '''onElabError {resume}\nonerror {resume}\nproc currStudent {lines { '''
+    tcl += '''onElabError {resume}\nonerror {resume}\n'''
     
-        tcl += f'''message "\nEnter 'q' to exit\nEnter 'n' for next student\nPress Control-C to break out if stuck\nNow working on {x[1]} '''
-
-        tcl += '''Hit Enter to continue ==> "} } {
-                puts -nonewline $message
+    tcl += '''proc currStudent {lines student} {
+                puts -nonewline "
+Enter 'q' to exit
+Enter 'n' for next student
+Press Control-C to break out if stuck
+Now working on $student Hit Enter to continue ==> "
                 flush stdout
                 set in [gets stdin]
                 if {$in == "q"} {
+                    set result [string map -nocase {"\} \{" "\}\\n\{" "\} " "\}\\n" ".vhd " ".vhd\\n"} [project filenames]] 
+                    set lines [split $result "\\n"]
+
+                    foreach x $lines {
+                        if {[string match *true_testbench.vhd* $x] == 1} {
+                            set z 1
+                        } else {
+                            eval project removefile [string map -nocase { "\{\{" "\{" "\}\}" "\}" } $x]
+                        }
+                    } 
                     quit -f
                     }
                 if {$in == "n"} {
@@ -37,8 +48,9 @@ def tcl_function(tclFile, project_mpf, resultList):
                     } 
                 }
 '''
-        tcl += tclScript + '''\n}\n\n'''
+    tcl += tclScript + '''\n}\n\n'''
 
+    for x in resultList:
             
         tcl += ''' 
 quietly set result [string map -nocase {"\} \{" "\}\\n\{" "\} " "\}\\n" ".vhd " ".vhd\\n"} [project filenames]] 
@@ -59,7 +71,7 @@ foreach x $lines {
 quietly set ret [project compileall -n]
 quietly set result [string map {explicit quiet \\\ /} $ret]
 quietly set lines [split $result "\\n"]'''
-        tcl += '''\ncurrStudent $lines;\n\n'''
+        tcl += f'''\ncurrStudent $lines {x[1]};\n\n'''
 
 
     tcl += 'exit'
