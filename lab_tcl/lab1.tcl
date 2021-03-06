@@ -4,9 +4,8 @@ proc pause {{message "\nHit Enter to continue ==> "}} {
     gets stdin
 }
 
-
 try {
-    vsim -c work.clk_gen_true_testbench
+    vsim -c work.adder_true_testbench
     add wave *
     run -all
 } on error {msg} {
@@ -18,19 +17,6 @@ try {
 pause;
 
 try {
-    vsim -c work.gray_true_testbench
-    add wave *
-    run -all
-} on error {msg} {
-    puts "SIMULATION FAILED"
-    puts $msg
-    quit -sim
-}
-
-pause; 
-
-
-try {
     vsim -c work.counter_true_testbench
     add wave *
     run -all
@@ -40,8 +26,14 @@ try {
     quit -sim
 }
 
+pause;
 
-
-
-
-
+try {
+    vsim -c work.fa_true_testbench
+    add wave *
+    run -all
+} on error {msg} {
+    puts "SIMULATION FAILED"
+    puts $msg
+    quit -sim
+}
