@@ -40,7 +40,7 @@ Now working on $student Hit Enter to continue ==> "
                     }
                     vdel -all
                     vlib work
-                    # vmap work work
+                    project compileall
                 for {set i 1} {$i<=2} {incr i} {
                     foreach x $lines {
                     try {
