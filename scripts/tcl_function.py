@@ -12,7 +12,7 @@ def tcl_function(tclFile, project_mpf, resultList):
 
     tcl = 'project open {' + f'{os.path.abspath(project_mpf)}' + '}\n\n'
 
-    tcl += '''onElabError {resume}\nonerror {resume}\n'''
+    tcl += '''onElabError {resume}\nonerror {resume}\n#vdel -all\n'''
     
     tcl += '''proc currStudent {lines student} {
                 puts -nonewline "
@@ -38,6 +38,9 @@ Now working on $student Hit Enter to continue ==> "
                 if {$in == "n"} {
                     return
                     }
+                    vdel -all
+                    vlib work
+                    # vmap work work
                 for {set i 1} {$i<=2} {incr i} {
                     foreach x $lines {
                     try {

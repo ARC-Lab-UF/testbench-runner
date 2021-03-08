@@ -13,13 +13,15 @@ from zipfile    import ZipFile
 
 
 
-def zip_opener(lab, studentFile, submissions):
+def zip_opener(lab, studentFile, submissions, delete_zip):
 
     studentUserList=[]
     fileList=[]
 
     with open(studentFile, "r") as f:
         studentList = f.read().splitlines()
+        studentList = filter(None, studentList)
+        print(studentList)
         for x in studentList:
             studentUserList.append( ''.join(x.lower().split()[::-1]) )
 
@@ -82,10 +84,11 @@ def zip_opener(lab, studentFile, submissions):
     for x in fileList:
         os.remove( os.path.join(pathDir, x) )
 
-    try:
-        os.remove(os.path.abspath(submissions))
-    except:
-        print("Couldn't Delete Zip File")
+    if (delete_zip):
+        try:
+            os.remove(os.path.abspath(submissions))
+        except:
+            print("Couldn't Delete Zip File")
 
     print("DONE")
 
