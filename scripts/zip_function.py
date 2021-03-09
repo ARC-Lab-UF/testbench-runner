@@ -20,7 +20,7 @@ def zip_opener(lab, studentFile, submissions, delete_zip):
 
     with open(studentFile, "r") as f:
         studentList = f.read().splitlines()
-        studentList = filter(None.__ne__, studentList)
+        studentList = filter(None, studentList)
         print(studentList)
         for x in studentList:
             studentUserList.append( ''.join(x.lower().split()[::-1]) )

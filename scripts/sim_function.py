@@ -19,7 +19,7 @@ def compile_modelsim(studentFile="studentList.txt", lab_dir = "Submissions/Lab4"
 
     with open(studentFile, "r") as f:
         studentList = f.read().splitlines()
-        studentList = filter(None.__ne__, studentList)
+        studentList = filter(None, studentList)
         for x in studentList:
             studentUserList.append(''.join(x.lower().split()[::-1]) )
 
