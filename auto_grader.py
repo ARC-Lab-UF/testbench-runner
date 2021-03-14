@@ -16,7 +16,7 @@ if __name__ == '__main__':
     parser.add_argument('-tclOutFile','--tclOutFile', default="scripts/lab4_out.tcl", type=str, help='location of modified tcl file', required=True)
     parser.add_argument('-tclFile','--tclFile', default="scripts/lab4.tcl", type=str, help='location of original tcl file', required=True)
     parser.add_argument('-gui', '--gui', default=False, type=lambda x: (str(x).lower() in ['true','1', 'yes']), help='Option to enable GUI (True | False)')
-    parser.add_argument('-delete_zip', '--delete_zip', default=False, type=lambda x: (str(x).lower() in ['true','1', 'yes']), help='Option to enable zip deletion (True | False)')
+    parser.add_argument('-delete_zip', '--delete_zip', default= True, type=lambda x: (str(x).lower() in ['true','1', 'yes']), help='Option to enable zip deletion (True | False)')
     parser.add_argument('-studentFile','--studentFile',default="studentList.txt",type=str,help='file of student names, separated by new line', required=False)
     parser.add_argument('-project_mpf','--project_mpf',default="../Modelsim_tb 21/Lab4/Lab4.mpf",type=str,help='location of modelsim tb project mpf file', required=True)
 
