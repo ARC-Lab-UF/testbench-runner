@@ -66,9 +66,13 @@ def zip_opener(lab, studentFile, submissions, delete_zip):
 
                 result = list(Path(newDir).rglob("*.[vV][hH][dD]*"))
                 y=[]
+                # print(result)
                 for x in result:
-                    try: 
+                    print(x)
+                    if 'vga_rom' in str(x):
+                        continue
 
+                    try: 
                         shutil.copy2(x, newDir)
                         y.append(os.path.join(os.getcwd(), x))
 
