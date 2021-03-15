@@ -7,3 +7,4 @@ __pycache__/
 !studentList_TEMPLATE.txt
 *.zip
 transcript
+*_out.tcl

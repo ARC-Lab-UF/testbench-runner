@@ -1,0 +1,1156 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/keeth/Desktop/Reconfig/Labs/Lab1
+Ealu_ns
+Z0 w1615060859
+Z1 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 728
+Z4 dC:/Users/keeth/Desktop/TA folder/Spring 21/Modelsim_tb 21/Lab2
+Z5 8C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab2/agarwalsahil/alu_ns.vhd
+Z6 FC:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab2/agarwalsahil/alu_ns.vhd
+l0
+L5 1
+VlgTD4>;:Zc1mCTnZ@oaki2
+!s100 ?A3goWK1JDI;Y;XWSeBTU2
+Z7 OV;C;2020.1;71
+32
+Z8 !s110 1615067706
+!i10b 1
+Z9 !s108 1615067706.000000
+Z10 !s90 -work|work|-2002|-quiet|-stats=none|C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab2/agarwalsahil/alu_ns.vhd|
+Z11 !s107 C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab2/agarwalsahil/alu_ns.vhd|
+!i113 1
+Z12 o-quiet -work work -2002
+Z13 tExplicit 1 CvgOpt 0
+Abhv
+R1
+R2
+R3
+DEx4 work 6 alu_ns 0 22 lgTD4>;:Zc1mCTnZ@oaki2
+!i122 728
+l19
+Z14 L18 78
+VQGAAT2NjX9?4JTKACo2Bo1
+!s100 e<OQegEbS^fPdUILU?Sd=2
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Ans
+R1
+R2
+R3
+DEx4 work 6 alu_ns 0 22 TToh@:jfLobWi=Sm0FD>Z3
+!i122 608
+l20
+L18 60
+Vch5L32c7Ji>Q7O>aXPU[:2
+!s100 Df[?]Fon?7d1Je<=GQoHm2
+R7
+32
+!s110 1615066002
+!i10b 1
+!s108 1615066002.000000
+!s90 -work|work|-2002|-quiet|-stats=none|C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab2/kochmancorey/alu_ns.vhd|
+!s107 C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab2/kochmancorey/alu_ns.vhd|
+!i113 1
+R12
+R13
+FC:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab2/kochmancorey/alu_ns.vhd
+8C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab2/kochmancorey/alu_ns.vhd
+Aalu_ns_bev
+R1
+R2
+R3
+DEx4 work 6 alu_ns 0 22 ]Hn?X5YW_UOl6NaXe17?G0
+!i122 570
+l19
+L18 101
+VjnLQL`hdeAHPa1U32]Szn0
+!s100 a0gnJ1^hhT1J3N:k4m0@T0
+R7
+32
+!s110 1615065975
+!i10b 1
+Z15 !s108 1615065975.000000
+!s90 -work|work|-2002|-quiet|-stats=none|C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab2/welchaustin/alu_ns.vhd|
+!s107 C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab2/welchaustin/alu_ns.vhd|
+!i113 1
+R12
+R13
+FC:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab2/welchaustin/alu_ns.vhd
+8C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab2/welchaustin/alu_ns.vhd
+Aalu
+R1
+R2
+R3
+DEx4 work 6 alu_ns 0 22 8PPV7T]3=e86oRLF_G5mh3
+!i122 488
+l20
+Z16 L19 74
+VZF5<3ml5fNfYlV@MLKHU81
+!s100 h`?IYj_zaU72NZHL[_T1A0
+R7
+32
+Z17 !s110 1615065924
+!i10b 1
+Z18 !s108 1615065924.000000
+!s90 -work|work|-2002|-quiet|-stats=none|C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab2/guigavin/alu_ns.vhd|
+!s107 C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab2/guigavin/alu_ns.vhd|
+!i113 1
+R12
+R13
+FC:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab2/guigavin/alu_ns.vhd
+8C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab2/guigavin/alu_ns.vhd
+Z19 w1615060858
+Abvh
+R1
+R2
+R3
+Z20 DEx4 work 6 alu_ns 0 22 l37[aLNN;KAZ:DI=5PfAn3
+!i122 88
+l19
+L18 88
+VB==6B]WfRdJ[IMcU8@iZP0
+!s100 N[CMAiX]CY:WZTE7]0:<R1
+R7
+32
+Z21 !s110 1600908120
+!i10b 1
+!s108 1600908119.000000
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/keeth/Desktop/TA folder/Submissions/Lab2/Aaliyah Richlen/alu_ns.vhd|
+!s107 C:/Users/keeth/Desktop/TA folder/Submissions/Lab2/Aaliyah Richlen/alu_ns.vhd|
+!i113 1
+Z22 o-work work -2002 -explicit
+R13
+FC:/Users/keeth/Desktop/TA folder/Submissions/Lab2/Aaliyah Richlen/alu_ns.vhd
+Z23 w1600903450
+8C:/Users/keeth/Desktop/TA folder/Submissions/Lab2/Aaliyah Richlen/alu_ns.vhd
+Z24 dC:/Users/keeth/Desktop/TA folder/Tester/Lab2
+Alogic
+R1
+R2
+R3
+R20
+!i122 83
+l34
+L18 100
+V=^Tf2NmJ[e;dMGMAX:h:J1
+!s100 mXQk:bLEQR^6G:NNk2@[o1
+R7
+32
+Z25 !s110 1600908039
+!i10b 1
+Z26 !s108 1600908039.000000
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/keeth/Desktop/TA folder/Submissions/Lab2/Michael Lee/Part 2/alu_ns.vhd|
+!s107 C:/Users/keeth/Desktop/TA folder/Submissions/Lab2/Michael Lee/Part 2/alu_ns.vhd|
+!i113 1
+R22
+R13
+FC:/Users/keeth/Desktop/TA folder/Submissions/Lab2/Michael Lee/Part 2/alu_ns.vhd
+Z27 w1600903415
+8C:/Users/keeth/Desktop/TA folder/Submissions/Lab2/Michael Lee/Part 2/alu_ns.vhd
+R24
+Abehavioral
+R1
+R2
+R3
+DEx4 work 6 alu_ns 0 22 ;[4aKc^EIoic[meJj^eL:1
+!i122 70
+l33
+L16 101
+Va1lSh`Lz[ZIUla_6ZUZUC3
+!s100 ?jlO=h=:KXU8:Togk0FmU3
+R7
+32
+Z28 !s110 1600907449
+!i10b 1
+!s108 1600907448.000000
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/keeth/Desktop/TA folder/Submissions/Lab2/Kevin Kosta/alu_ns.vhd|
+!s107 C:/Users/keeth/Desktop/TA folder/Submissions/Lab2/Kevin Kosta/alu_ns.vhd|
+!i113 1
+R22
+R13
+FC:/Users/keeth/Desktop/TA folder/Submissions/Lab2/Kevin Kosta/alu_ns.vhd
+Z29 w1600902517
+8C:/Users/keeth/Desktop/TA folder/Submissions/Lab2/Kevin Kosta/alu_ns.vhd
+R24
+Aarch
+R1
+R2
+R3
+R20
+!i122 65
+l20
+L18 71
+VCB@F_4S<=N?DC0<oii<:<3
+!s100 ;SKGA2mZnjGMhGFB0`nhV1
+R7
+32
+Z30 !s110 1600907016
+!i10b 1
+Z31 !s108 1600907016.000000
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/keeth/Desktop/TA folder/Submissions/Lab2/Ramsey Hamed/Part2/alu_ns.vhd|
+!s107 C:/Users/keeth/Desktop/TA folder/Submissions/Lab2/Ramsey Hamed/Part2/alu_ns.vhd|
+!i113 1
+R22
+R13
+FC:/Users/keeth/Desktop/TA folder/Submissions/Lab2/Ramsey Hamed/Part2/alu_ns.vhd
+Z32 w1600901799
+8C:/Users/keeth/Desktop/TA folder/Submissions/Lab2/Ramsey Hamed/Part2/alu_ns.vhd
+R24
+Astr
+R1
+R2
+R3
+DEx4 work 6 alu_ns 0 22 2D=V]B?3AOlA;_?eo?NHC1
+!i122 49
+l23
+L20 71
+VjYcfaO055ONn`AGa[aDKc3
+!s100 IJkVBHfdG<k?kLel_1YgP1
+R7
+32
+Z33 !s110 1600906449
+!i10b 1
+Z34 !s108 1600906449.000000
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/keeth/Desktop/TA folder/Submissions/Lab2/Daniel Faltemier/alu_ns.vhd|
+!s107 C:/Users/keeth/Desktop/TA folder/Submissions/Lab2/Daniel Faltemier/alu_ns.vhd|
+!i113 1
+R22
+R13
+FC:/Users/keeth/Desktop/TA folder/Submissions/Lab2/Daniel Faltemier/alu_ns.vhd
+Z35 w1600901353
+8C:/Users/keeth/Desktop/TA folder/Submissions/Lab2/Daniel Faltemier/alu_ns.vhd
+R24
+Abhv1
+R1
+R2
+R3
+DEx4 work 6 alu_ns 0 22 1IoV@f7IM_aO3mIz2Z:5f2
+!i122 36
+l36
+L19 108
+Ve@0[FX^O0VfiIjeLeTXbM1
+!s100 6Q3nz?j13O>:Y>^ddG;R52
+R7
+32
+Z36 !s110 1600905598
+!i10b 1
+Z37 !s108 1600905598.000000
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/keeth/Desktop/TA folder/Submissions/Lab2/Geneva Anderson/ALU_ns/alu_ns.vhd|
+!s107 C:/Users/keeth/Desktop/TA folder/Submissions/Lab2/Geneva Anderson/ALU_ns/alu_ns.vhd|
+!i113 1
+R22
+R13
+FC:/Users/keeth/Desktop/TA folder/Submissions/Lab2/Geneva Anderson/ALU_ns/alu_ns.vhd
+Z38 w1600901262
+8C:/Users/keeth/Desktop/TA folder/Submissions/Lab2/Geneva Anderson/ALU_ns/alu_ns.vhd
+R24
+Ealu_ns_tb
+R0
+R1
+R2
+R3
+!i122 385
+R4
+Z39 8C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab2/bricenoandrew/alu_ns_tb.vhd
+Z40 FC:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab2/bricenoandrew/alu_ns_tb.vhd
+l0
+L7 1
+VR:bQM7hW[hIgRZlVYC4fT2
+!s100 W>8<jCU4LISA9g]b23F5^1
+R7
+32
+Z41 !s110 1615061085
+!i10b 1
+Z42 !s108 1615061085.000000
+Z43 !s90 -work|work|-2002|-quiet|-stats=none|C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab2/bricenoandrew/alu_ns_tb.vhd|
+Z44 !s107 C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab2/bricenoandrew/alu_ns_tb.vhd|
+!i113 1
+R12
+R13
+Atb
+DEx4 work 6 alu_ns 0 22 hbL8K3kQ]=hF<@M<P3d6B0
+R1
+R2
+R3
+DEx4 work 9 alu_ns_tb 0 22 R:bQM7hW[hIgRZlVYC4fT2
+!i122 385
+l19
+Z45 L10 144
+VX[jIiNl:6WTzjZZD`P^EQ2
+!s100 FnjScmn26T7]<oTJ;8OgA0
+R7
+32
+R41
+!i10b 1
+R42
+R43
+R44
+!i113 1
+R12
+R13
+Ealu_ns_true_testbench
+Z46 w1615056264
+Z47 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z48 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+R2
+R3
+!i122 725
+R4
+Z49 8C:/Users/keeth/Desktop/TA folder/Spring 21/Modelsim_tb 21/Lab2/alu_ns_true_testbench.vhd
+Z50 FC:/Users/keeth/Desktop/TA folder/Spring 21/Modelsim_tb 21/Lab2/alu_ns_true_testbench.vhd
+l0
+L6 1
+VEfhm6fl9TTI8gCREER8a<3
+!s100 ]@?iC^L5zY7XXnd6T4AEK1
+R7
+32
+R8
+!i10b 1
+R9
+Z51 !s90 -work|work|-2002|-quiet|-stats=none|C:/Users/keeth/Desktop/TA folder/Spring 21/Modelsim_tb 21/Lab2/alu_ns_true_testbench.vhd|
+Z52 !s107 C:/Users/keeth/Desktop/TA folder/Spring 21/Modelsim_tb 21/Lab2/alu_ns_true_testbench.vhd|
+!i113 1
+R12
+R13
+Atb
+R47
+R48
+R2
+R3
+DEx4 work 21 alu_ns_true_testbench 0 22 Efhm6fl9TTI8gCREER8a<3
+!i122 725
+l37
+L9 583
+VZ>MFYaV:a@M4NVI7129HY1
+!s100 nHfeb_9^mk2LPW>Ra`NfW3
+R7
+32
+R8
+!i10b 1
+R9
+R51
+R52
+!i113 1
+R12
+R13
+Ealu_sla
+R0
+R47
+R48
+R2
+R3
+!i122 729
+R4
+Z53 8C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab2/agarwalsahil/alu_sla.vhd
+Z54 FC:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab2/agarwalsahil/alu_sla.vhd
+l0
+L5 1
+V4131<MH]?S6=E?z_YjUZj1
+!s100 l;A0;^bH9e]>K[5X@VJZ73
+R7
+32
+Z55 !s110 1615067707
+!i10b 1
+R9
+Z56 !s90 -work|work|-2002|-quiet|-stats=none|C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab2/agarwalsahil/alu_sla.vhd|
+Z57 !s107 C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab2/agarwalsahil/alu_sla.vhd|
+!i113 1
+R12
+R13
+Abhv
+R47
+R48
+R2
+R3
+DEx4 work 7 alu_sla 0 22 4131<MH]?S6=E?z_YjUZj1
+!i122 729
+l19
+R14
+VKEJYPz>ER<hTNhM8S9SK;0
+!s100 ^mVXXXdT`aAoe3f8bZ2B73
+R7
+32
+R55
+!i10b 1
+R9
+R56
+R57
+!i113 1
+R12
+R13
+Aalu_sla_bev
+R47
+R48
+R2
+R3
+Z58 DEx4 work 7 alu_sla 0 22 4:ZMIW>3cV0WKUmUg_UVO1
+!i122 571
+l20
+L19 101
+VERZ5V>02>]91VC<GY9z?z1
+!s100 :SKm?@N4:CP6A;0m;_Dch2
+R7
+32
+Z59 !s110 1615065976
+!i10b 1
+R15
+!s90 -work|work|-2002|-quiet|-stats=none|C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab2/welchaustin/alu_sla.vhd|
+!s107 C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab2/welchaustin/alu_sla.vhd|
+!i113 1
+R12
+R13
+FC:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab2/welchaustin/alu_sla.vhd
+8C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab2/welchaustin/alu_sla.vhd
+Aalu
+R47
+R48
+R2
+R3
+R58
+!i122 489
+l20
+R16
+VFZQ=EVgmkoG;Kn4g@Q@Bf0
+!s100 <GZhUzSEf5W<Q^e4P=?mN0
+R7
+32
+R17
+!i10b 1
+R18
+!s90 -work|work|-2002|-quiet|-stats=none|C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab2/guigavin/alu_sla.vhd|
+!s107 C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab2/guigavin/alu_sla.vhd|
+!i113 1
+R12
+R13
+FC:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab2/guigavin/alu_sla.vhd
+8C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab2/guigavin/alu_sla.vhd
+R19
+Abvh
+R47
+R48
+R2
+R3
+Z60 DEx4 work 7 alu_sla 0 22 8:X]FgQ2c5CK5mK8<:]kN1
+!i122 89
+l20
+L19 89
+Vkj1]Ej:RgeRhGz^l6m<Lc2
+!s100 Vd=3mzeUOCo0b8eo1>0PS3
+R7
+32
+R21
+!i10b 1
+!s108 1600908120.000000
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/keeth/Desktop/TA folder/Submissions/Lab2/Aaliyah Richlen/alu_sla.vhd|
+!s107 C:/Users/keeth/Desktop/TA folder/Submissions/Lab2/Aaliyah Richlen/alu_sla.vhd|
+!i113 1
+R22
+R13
+FC:/Users/keeth/Desktop/TA folder/Submissions/Lab2/Aaliyah Richlen/alu_sla.vhd
+R23
+8C:/Users/keeth/Desktop/TA folder/Submissions/Lab2/Aaliyah Richlen/alu_sla.vhd
+R24
+Alogic
+R47
+R48
+R2
+R3
+R60
+!i122 84
+l35
+L19 103
+VmW=2e6gJY>ja[?Jm0BXhn1
+!s100 7Yj=1j2cfPeMn_ZFKLd4^2
+R7
+32
+R25
+!i10b 1
+R26
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/keeth/Desktop/TA folder/Submissions/Lab2/Michael Lee/Part 3/alu_sla.vhd|
+!s107 C:/Users/keeth/Desktop/TA folder/Submissions/Lab2/Michael Lee/Part 3/alu_sla.vhd|
+!i113 1
+R22
+R13
+FC:/Users/keeth/Desktop/TA folder/Submissions/Lab2/Michael Lee/Part 3/alu_sla.vhd
+w1600903416
+8C:/Users/keeth/Desktop/TA folder/Submissions/Lab2/Michael Lee/Part 3/alu_sla.vhd
+R24
+Abehavioral
+R47
+R48
+R2
+R3
+Z61 DEx4 work 7 alu_sla 0 22 lGR5NHFF=M`Oh_0aQC:CN1
+!i122 71
+l35
+L18 99
+VZbH9e3^:5Q;Ko`Md_FSB[0
+!s100 YMhX:Z;F^_58XXHmB^B:T3
+R7
+32
+R28
+!i10b 1
+!s108 1600907449.000000
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/keeth/Desktop/TA folder/Submissions/Lab2/Kevin Kosta/alu_sla.vhd|
+!s107 C:/Users/keeth/Desktop/TA folder/Submissions/Lab2/Kevin Kosta/alu_sla.vhd|
+!i113 1
+R22
+R13
+FC:/Users/keeth/Desktop/TA folder/Submissions/Lab2/Kevin Kosta/alu_sla.vhd
+R29
+8C:/Users/keeth/Desktop/TA folder/Submissions/Lab2/Kevin Kosta/alu_sla.vhd
+R24
+Aarch
+R47
+R48
+R2
+R3
+R60
+!i122 66
+l21
+L19 71
+VG5goz?^Ia@l=F4677TcYZ0
+!s100 _X:J?>zP6=mo4AT5CA]hS1
+R7
+32
+R30
+!i10b 1
+R31
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/keeth/Desktop/TA folder/Submissions/Lab2/Ramsey Hamed/Part3/alu_sla.vhd|
+!s107 C:/Users/keeth/Desktop/TA folder/Submissions/Lab2/Ramsey Hamed/Part3/alu_sla.vhd|
+!i113 1
+R22
+R13
+FC:/Users/keeth/Desktop/TA folder/Submissions/Lab2/Ramsey Hamed/Part3/alu_sla.vhd
+R32
+8C:/Users/keeth/Desktop/TA folder/Submissions/Lab2/Ramsey Hamed/Part3/alu_sla.vhd
+R24
+Astr
+R47
+R48
+R2
+R3
+DEx4 work 7 alu_sla 0 22 eV1z9abP9PKF9iz632VTF3
+!i122 50
+l22
+L19 63
+VZMIU4]3T;EM9ZNbUUU<IS0
+!s100 UB9=nJRgV;`inTXVzC]PT2
+R7
+32
+R33
+!i10b 1
+R34
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/keeth/Desktop/TA folder/Submissions/Lab2/Daniel Faltemier/alu_sla.vhd|
+!s107 C:/Users/keeth/Desktop/TA folder/Submissions/Lab2/Daniel Faltemier/alu_sla.vhd|
+!i113 1
+R22
+R13
+FC:/Users/keeth/Desktop/TA folder/Submissions/Lab2/Daniel Faltemier/alu_sla.vhd
+R35
+8C:/Users/keeth/Desktop/TA folder/Submissions/Lab2/Daniel Faltemier/alu_sla.vhd
+R24
+Ab1
+R47
+R48
+R2
+R3
+R61
+!i122 37
+l37
+L18 97
+V[b_@`_d:8nC@cUl4GVfFl1
+!s100 7BLfFTS]=dTOhK5Qj]fIS1
+R7
+32
+R36
+!i10b 1
+R37
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/keeth/Desktop/TA folder/Submissions/Lab2/Geneva Anderson/Alu_sla/alu_sla.vhd|
+!s107 C:/Users/keeth/Desktop/TA folder/Submissions/Lab2/Geneva Anderson/Alu_sla/alu_sla.vhd|
+!i113 1
+R22
+R13
+FC:/Users/keeth/Desktop/TA folder/Submissions/Lab2/Geneva Anderson/Alu_sla/alu_sla.vhd
+R38
+8C:/Users/keeth/Desktop/TA folder/Submissions/Lab2/Geneva Anderson/Alu_sla/alu_sla.vhd
+R24
+Ans
+R47
+R48
+R2
+R3
+R61
+!i122 8
+l19
+L18 73
+Vo]Fi=`hFUle7TlI2N[hKP1
+!s100 P1j@TBFTVNjf4<ZoF9bVH2
+R7
+32
+!s110 1600736882
+!i10b 1
+!s108 1600736882.000000
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/keeth/Desktop/TA folder/Tester/Lab2/alu_sla.vhd|
+!s107 C:/Users/keeth/Desktop/TA folder/Tester/Lab2/alu_sla.vhd|
+!i113 1
+R22
+R13
+FC:/Users/keeth/Desktop/TA folder/Tester/Lab2/alu_sla.vhd
+w1600735546
+8C:/Users/keeth/Desktop/TA folder/Tester/Lab2/alu_sla.vhd
+R24
+Ealu_sla_tb
+R0
+R47
+R48
+R2
+R3
+!i122 387
+R4
+Z62 8C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab2/bricenoandrew/alu_sla_tb.vhd
+Z63 FC:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab2/bricenoandrew/alu_sla_tb.vhd
+l0
+L7 1
+VHBYz[CZGHI<WDH>;X4Xid0
+!s100 <8ld:jK2i>S1HH3nLeaY82
+R7
+32
+R41
+!i10b 1
+R42
+Z64 !s90 -work|work|-2002|-quiet|-stats=none|C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab2/bricenoandrew/alu_sla_tb.vhd|
+Z65 !s107 C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab2/bricenoandrew/alu_sla_tb.vhd|
+!i113 1
+R12
+R13
+Atb
+DEx4 work 7 alu_sla 0 22 FaS@z7JEl0VOW1O_kVnDa2
+R47
+R48
+R2
+R3
+DEx4 work 10 alu_sla_tb 0 22 HBYz[CZGHI<WDH>;X4Xid0
+!i122 387
+l19
+R45
+V]PfP9ZJEh4mK6kM2=D01M1
+!s100 Y^Oa6MP0d6kacd1CMm@[P2
+R7
+32
+R41
+!i10b 1
+R42
+R64
+R65
+!i113 1
+R12
+R13
+Ealu_sla_true_testbench
+Z66 w1615056292
+R47
+R48
+R2
+R3
+!i122 726
+R4
+Z67 8C:/Users/keeth/Desktop/TA folder/Spring 21/Modelsim_tb 21/Lab2/alu_sla_true_testbench.vhd
+Z68 FC:/Users/keeth/Desktop/TA folder/Spring 21/Modelsim_tb 21/Lab2/alu_sla_true_testbench.vhd
+l0
+L6 1
+VDVQjRefj537cVEAeQbLg<2
+!s100 hTI;`<Nk=d`MU6bg`g6bT0
+R7
+32
+R8
+!i10b 1
+R9
+Z69 !s90 -work|work|-2002|-quiet|-stats=none|C:/Users/keeth/Desktop/TA folder/Spring 21/Modelsim_tb 21/Lab2/alu_sla_true_testbench.vhd|
+Z70 !s107 C:/Users/keeth/Desktop/TA folder/Spring 21/Modelsim_tb 21/Lab2/alu_sla_true_testbench.vhd|
+!i113 1
+R12
+R13
+Atb
+R47
+R48
+R2
+R3
+DEx4 work 22 alu_sla_true_testbench 0 22 DVQjRefj537cVEAeQbLg<2
+!i122 726
+l38
+L9 584
+V<A:bN3FH226R=;a7[>C7i1
+!s100 TdCo[zbDmnQ9im0MohGMH1
+R7
+32
+R8
+!i10b 1
+R9
+R69
+R70
+!i113 1
+R12
+R13
+Edecoder7seg
+R0
+R2
+R3
+!i122 730
+R4
+Z71 8C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab2/agarwalsahil/decoder7seg.vhd
+Z72 FC:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab2/agarwalsahil/decoder7seg.vhd
+l0
+L4 1
+V;2<:b>4g9znWE973k`2aL3
+!s100 Xcf;?DIgO:3J`>`<JZG2g2
+R7
+32
+R55
+!i10b 1
+Z73 !s108 1615067707.000000
+Z74 !s90 -work|work|-2002|-quiet|-stats=none|C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab2/agarwalsahil/decoder7seg.vhd|
+Z75 !s107 C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab2/agarwalsahil/decoder7seg.vhd|
+!i113 1
+R12
+R13
+Abhv
+R2
+R3
+Z76 DEx4 work 11 decoder7seg 0 22 ;2<:b>4g9znWE973k`2aL3
+!i122 730
+l11
+Z77 L10 42
+Z78 VZbV2[b55eh9XPSn1E87C[0
+Z79 !s100 ?Mg;oeH^i:lMKFEfVoBiA2
+R7
+32
+R55
+!i10b 1
+R73
+R74
+R75
+!i113 1
+R12
+R13
+Abehavioral
+R48
+R47
+R1
+R2
+R3
+DEx4 work 11 decoder7seg 0 22 ToZz`fgGU[GQ^V2nXGdTh2
+!i122 658
+l13
+L11 26
+VjnHdkk??o<Q?PinbfWQ1F3
+!s100 lXDW<a]Io5KHkHPmW6GGG0
+R7
+32
+!s110 1615066099
+!i10b 1
+!s108 1615066099.000000
+!s90 -work|work|-2002|-quiet|-stats=none|C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab2/nahikiancarolyn/decoder7seg.vhd|
+!s107 C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab2/nahikiancarolyn/decoder7seg.vhd|
+!i113 1
+R12
+R13
+FC:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab2/nahikiancarolyn/decoder7seg.vhd
+8C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab2/nahikiancarolyn/decoder7seg.vhd
+Aseg_bev
+R2
+R3
+DEx4 work 11 decoder7seg 0 22 Bh5:fjU<jBkah:^K?jO@71
+!i122 572
+l12
+L11 42
+VM_hM6^zPlCc_LhaO`e5J30
+!s100 CzD:h30R?1KndS7TD:0:P3
+R7
+32
+R59
+!i10b 1
+!s108 1615065976.000000
+!s90 -work|work|-2002|-quiet|-stats=none|C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab2/welchaustin/decoder7seg.vhd|
+!s107 C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab2/welchaustin/decoder7seg.vhd|
+!i113 1
+R12
+R13
+FC:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab2/welchaustin/decoder7seg.vhd
+8C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab2/welchaustin/decoder7seg.vhd
+Adecoder
+R1
+R2
+R3
+DEx4 work 11 decoder7seg 0 22 b81HL?1JJWPFneUhEgc5f2
+!i122 490
+l13
+L12 21
+VBn=d6PMVnC3K2G`;5`^dF2
+!s100 ;XOicT;`3TKi543maWIUY2
+R7
+32
+R17
+!i10b 1
+R18
+!s90 -work|work|-2002|-quiet|-stats=none|C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab2/guigavin/decoder7seg.vhd|
+!s107 C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab2/guigavin/decoder7seg.vhd|
+!i113 1
+R12
+R13
+FC:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab2/guigavin/decoder7seg.vhd
+8C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab2/guigavin/decoder7seg.vhd
+R19
+Alogic
+R1
+R2
+R3
+DEx4 work 11 decoder7seg 0 22 S3OS;Lme0D^TK>;;;miKT0
+!i122 82
+l12
+L11 45
+VC77VIDP[ToKOH7QJn1>]13
+!s100 V3YPoe8=]R1QI[cYoX?RE1
+R7
+32
+R25
+!i10b 1
+R26
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/keeth/Desktop/TA folder/Submissions/Lab2/Michael Lee/Part 1/decoder7seg.vhd|
+!s107 C:/Users/keeth/Desktop/TA folder/Submissions/Lab2/Michael Lee/Part 1/decoder7seg.vhd|
+!i113 1
+R22
+R13
+FC:/Users/keeth/Desktop/TA folder/Submissions/Lab2/Michael Lee/Part 1/decoder7seg.vhd
+R27
+8C:/Users/keeth/Desktop/TA folder/Submissions/Lab2/Michael Lee/Part 1/decoder7seg.vhd
+R24
+Aarch
+R2
+R3
+DEx4 work 11 decoder7seg 0 22 U9M:cQzZ6fMU3Ie1SkhhW0
+!i122 64
+l13
+L11 44
+V:UmKNmcHUTU@R>^j?O0U72
+!s100 `S2H<7EFjL?>a8BNe>bER2
+R7
+32
+R30
+!i10b 1
+R31
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/keeth/Desktop/TA folder/Submissions/Lab2/Ramsey Hamed/Part1/decoder7seg.vhd|
+!s107 C:/Users/keeth/Desktop/TA folder/Submissions/Lab2/Ramsey Hamed/Part1/decoder7seg.vhd|
+!i113 1
+R22
+R13
+FC:/Users/keeth/Desktop/TA folder/Submissions/Lab2/Ramsey Hamed/Part1/decoder7seg.vhd
+R32
+8C:/Users/keeth/Desktop/TA folder/Submissions/Lab2/Ramsey Hamed/Part1/decoder7seg.vhd
+R24
+Ade10
+R2
+R3
+DEx4 work 11 decoder7seg 0 22 >h]6l5YWE4DCdQd2cCbX@1
+!i122 59
+l11
+R77
+Vm:2J8:1S??BXMfMCoSAC81
+!s100 SL?S>X8LLHCe[XJA_8eM>1
+R7
+32
+!s110 1600906767
+!i10b 1
+!s108 1600906767.000000
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/keeth/Desktop/TA folder/Submissions/Lab2/Daniel Fernandes/decoder7seg.vhd|
+!s107 C:/Users/keeth/Desktop/TA folder/Submissions/Lab2/Daniel Fernandes/decoder7seg.vhd|
+!i113 1
+R22
+R13
+FC:/Users/keeth/Desktop/TA folder/Submissions/Lab2/Daniel Fernandes/decoder7seg.vhd
+w1600901774
+8C:/Users/keeth/Desktop/TA folder/Submissions/Lab2/Daniel Fernandes/decoder7seg.vhd
+R24
+Astr
+R1
+R2
+R3
+DEx4 work 11 decoder7seg 0 22 ?dOVD09^ZUj?M:[lCj_VA0
+!i122 51
+l14
+L12 28
+V0OE?6]?:Qh^NZd<UGAjzP3
+!s100 aKPiMR9KmmOoU?3hVOZ@[1
+R7
+32
+R33
+!i10b 1
+R34
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/keeth/Desktop/TA folder/Submissions/Lab2/Daniel Faltemier/decoder7seg.vhd|
+!s107 C:/Users/keeth/Desktop/TA folder/Submissions/Lab2/Daniel Faltemier/decoder7seg.vhd|
+!i113 1
+R22
+R13
+FC:/Users/keeth/Desktop/TA folder/Submissions/Lab2/Daniel Faltemier/decoder7seg.vhd
+R35
+8C:/Users/keeth/Desktop/TA folder/Submissions/Lab2/Daniel Faltemier/decoder7seg.vhd
+R24
+Asel
+R2
+R3
+DEx4 work 11 decoder7seg 0 22 7BhQLZEFE];V88[SQZb501
+!i122 43
+l21
+L20 23
+V@n[P<e@DgSg?kZmF4P9zU3
+!s100 QM?9IHiP<9bZ1hUV9VRM:0
+R7
+32
+!s110 1600905999
+!i10b 1
+!s108 1600905999.000000
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/keeth/Desktop/TA folder/Submissions/Lab2/Shane Auberger/Part1/decoder7seg.vhd|
+!s107 C:/Users/keeth/Desktop/TA folder/Submissions/Lab2/Shane Auberger/Part1/decoder7seg.vhd|
+!i113 1
+R22
+R13
+FC:/Users/keeth/Desktop/TA folder/Submissions/Lab2/Shane Auberger/Part1/decoder7seg.vhd
+w1600901295
+8C:/Users/keeth/Desktop/TA folder/Submissions/Lab2/Shane Auberger/Part1/decoder7seg.vhd
+R24
+Abehavior1
+R2
+R3
+Z80 DEx4 work 11 decoder7seg 0 22 kRzVdSF6kf9j0V4EKTH@a3
+!i122 38
+l11
+R77
+Vn2mQU13dd<f5CDYCEe3O91
+!s100 RJGQY;dcjCi_c>NPN<lUm2
+R7
+32
+R36
+!i10b 1
+R37
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/keeth/Desktop/TA folder/Submissions/Lab2/Geneva Anderson/Lab2Decoder/decoder7seg.vhd|
+!s107 C:/Users/keeth/Desktop/TA folder/Submissions/Lab2/Geneva Anderson/Lab2Decoder/decoder7seg.vhd|
+!i113 1
+R22
+R13
+FC:/Users/keeth/Desktop/TA folder/Submissions/Lab2/Geneva Anderson/Lab2Decoder/decoder7seg.vhd
+R38
+8C:/Users/keeth/Desktop/TA folder/Submissions/Lab2/Geneva Anderson/Lab2Decoder/decoder7seg.vhd
+R24
+Edecoder7seg_tb
+R0
+R1
+R2
+R3
+!i122 389
+R4
+Z81 8C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab2/bricenoandrew/decoder7seg_tb.vhd
+Z82 FC:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab2/bricenoandrew/decoder7seg_tb.vhd
+l0
+L5 1
+VY[Y[2eO]ZD7S?;Kdj]PIh2
+!s100 aL:0Taj0aomELM_oz]DEJ1
+R7
+32
+Z83 !s110 1615061086
+!i10b 1
+R42
+Z84 !s90 -work|work|-2002|-quiet|-stats=none|C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab2/bricenoandrew/decoder7seg_tb.vhd|
+Z85 !s107 C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab2/bricenoandrew/decoder7seg_tb.vhd|
+!i113 1
+R12
+R13
+Atb
+DEx4 work 11 decoder7seg 0 22 THcldKF`iY1>jcKjMU@0O2
+R1
+R2
+R3
+DEx4 work 14 decoder7seg_tb 0 22 Y[Y[2eO]ZD7S?;Kdj]PIh2
+!i122 389
+l12
+L8 85
+VA_Y^[@nDSU0P[<CTD72Rh0
+!s100 b0a5:PjN3gno3kfC7P8SS3
+R7
+32
+R83
+!i10b 1
+R42
+R84
+R85
+!i113 1
+R12
+R13
+Atest
+R80
+R2
+R3
+DEx4 work 14 decoder7seg_tb 0 22 f1MaXol]0eEo=F<c68ZO31
+!i122 27
+l49
+L7 71
+V0@cSlBZYJ`b]B]9BX_j5:3
+!s100 HIzGcAf7Z3Q4@^QOb59PA2
+R7
+32
+!s110 1600905417
+!i10b 1
+!s108 1600905417.000000
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/keeth/Desktop/TA folder/Submissions/Lab2/Geneva Anderson/Lab2Decoder/decoder7seg_tb.vhd|
+!s107 C:/Users/keeth/Desktop/TA folder/Submissions/Lab2/Geneva Anderson/Lab2Decoder/decoder7seg_tb.vhd|
+!i113 1
+R22
+R13
+FC:/Users/keeth/Desktop/TA folder/Submissions/Lab2/Geneva Anderson/Lab2Decoder/decoder7seg_tb.vhd
+R38
+8C:/Users/keeth/Desktop/TA folder/Submissions/Lab2/Geneva Anderson/Lab2Decoder/decoder7seg_tb.vhd
+R24
+Edecoder7seg_true_testbench
+Z86 w1615060995
+R47
+R48
+R2
+R3
+!i122 727
+R4
+Z87 8C:/Users/keeth/Desktop/TA folder/Spring 21/Modelsim_tb 21/Lab2/decoder7seg_true_testbench.vhd
+Z88 FC:/Users/keeth/Desktop/TA folder/Spring 21/Modelsim_tb 21/Lab2/decoder7seg_true_testbench.vhd
+l0
+L10 1
+VbAP@OAX3NCNPNhhD=07=T2
+!s100 ZBUWJNziHff4dV[LVa=fd1
+R7
+32
+R8
+!i10b 1
+R9
+Z89 !s90 -work|work|-2002|-quiet|-stats=none|C:/Users/keeth/Desktop/TA folder/Spring 21/Modelsim_tb 21/Lab2/decoder7seg_true_testbench.vhd|
+Z90 !s107 C:/Users/keeth/Desktop/TA folder/Spring 21/Modelsim_tb 21/Lab2/decoder7seg_true_testbench.vhd|
+!i113 1
+R12
+R13
+Atb
+R47
+R48
+R2
+R3
+DEx4 work 26 decoder7seg_true_testbench 0 22 bAP@OAX3NCNPNhhD=07=T2
+!i122 727
+l30
+L13 99
+VNiLoQUE665E]AKWmY02h52
+!s100 MecY>Eo=T^<;DCKS29SS=1
+R7
+32
+R8
+!i10b 1
+R9
+R89
+R90
+!i113 1
+R12
+R13
+Edecoder7segr
+R0
+R2
+R3
+!i122 598
+R4
+Z91 8C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab2/hoffmanmichael/decoder7segR.vhd
+Z92 FC:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab2/hoffmanmichael/decoder7segR.vhd
+l0
+L6 1
+V?[ZP9;dU3?_<bZbN[Uo252
+!s100 iME2c@8=LI0>JOODD`NGO1
+R7
+32
+Z93 !s110 1615065993
+!i10b 1
+Z94 !s108 1615065993.000000
+Z95 !s90 -work|work|-2002|-quiet|-stats=none|C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab2/hoffmanmichael/decoder7segR.vhd|
+Z96 !s107 C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab2/hoffmanmichael/decoder7segR.vhd|
+!i113 1
+R12
+R13
+Abhv
+R2
+R3
+DEx4 work 12 decoder7segr 0 22 ?[ZP9;dU3?_<bZbN[Uo252
+!i122 598
+l22
+L13 22
+V=6R54b;mLUKYM?mHEC6722
+!s100 ?KYR<VN03BAbCEXCFdSRO0
+R7
+32
+R93
+!i10b 1
+R94
+R95
+R96
+!i113 1
+R12
+R13
+Etop_level
+R0
+R2
+R3
+!i122 418
+R4
+Z97 8C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab2/bricenoandrew/top_level.vhd
+Z98 FC:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab2/bricenoandrew/top_level.vhd
+l0
+L18 1
+VmW^P30mem3k4V8Yzlb@RT0
+!s100 JMFj69CoA`e:?>Zi>IPU>1
+R7
+32
+Z99 !s110 1615061997
+!i10b 1
+Z100 !s108 1615061997.000000
+Z101 !s90 -work|work|-2002|-quiet|-stats=none|C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab2/bricenoandrew/top_level.vhd|
+Z102 !s107 C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab2/bricenoandrew/top_level.vhd|
+!i113 1
+R12
+R13
+Astr
+R2
+R3
+DEx4 work 9 top_level 0 22 mW^P30mem3k4V8Yzlb@RT0
+!i122 418
+l64
+L37 78
+VNe]6eDIdaVaDA7PeafFC71
+!s100 5^M=zzmS`Gz<V=n5mJDAL1
+R7
+32
+R99
+!i10b 1
+R100
+R101
+R102
+!i113 1
+R12
+R13

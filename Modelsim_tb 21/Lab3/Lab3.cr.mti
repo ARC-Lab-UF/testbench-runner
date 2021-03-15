@@ -1,0 +1,114 @@
+{C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab3/hoffmanmichael/cla2.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab3/hoffmanmichael/cla2.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity cla2
+-- Compiling architecture CARRY_LOOKAHEAD of cla2
+
+} {} {}} {C:/Users/keeth/Desktop/TA folder/Spring 21/Tester 21/Lab3/cgen2.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/keeth/Desktop/TA folder/Spring 21/Tester 21/Lab3/cgen2.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity cgen2
+-- Compiling architecture BHV of cgen2
+
+} {} {}} {C:/Users/keeth/Desktop/TA folder/Spring 21/Tester 21/Lab3/fa.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/keeth/Desktop/TA folder/Spring 21/Tester 21/Lab3/fa.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity fa
+-- Compiling architecture BHV of fa
+
+} {} {}} {C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab3/hoffmanmichael/fa.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab3/hoffmanmichael/fa.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity fa
+-- Compiling architecture BHV of fa
+
+} {} {}} {C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab3/hoffmanmichael/cgen2.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab3/hoffmanmichael/cgen2.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity cgen2
+-- Compiling architecture CARRY_GEN of cgen2
+
+} {} {}} {C:/Users/keeth/Desktop/TA folder/Spring 21/Tester 21/Lab3/cla4.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/keeth/Desktop/TA folder/Spring 21/Tester 21/Lab3/cla4.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity cla4
+-- Compiling architecture BHV of cla4
+-- Loading entity cla2
+-- Loading entity cgen2
+
+} {} {}} adder_true_testbench.vhd {0 {vcom -work work -2002 -explicit -stats=none {C:\Users\keeth\Desktop\TA folder\Spring 21\Modelsim_tb 21\Lab3\adder_true_testbench.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity adder_true_testbench
+-- Compiling architecture TB of adder_true_testbench
+-- Compiling configuration adder_true_testbench_config
+-- Loading entity adder_true_testbench
+-- Loading architecture TB of adder_true_testbench
+-- Loading entity adder
+** Error: C:\Users\keeth\Desktop\TA folder\Spring 21\Modelsim_tb 21\Lab3\adder_true_testbench.vhd(255): Labels do not match: 'adder_true_testbench_config' and 'TB_CONFIG'.
+** Note: C:\Users\keeth\Desktop\TA folder\Spring 21\Modelsim_tb 21\Lab3\adder_true_testbench.vhd(255): VHDL Compiler exiting
+
+} {13.0 14.0} {}} {C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab3/hoffmanmichael/cla4.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:\Users\keeth\Desktop\TA folder\Spring 21\DD_Grader\Submissions\Lab3\hoffmanmichael\cla4.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity cla4
+-- Compiling architecture HYBRID of cla4
+-- Loading entity cla2
+-- Loading entity cgen2
+
+} {} {}} {C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab3/hoffmanmichael/adder.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab3/hoffmanmichael/adder.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity adder
+-- Compiling architecture RIPPLE_CARRY of adder
+-- Loading entity fa
+-- Compiling architecture CARRY_LOOKAHEAD of adder
+-- Loading entity adder
+-- Compiling architecture CARRY_LOOKAHEAD_BAD_SYNTHESIS of adder
+-- Loading entity adder
+-- Compiling architecture HIERARCHICAL of adder
+-- Loading entity adder
+-- Loading entity cla4
+-- Loading entity cgen2
+
+} {} {}} {C:/Users/keeth/Desktop/TA folder/Spring 21/Tester 21/Lab3/adder_tb.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/keeth/Desktop/TA folder/Spring 21/Tester 21/Lab3/adder_tb.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity adder_tb
+-- Compiling architecture TB of adder_tb
+-- Compiling configuration TB_CONFIG
+-- Loading entity adder_tb
+-- Loading architecture TB of adder_tb
+-- Loading entity adder
+
+} {} {}} {C:/Users/keeth/Desktop/TA folder/Spring 21/Tester 21/Lab3/cla2.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/keeth/Desktop/TA folder/Spring 21/Tester 21/Lab3/cla2.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity cla2
+-- Compiling architecture BHV of cla2
+
+} {} {}}

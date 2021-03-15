@@ -1,0 +1,278 @@
+{C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab4/herrerabryce/gray2.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab4/herrerabryce/gray2.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity gray2
+-- Compiling architecture STR of gray2
+
+} {} {}} {C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab4/herrerabryce/counter_tb.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab4/herrerabryce/counter_tb.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity counter_tb
+-- Compiling architecture TB of counter_tb
+-- Loading package NUMERIC_STD
+-- Loading entity counter
+
+} {} {}} gray_true_testbench.vhd {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/keeth/Desktop/TA folder/Spring 21/Modelsim_tb 21/Lab4/gray_true_testbench.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity gray_true_testbench
+-- Compiling architecture TB of gray_true_testbench
+-- Loading entity gray1
+-- Loading entity gray2
+
+} {} {}} clk_gen_true_testbench.vhd {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/keeth/Desktop/TA folder/Spring 21/Modelsim_tb 21/Lab4/clk_gen_true_testbench.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity clk_gen_true_testbench
+-- Compiling architecture TB of clk_gen_true_testbench
+-- Loading package MATH_REAL
+-- Loading entity clk_gen
+
+} {} {}} {C:/Users/keeth/Desktop/TA folder/Spring 21/Test Section/Submissions/Lab4/raymakeranna/top_level.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/keeth/Desktop/TA folder/Spring 21/Test Section/Submissions/Lab4/raymakeranna/top_level.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity top_level
+-- Compiling architecture STR of top_level
+
+} {} {}} {C:/Users/keeth/Desktop/TA folder/Spring 21/Test Section/Submissions/Lab4/raymakeranna/gray2_tb.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/keeth/Desktop/TA folder/Spring 21/Test Section/Submissions/Lab4/raymakeranna/gray2_tb.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity gray2_tb
+-- Compiling architecture TB of gray2_tb
+-- Loading entity gray2
+
+} {} {}} {C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab4/herrerabryce/counter.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab4/herrerabryce/counter.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity counter
+-- Compiling architecture STR of counter
+
+} {} {}} {C:/Users/keeth/Desktop/TA folder/Spring 21/Modelsim_tb 21/Lab4/counter_true_testbench.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/keeth/Desktop/TA folder/Spring 21/Modelsim_tb 21/Lab4/counter_true_testbench.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity counter_true_testbench
+-- Compiling architecture TB of counter_true_testbench
+-- Loading entity counter
+
+} {} {}} {C:/Users/keeth/Desktop/TA folder/Spring 21/Test Section/Submissions/Lab4/raymakeranna/clk_div.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/keeth/Desktop/TA folder/Spring 21/Test Section/Submissions/Lab4/raymakeranna/clk_div.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package MATH_REAL
+-- Compiling entity clk_div
+-- Compiling architecture ARCH of clk_div
+
+} {} {}} {C:/Users/keeth/Desktop/TA folder/Spring 21/Test Section/Submissions/Lab4/raymakeranna/gray1.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/keeth/Desktop/TA folder/Spring 21/Test Section/Submissions/Lab4/raymakeranna/gray1.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity gray1
+-- Compiling architecture FSM1 of gray1
+
+} {} {}} {C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab4/herrerabryce/gray2_tb.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab4/herrerabryce/gray2_tb.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity gray2_tb
+-- Compiling architecture TB of gray2_tb
+-- Loading entity gray2
+
+} {} {}} {C:/Users/keeth/Desktop/TA folder/Spring 21/Test Section/Submissions/Lab4/raymakeranna/gray2.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/keeth/Desktop/TA folder/Spring 21/Test Section/Submissions/Lab4/raymakeranna/gray2.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity gray2
+-- Compiling architecture FSM2 of gray2
+
+} {} {}} {C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab4/herrerabryce/clk_gen.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab4/herrerabryce/clk_gen.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package MATH_REAL
+-- Compiling entity clk_gen
+-- Compiling architecture STR of clk_gen
+
+} {} {}} counter_true_testbench.vhd {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/keeth/Desktop/TA folder/Spring 21/Modelsim_tb 21/Lab4/counter_true_testbench.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity counter_true_testbench
+-- Compiling architecture TB of counter_true_testbench
+-- Loading entity counter
+
+} {} {}} {C:/Users/keeth/Desktop/TA folder/Spring 21/Test Section/Submissions/Lab4/raymakeranna/clk_gen_tb.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/keeth/Desktop/TA folder/Spring 21/Test Section/Submissions/Lab4/raymakeranna/clk_gen_tb.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity clk_gen_tb
+-- Compiling architecture TB of clk_gen_tb
+-- Loading package MATH_REAL
+-- Loading entity clk_gen
+
+} {} {}} {C:/Users/keeth/Desktop/TA folder/Spring 21/Test Section/Submissions/Lab4/raymakeranna/counter.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/keeth/Desktop/TA folder/Spring 21/Test Section/Submissions/Lab4/raymakeranna/counter.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity counter
+-- Compiling architecture BHV of counter
+
+} {} {}} {C:/Users/keeth/Desktop/TA folder/Spring 21/Test Section/Submissions/Lab4/raymakeranna/clk_div_tb.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/keeth/Desktop/TA folder/Spring 21/Test Section/Submissions/Lab4/raymakeranna/clk_div_tb.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity clk_div_tb
+-- Compiling architecture TB of clk_div_tb
+
+} {} {}} {C:/Users/keeth/Desktop/TA folder/Spring 21/Test Section/Submissions/Lab4/raymakeranna/gray1_tb.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/keeth/Desktop/TA folder/Spring 21/Test Section/Submissions/Lab4/raymakeranna/gray1_tb.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity gray1_tb
+-- Compiling architecture TB of gray1_tb
+-- Loading entity gray1
+
+} {} {}} {C:/Users/keeth/Desktop/TA folder/Spring 21/Tester 21/Lab4/clk_div.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/keeth/Desktop/TA folder/Spring 21/Tester 21/Lab4/clk_div.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package MATH_REAL
+-- Compiling entity clk_div
+-- Compiling architecture BHV of clk_div
+
+} {} {}} {C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab4/herrerabryce/clk_gen_tb.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab4/herrerabryce/clk_gen_tb.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity clk_gen_tb
+-- Compiling architecture TB of clk_gen_tb
+-- Loading package MATH_REAL
+-- Loading entity clk_gen
+
+} {} {}} {C:/Users/keeth/Desktop/TA folder/Spring 21/Test Section/Submissions/Lab4/raymakeranna/clk_gen.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/keeth/Desktop/TA folder/Spring 21/Test Section/Submissions/Lab4/raymakeranna/clk_gen.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package MATH_REAL
+-- Compiling entity clk_gen
+-- Compiling architecture BHV of clk_gen
+-- Loading entity clk_div
+
+} {} {}} {C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab4/herrerabryce/gray1_tb.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab4/herrerabryce/gray1_tb.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity gray1_tb
+-- Compiling architecture TB of gray1_tb
+-- Loading entity gray1
+
+} {} {}} {C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab4/herrerabryce/clk_div_tb.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab4/herrerabryce/clk_div_tb.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity clk_div_tb
+-- Compiling architecture TB of clk_div_tb
+
+} {} {}} {C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab4/herrerabryce/top_level.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab4/herrerabryce/top_level.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity top_level
+-- Compiling architecture STR of top_level
+
+} {} {}} {C:/Users/keeth/Desktop/TA folder/Spring 21/Test Section/Submissions/Lab4/raymakeranna/counter_tb.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/keeth/Desktop/TA folder/Spring 21/Test Section/Submissions/Lab4/raymakeranna/counter_tb.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity counter_tb
+-- Compiling architecture TB of counter_tb
+-- Loading entity counter
+
+} {} {}} {C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab4/herrerabryce/gray1.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab4/herrerabryce/gray1.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity gray1
+-- Compiling architecture STR of gray1
+
+} {} {}} {C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab4/herrerabryce/clk_div.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab4/herrerabryce/clk_div.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package MATH_REAL
+-- Compiling entity clk_div
+-- Compiling architecture STR of clk_div
+
+} {} {}} {C:/Users/keeth/Desktop/TA folder/Spring 21/Modelsim_tb 21/Lab4/clk_gen_true_testbench.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/keeth/Desktop/TA folder/Spring 21/Modelsim_tb 21/Lab4/clk_gen_true_testbench.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity clk_gen_true_testbench
+-- Compiling architecture TB of clk_gen_true_testbench
+-- Loading package MATH_REAL
+-- Loading entity clk_gen
+
+} {} {}} {C:/Users/keeth/Desktop/TA folder/Spring 21/Modelsim_tb 21/Lab4/gray_true_testbench.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/keeth/Desktop/TA folder/Spring 21/Modelsim_tb 21/Lab4/gray_true_testbench.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity gray_true_testbench
+-- Compiling architecture TB of gray_true_testbench
+-- Loading entity gray1
+-- Loading entity gray2
+
+} {} {}}
