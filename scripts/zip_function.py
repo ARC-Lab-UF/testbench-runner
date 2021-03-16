@@ -68,7 +68,7 @@ def zip_opener(lab, studentFile, submissions, delete_zip):
                 y=[]
                 # print(result)
                 for x in result:
-                    print(x)
+                    # print(x)
                     if 'vga_rom' in str(x):
                         continue
 
