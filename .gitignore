@@ -9,4 +9,5 @@ __pycache__/
 transcript
 *_out.tcl
 *.wlf
+*.cr.mti
 Modelsim_tb 21/Lab6/vga_output.txt
