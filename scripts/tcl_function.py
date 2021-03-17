@@ -52,7 +52,7 @@ Now working on $student Hit Enter to continue ==> "
                         
                     } 
                     if {$i == 2} {
-                        puts "COMPILE PASSED SUCCESSFULLY\n"
+                        puts "COMPILE PASSED SUCCESSFULLY\n--------------STARTING SIMULATION--------------\n"
                     }
                 }
                    

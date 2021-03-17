@@ -321,11 +321,11 @@ begin -- TB
         report "DONE!!!!!!" severity note;
 
         if errors <= 10 then
-            percent := 100-errors*10;
+            percent := 50-errors*5;
         else
             percent := 0;
         end if;
-        report "VGA PERCENTAGE = " & integer'image(percent) severity note;
+        report "VGA Sync Score = " & integer'image(percent) & "/50" severity note;
 
         wait;
 
