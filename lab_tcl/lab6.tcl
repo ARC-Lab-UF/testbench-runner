@@ -1,6 +1,6 @@
 
 try {
-    vsim -c work.vga_final_true_testbench
+    vsim -c -quiet work.vga_final_true_testbench
     add wave *
     run -all
 } on error {msg} {

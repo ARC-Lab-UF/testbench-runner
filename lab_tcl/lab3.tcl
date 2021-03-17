@@ -1,6 +1,6 @@
 
 try {
-    vsim -c work.adder_true_testbench_config
+    vsim -c -quiet work.adder_true_testbench_config
     add wave *
     run -all
 } on error {msg} {

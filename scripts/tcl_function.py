@@ -41,14 +41,21 @@ Now working on $student Hit Enter to continue ==> "
                     vdel -all
                     vlib work
                 for {set i 1} {$i<=2} {incr i} {
+                    puts "\n--------------COMPILE ATTEMPT: $i--------------\n"
                     foreach x $lines {
                     try {
-                            eval $x
+                        eval $x
+                             
                         } on error {msg} {
                             puts ""
                         }
+                        
                     } 
+                    if {$i == 2} {
+                        puts "COMPILE PASSED SUCCESSFULLY\n"
+                    }
                 }
+                   
 '''
     tcl += tclScript + '''\n}\n\n'''
 
@@ -71,7 +78,7 @@ foreach x $lines {
         tcl += x[0]
         tcl += '''
 quietly set ret [project compileall -n]
-quietly set result [string map {explicit "quiet -suppress 1195,3009" \\\ / } $ret]
+quietly set result [string map {explicit "quiet -suppress 1195,1194" \\\ / } $ret]
 quietly set lines [split $result "\\n"]'''
         tcl += f'''\ncurrStudent $lines {x[1]};\n\n'''
 

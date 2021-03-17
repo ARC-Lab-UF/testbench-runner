@@ -1,6 +1,6 @@
 
 try {
-    vsim -c work.all_gcd_true_testbench
+    vsim -c -quiet work.all_gcd_true_testbench
     add wave *
     run -all
 } on error {msg} {

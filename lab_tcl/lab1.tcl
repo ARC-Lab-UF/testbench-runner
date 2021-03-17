@@ -5,7 +5,7 @@ proc pause {{message "\nHit Enter to continue ==> "}} {
 }
 
 try {
-    vsim -c work.adder_true_testbench
+    vsim -c -quiet work.adder_true_testbench
     add wave *
     run -all
 } on error {msg} {
@@ -17,7 +17,7 @@ try {
 pause;
 
 try {
-    vsim -c work.fa_true_testbench
+    vsim -c -quiet work.fa_true_testbench
     add wave *
     run -all
 } on error {msg} {
