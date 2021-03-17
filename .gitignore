@@ -1,6 +1,6 @@
 # Byte-compiled / optimized / DLL files
-__pycache__/
-*.py[cod]
+# __pycache__/
+# *.py[cod]
 
 /Submissions
 *studentList*.txt
@@ -8,4 +8,5 @@ __pycache__/
 *.zip
 transcript
 *_out.tcl
-
+*.wlf
+Modelsim_tb 21/Lab6/vga_output.txt
