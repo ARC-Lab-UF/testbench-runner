@@ -132,7 +132,7 @@ VHDL93 = 2002
 ; the compiler for each type declaration). Default is off.
 ; The .ini file has Explicit enabled so that std_logic_signed/unsigned
 ; will match the behavior of synthesis tools.
-Explicit = 1
+Explicit = 0
 
 ; Turn off acceleration of the VITAL packages. Default is to accelerate.
 ; NoVital = 1
@@ -152,14 +152,14 @@ Explicit = 1
 
 ; Keep silent about warnings caused by aggregates that are not locally static.
 ; Default is to give a warning.
-; NoOthersStaticError = 1
+NoOthersStaticError = 0
 
 ; Turn off inclusion of debugging info within design units.
 ; Default is to include debugging info.
 ; NoDebug = 1
 
 ; Turn off "Loading..." messages. Default is messages on.
-; Quiet = 1
+Quiet = 1
 
 ; Turn on some limited synthesis rule compliance checking. Checks only:
 ;    -- signals used (read) by a process must be in the sensitivity list
@@ -191,7 +191,7 @@ Explicit = 1
 ; NoDebug = 1
 
 ; Turn off "loading..." messages. Default is messages on.
-; Quiet = 1
+Quiet = 1
 
 ; Turn on Verilog hazard checking (order-dependent accessing of global vars).
 ; Default is off.
@@ -260,7 +260,7 @@ DefaultRadix = symbolic
 ; Startup = do startup.do
 
 ; File for saving command transcript
-TranscriptFile = transcript
+; TranscriptFile = transcript
 
 ; File for saving command history
 ; CommandHistory = cmdhist.log
@@ -370,7 +370,7 @@ ConcurrentFileLimit = 40
 ; Specify whether or not a WLF file should be deleted when the
 ; simulation ends.  A value of 1 will cause the WLF file to be deleted.
 ; The default is 0 (do not delete WLF file when simulation ends).
-; WLFDeleteOnQuit = 1
+WLFDeleteOnQuit = 1
 
 ; Automatic SDF compilation
 ; Disables automatic compilation of SDF files in flows that support it.
@@ -411,29 +411,31 @@ DelayFileOpen = 1
 Project_Version = 6
 Project_DefaultLib = work
 Project_SortMethod = unused
-Project_Files_Count = 11
-Project_File_0 = C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/villegasmichael/datapath1.vhd
-Project_File_P_0 = vhdl_novitalcheck 0 file_type vhdl group_id 0 cover_nofec 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 0 vhdl_synth 0 vhdl_enable0In 0 folder {Top Level} last_compile 0 vhdl_disableopt 0 cover_excludedefault 0 vhdl_vital 0 vhdl_warn1 1 vhdl_showsource 0 vhdl_explicit 1 vhdl_warn2 1 vhdl_0InOptions {} cover_covercells 0 vhdl_warn3 1 vhdl_options {} cover_optlevel 3 voptflow 1 vhdl_warn4 1 ood 1 toggle - vhdl_warn5 1 compile_to work cover_noshort 0 compile_order 4 dont_compile 0 cover_nosub 0 vhdl_use93 2002
-Project_File_1 = C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/villegasmichael/comparator.vhd
-Project_File_P_1 = vhdl_novitalcheck 0 file_type vhdl group_id 0 cover_nofec 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 0 vhdl_synth 0 vhdl_enable0In 0 folder {Top Level} last_compile 0 vhdl_disableopt 0 cover_excludedefault 0 vhdl_vital 0 vhdl_warn1 1 vhdl_showsource 0 vhdl_explicit 1 vhdl_warn2 1 vhdl_0InOptions {} cover_covercells 0 vhdl_warn3 1 vhdl_options {} cover_optlevel 3 voptflow 1 vhdl_warn4 1 ood 1 toggle - vhdl_warn5 1 compile_to work cover_noshort 0 compile_order 1 dont_compile 0 cover_nosub 0 vhdl_use93 2002
-Project_File_2 = C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/villegasmichael/subtractor.vhd
-Project_File_P_2 = vhdl_novitalcheck 0 file_type vhdl group_id 0 cover_nofec 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 0 vhdl_synth 0 vhdl_enable0In 0 folder {Top Level} last_compile 0 vhdl_disableopt 0 cover_excludedefault 0 vhdl_vital 0 vhdl_warn1 1 vhdl_showsource 0 vhdl_explicit 1 vhdl_warn2 1 vhdl_0InOptions {} cover_covercells 0 vhdl_warn3 1 vhdl_options {} cover_optlevel 3 voptflow 1 vhdl_warn4 1 ood 1 toggle - vhdl_warn5 1 compile_to work cover_noshort 0 compile_order 9 dont_compile 0 cover_nosub 0 vhdl_use93 2002
-Project_File_3 = C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/villegasmichael/datapath2.vhd
-Project_File_P_3 = vhdl_novitalcheck 0 file_type vhdl group_id 0 cover_nofec 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 0 vhdl_synth 0 vhdl_enable0In 0 folder {Top Level} last_compile 0 vhdl_disableopt 0 cover_excludedefault 0 vhdl_vital 0 vhdl_warn1 1 vhdl_showsource 0 vhdl_explicit 1 vhdl_warn2 1 vhdl_0InOptions {} cover_covercells 0 vhdl_warn3 1 vhdl_options {} cover_optlevel 3 voptflow 1 vhdl_warn4 1 ood 1 toggle - vhdl_warn5 1 compile_to work cover_noshort 0 compile_order 5 dont_compile 0 cover_nosub 0 vhdl_use93 2002
-Project_File_4 = C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/villegasmichael/mux_2x1.vhd
-Project_File_P_4 = vhdl_novitalcheck 0 file_type vhdl group_id 0 cover_nofec 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 0 vhdl_synth 0 vhdl_enable0In 0 folder {Top Level} last_compile 0 vhdl_disableopt 0 cover_excludedefault 0 vhdl_vital 0 vhdl_warn1 1 vhdl_showsource 0 vhdl_explicit 1 vhdl_warn2 1 vhdl_0InOptions {} cover_covercells 0 vhdl_warn3 1 vhdl_options {} cover_optlevel 3 voptflow 1 vhdl_warn4 1 ood 1 toggle - vhdl_warn5 1 compile_to work cover_noshort 0 compile_order 7 dont_compile 0 cover_nosub 0 vhdl_use93 2002
-Project_File_5 = C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/villegasmichael/reg.vhd
-Project_File_P_5 = vhdl_novitalcheck 0 file_type vhdl group_id 0 cover_nofec 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 0 vhdl_synth 0 vhdl_enable0In 0 folder {Top Level} last_compile 0 vhdl_disableopt 0 cover_excludedefault 0 vhdl_vital 0 vhdl_warn1 1 vhdl_showsource 0 vhdl_explicit 1 vhdl_warn2 1 vhdl_0InOptions {} cover_covercells 0 vhdl_warn3 1 vhdl_options {} cover_optlevel 3 voptflow 1 vhdl_warn4 1 ood 1 toggle - vhdl_warn5 1 compile_to work cover_noshort 0 compile_order 8 dont_compile 0 cover_nosub 0 vhdl_use93 2002
-Project_File_6 = C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/villegasmichael/gcd.vhd
-Project_File_P_6 = vhdl_novitalcheck 0 file_type vhdl group_id 0 cover_nofec 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 0 vhdl_synth 0 vhdl_enable0In 0 folder {Top Level} last_compile 0 vhdl_disableopt 0 cover_excludedefault 0 vhdl_vital 0 vhdl_warn1 1 vhdl_showsource 0 vhdl_explicit 1 vhdl_warn2 1 vhdl_0InOptions {} cover_covercells 0 vhdl_warn3 1 vhdl_options {} cover_optlevel 3 voptflow 1 vhdl_warn4 1 ood 1 toggle - vhdl_warn5 1 compile_to work cover_noshort 0 compile_order 6 dont_compile 0 cover_nosub 0 vhdl_use93 2002
-Project_File_7 = C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/villegasmichael/ctrl1.vhd
-Project_File_P_7 = vhdl_novitalcheck 0 file_type vhdl group_id 0 cover_nofec 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 0 vhdl_synth 0 vhdl_enable0In 0 folder {Top Level} last_compile 0 vhdl_disableopt 0 cover_excludedefault 0 vhdl_vital 0 vhdl_warn1 1 vhdl_showsource 0 vhdl_explicit 1 vhdl_warn2 1 vhdl_0InOptions {} cover_covercells 0 vhdl_warn3 1 vhdl_options {} cover_optlevel 3 voptflow 1 vhdl_warn4 1 ood 1 toggle - vhdl_warn5 1 compile_to work cover_noshort 0 compile_order 2 dont_compile 0 cover_nosub 0 vhdl_use93 2002
-Project_File_8 = C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/villegasmichael/ctrl2.vhd
-Project_File_P_8 = vhdl_novitalcheck 0 file_type vhdl group_id 0 cover_nofec 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 0 vhdl_synth 0 vhdl_enable0In 0 folder {Top Level} last_compile 0 vhdl_disableopt 0 cover_excludedefault 0 vhdl_vital 0 vhdl_warn1 1 vhdl_showsource 0 vhdl_explicit 1 vhdl_warn2 1 vhdl_0InOptions {} cover_covercells 0 vhdl_warn3 1 vhdl_options {} cover_optlevel 3 voptflow 1 vhdl_warn4 1 ood 1 toggle - vhdl_warn5 1 compile_to work cover_noshort 0 compile_order 3 dont_compile 0 cover_nosub 0 vhdl_use93 2002
-Project_File_9 = C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/villegasmichael/top_level.vhd
-Project_File_P_9 = vhdl_novitalcheck 0 file_type vhdl group_id 0 cover_nofec 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 0 vhdl_synth 0 vhdl_enable0In 0 folder {Top Level} last_compile 0 vhdl_disableopt 0 cover_excludedefault 0 vhdl_vital 0 vhdl_warn1 1 vhdl_showsource 0 vhdl_explicit 1 vhdl_warn2 1 vhdl_0InOptions {} cover_covercells 0 vhdl_warn3 1 vhdl_options {} cover_optlevel 3 voptflow 1 vhdl_warn4 1 ood 1 toggle - vhdl_warn5 1 compile_to work cover_noshort 0 compile_order 10 dont_compile 0 cover_nosub 0 vhdl_use93 2002
+Project_Files_Count = 12
+Project_File_0 = C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/hoffmanmichael/datapath1.vhd
+Project_File_P_0 = vhdl_novitalcheck 0 file_type vhdl group_id 0 cover_nofec 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 1 vhdl_synth 0 vhdl_enable0In 0 folder {Top Level} last_compile 0 vhdl_disableopt 0 cover_excludedefault 0 vhdl_vital 0 vhdl_warn1 1 vhdl_showsource 0 vhdl_explicit 0 vhdl_warn2 1 vhdl_0InOptions {} cover_covercells 0 vhdl_warn3 1 vhdl_options {} cover_optlevel 3 voptflow 1 vhdl_warn4 1 ood 1 toggle - vhdl_warn5 1 compile_to work cover_noshort 0 compile_order 4 dont_compile 0 cover_nosub 0 vhdl_use93 2002
+Project_File_1 = C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/hoffmanmichael/comparator.vhd
+Project_File_P_1 = vhdl_novitalcheck 0 file_type vhdl group_id 0 cover_nofec 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 1 vhdl_synth 0 vhdl_enable0In 0 folder {Top Level} last_compile 0 vhdl_disableopt 0 cover_excludedefault 0 vhdl_vital 0 vhdl_warn1 1 vhdl_showsource 0 vhdl_explicit 0 vhdl_warn2 1 vhdl_0InOptions {} cover_covercells 0 vhdl_warn3 1 vhdl_options {} cover_optlevel 3 voptflow 1 vhdl_warn4 1 ood 1 toggle - vhdl_warn5 1 compile_to work cover_noshort 0 compile_order 1 dont_compile 0 cover_nosub 0 vhdl_use93 2002
+Project_File_2 = C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/hoffmanmichael/subtractor.vhd
+Project_File_P_2 = vhdl_novitalcheck 0 file_type vhdl group_id 0 cover_nofec 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 1 vhdl_synth 0 vhdl_enable0In 0 folder {Top Level} last_compile 0 vhdl_disableopt 0 cover_excludedefault 0 vhdl_vital 0 vhdl_warn1 1 vhdl_showsource 0 vhdl_explicit 0 vhdl_warn2 1 vhdl_0InOptions {} cover_covercells 0 vhdl_warn3 1 vhdl_options {} cover_optlevel 3 voptflow 1 vhdl_warn4 1 ood 1 toggle - vhdl_warn5 1 compile_to work cover_noshort 0 compile_order 10 dont_compile 0 cover_nosub 0 vhdl_use93 2002
+Project_File_3 = C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/hoffmanmichael/datapath2.vhd
+Project_File_P_3 = vhdl_novitalcheck 0 file_type vhdl group_id 0 cover_nofec 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 1 vhdl_synth 0 vhdl_enable0In 0 folder {Top Level} last_compile 0 vhdl_disableopt 0 cover_excludedefault 0 vhdl_vital 0 vhdl_warn1 1 vhdl_showsource 0 vhdl_explicit 0 vhdl_warn2 1 vhdl_0InOptions {} cover_covercells 0 vhdl_warn3 1 vhdl_options {} cover_optlevel 3 voptflow 1 vhdl_warn4 1 ood 1 toggle - vhdl_warn5 1 compile_to work cover_noshort 0 compile_order 5 dont_compile 0 cover_nosub 0 vhdl_use93 2002
+Project_File_4 = C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/hoffmanmichael/mux_2_1.vhd
+Project_File_P_4 = vhdl_novitalcheck 0 file_type vhdl group_id 0 cover_nofec 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 1 vhdl_synth 0 vhdl_enable0In 0 folder {Top Level} last_compile 0 vhdl_disableopt 0 cover_excludedefault 0 vhdl_vital 0 vhdl_warn1 1 vhdl_showsource 0 vhdl_explicit 0 vhdl_warn2 1 vhdl_0InOptions {} cover_covercells 0 vhdl_warn3 1 vhdl_options {} cover_optlevel 3 voptflow 1 vhdl_warn4 1 ood 1 toggle - vhdl_warn5 1 compile_to work cover_noshort 0 compile_order 9 dont_compile 0 cover_nosub 0 vhdl_use93 2002
+Project_File_5 = C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/hoffmanmichael/decoder7seg.vhd
+Project_File_P_5 = vhdl_novitalcheck 0 file_type vhdl group_id 0 cover_nofec 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 1 vhdl_synth 0 vhdl_enable0In 0 folder {Top Level} last_compile 0 vhdl_disableopt 0 cover_excludedefault 0 vhdl_vital 0 vhdl_warn1 1 vhdl_showsource 0 vhdl_explicit 0 vhdl_warn2 1 vhdl_0InOptions {} cover_covercells 0 vhdl_warn3 1 vhdl_options {} cover_optlevel 3 voptflow 1 vhdl_warn4 1 ood 1 toggle - vhdl_warn5 1 compile_to work cover_noshort 0 compile_order 6 dont_compile 0 cover_nosub 0 vhdl_use93 2002
+Project_File_6 = C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/hoffmanmichael/gcd.vhd
+Project_File_P_6 = vhdl_novitalcheck 0 file_type vhdl group_id 0 cover_nofec 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 1 vhdl_synth 0 vhdl_enable0In 0 folder {Top Level} last_compile 0 vhdl_disableopt 0 cover_excludedefault 0 vhdl_vital 0 vhdl_warn1 1 vhdl_showsource 0 vhdl_explicit 0 vhdl_warn2 1 vhdl_0InOptions {} cover_covercells 0 vhdl_warn3 1 vhdl_options {} cover_optlevel 3 voptflow 1 vhdl_warn4 1 ood 1 toggle - vhdl_warn5 1 compile_to work cover_noshort 0 compile_order 8 dont_compile 0 cover_nosub 0 vhdl_use93 2002
+Project_File_7 = C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/hoffmanmichael/ctrl1.vhd
+Project_File_P_7 = vhdl_novitalcheck 0 file_type vhdl group_id 0 cover_nofec 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 1 vhdl_synth 0 vhdl_enable0In 0 folder {Top Level} last_compile 0 vhdl_disableopt 0 cover_excludedefault 0 vhdl_vital 0 vhdl_warn1 1 vhdl_showsource 0 vhdl_explicit 0 vhdl_warn2 1 vhdl_0InOptions {} cover_covercells 0 vhdl_warn3 1 vhdl_options {} cover_optlevel 3 voptflow 1 vhdl_warn4 1 ood 1 toggle - vhdl_warn5 1 compile_to work cover_noshort 0 compile_order 2 dont_compile 0 cover_nosub 0 vhdl_use93 2002
+Project_File_8 = C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/hoffmanmichael/ctrl2.vhd
+Project_File_P_8 = vhdl_novitalcheck 0 file_type vhdl group_id 0 cover_nofec 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 1 vhdl_synth 0 vhdl_enable0In 0 folder {Top Level} last_compile 0 vhdl_disableopt 0 cover_excludedefault 0 vhdl_vital 0 vhdl_warn1 1 vhdl_showsource 0 vhdl_explicit 0 vhdl_warn2 1 vhdl_0InOptions {} cover_covercells 0 vhdl_warn3 1 vhdl_options {} cover_optlevel 3 voptflow 1 vhdl_warn4 1 ood 1 toggle - vhdl_warn5 1 compile_to work cover_noshort 0 compile_order 3 dont_compile 0 cover_nosub 0 vhdl_use93 2002
+Project_File_9 = C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/hoffmanmichael/top_level.vhd
+Project_File_P_9 = vhdl_novitalcheck 0 file_type vhdl group_id 0 cover_nofec 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 1 vhdl_synth 0 vhdl_enable0In 0 folder {Top Level} last_compile 0 vhdl_disableopt 0 cover_excludedefault 0 vhdl_vital 0 vhdl_warn1 1 vhdl_showsource 0 vhdl_explicit 0 vhdl_warn2 1 vhdl_0InOptions {} cover_covercells 0 vhdl_warn3 1 vhdl_options {} cover_optlevel 3 voptflow 1 vhdl_warn4 1 ood 1 toggle - vhdl_warn5 1 compile_to work cover_noshort 0 compile_order 11 dont_compile 0 cover_nosub 0 vhdl_use93 2002
 Project_File_10 = all_gcd_true_testbench.vhd
-Project_File_P_10 = vhdl_novitalcheck 0 file_type vhdl group_id 0 cover_nofec 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 0 vhdl_synth 0 vhdl_enable0In 0 folder {Top Level} last_compile 1614727790 vhdl_disableopt 0 cover_excludedefault 0 vhdl_vital 0 vhdl_warn1 1 vhdl_showsource 0 vhdl_explicit 1 vhdl_warn2 1 vhdl_0InOptions {} cover_covercells 0 vhdl_warn3 1 vhdl_options {} cover_optlevel 3 voptflow 1 vhdl_warn4 1 ood 0 toggle - vhdl_warn5 1 compile_to work cover_noshort 0 compile_order 0 dont_compile 0 cover_nosub 0 vhdl_use93 2002
+Project_File_P_10 = vhdl_novitalcheck 0 file_type vhdl group_id 0 cover_nofec 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 0 vhdl_synth 0 vhdl_enable0In 0 folder {Top Level} last_compile 1614727790 vhdl_disableopt 0 vhdl_vital 0 cover_excludedefault 0 vhdl_warn1 1 vhdl_warn2 1 vhdl_explicit 1 vhdl_showsource 0 vhdl_warn3 1 cover_covercells 0 vhdl_0InOptions {} vhdl_warn4 1 voptflow 1 cover_optlevel 3 vhdl_options {} vhdl_warn5 1 toggle - ood 0 cover_noshort 0 compile_to work compile_order 0 cover_nosub 0 dont_compile 0 vhdl_use93 2002
+Project_File_11 = C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/hoffmanmichael/en_register.vhd
+Project_File_P_11 = vhdl_novitalcheck 0 file_type vhdl group_id 0 cover_nofec 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 1 vhdl_synth 0 vhdl_enable0In 0 folder {Top Level} last_compile 0 vhdl_disableopt 0 cover_excludedefault 0 vhdl_vital 0 vhdl_warn1 1 vhdl_showsource 0 vhdl_explicit 0 vhdl_warn2 1 vhdl_0InOptions {} cover_covercells 0 vhdl_warn3 1 vhdl_options {} cover_optlevel 3 voptflow 1 vhdl_warn4 1 ood 1 toggle - vhdl_warn5 1 compile_to work cover_noshort 0 compile_order 7 dont_compile 0 cover_nosub 0 vhdl_use93 2002
 Project_Sim_Count = 0
 Project_Folder_Count = 0
 Echo_Compile_Output = 0

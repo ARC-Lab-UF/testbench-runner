@@ -8,40 +8,40 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Users/keeth/Desktop/TA folder/Spring 21/Modelsim_tb 21/Lab5
+Z0 dC:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Modelsim_tb 21/Lab5
 Eall_gcd_true_testbench
 Z1 w1614727790
 Z2 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
 Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z4 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
-!i122 26
+!i122 24
 R0
-Z5 8C:/Users/keeth/Desktop/TA folder/Spring 21/Modelsim_tb 21/Lab5/all_gcd_true_testbench.vhd
-Z6 FC:/Users/keeth/Desktop/TA folder/Spring 21/Modelsim_tb 21/Lab5/all_gcd_true_testbench.vhd
+Z5 8C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Modelsim_tb 21/Lab5/all_gcd_true_testbench.vhd
+Z6 FC:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Modelsim_tb 21/Lab5/all_gcd_true_testbench.vhd
 l0
 L5 1
-VQnM;H@>Z;MIb[^89FYjH]0
+VN3i;F0nae5TA[OXMBzE6E0
 !s100 R?N80CeNX8d2N5elNWR_A0
 Z7 OV;C;2020.1;71
 32
-Z8 !s110 1615410583
+Z8 !s110 1615995942
 !i10b 1
-Z9 !s108 1615410583.000000
-Z10 !s90 -work|work|-2002|-quiet|-stats=none|C:/Users/keeth/Desktop/TA folder/Spring 21/Modelsim_tb 21/Lab5/all_gcd_true_testbench.vhd|
-Z11 !s107 C:/Users/keeth/Desktop/TA folder/Spring 21/Modelsim_tb 21/Lab5/all_gcd_true_testbench.vhd|
+Z9 !s108 1615995942.000000
+Z10 !s90 -work|work|-2002|-quiet|-suppress|1195,3009|-stats=none|C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Modelsim_tb 21/Lab5/all_gcd_true_testbench.vhd|
+Z11 !s107 C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Modelsim_tb 21/Lab5/all_gcd_true_testbench.vhd|
 !i113 1
-Z12 o-quiet -work work -2002
-Z13 tExplicit 1 CvgOpt 0
+Z12 o-suppress 1195,3009 -quiet -work work -2002
+Z13 tQuiet 1 CvgOpt 0
 Atb
-Z14 DEx4 work 3 gcd 0 22 5Ymc^XY8P2M6P]RU:[Xo<1
+Z14 DEx4 work 3 gcd 0 22 ]@M?13LRk_46?Hz@Z1S733
 R2
 R3
 R4
-DEx4 work 22 all_gcd_true_testbench 0 22 QnM;H@>Z;MIb[^89FYjH]0
-!i122 26
+DEx4 work 22 all_gcd_true_testbench 0 22 N3i;F0nae5TA[OXMBzE6E0
+!i122 24
 l35
 L8 191
-V^MX9C>MgQWgKaFM?^E6GE1
+Vm0EA[m;`:@nFA2Qd^^l;P3
 !s100 W`5:PY<OXUANGi4io]_>90
 R7
 32
@@ -55,585 +55,543 @@ R12
 R13
 Ecomparator
 Z15 w1615410405
-Z16 DPx4 ieee 9 math_real 0 22 gNk<PdFJ<XNPcfef`f?Z81
-R2
 R3
 R4
-!i122 27
+!i122 25
 R0
-Z17 8C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/valdezmendozajonathan/Comparator.vhd
-Z18 FC:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/valdezmendozajonathan/Comparator.vhd
+Z16 8C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/bhatyashasvi/comparator.vhd
+Z17 FC:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/bhatyashasvi/comparator.vhd
 l0
-L7 1
-V7cT1zR26BUoccYmEoPNUR2
-!s100 C4fUoOY3zESXdB<gLbUj^2
+L4 1
+VK8leXY745YjFi@O<eUdVd3
+!s100 E2G:DY_Lkm>h==b>OSA]h2
 R7
 32
-R8
+Z18 !s110 1615995943
 !i10b 1
 R9
-Z19 !s90 -work|work|-2002|-quiet|-stats=none|C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/valdezmendozajonathan/Comparator.vhd|
-Z20 !s107 C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/valdezmendozajonathan/Comparator.vhd|
+Z19 !s90 -work|work|-2002|-quiet|-stats=none|C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/bhatyashasvi/comparator.vhd|
+Z20 !s107 C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/bhatyashasvi/comparator.vhd|
 !i113 1
-R12
+Z21 o-quiet -work work -2002
 R13
 Abhv
-R16
-R2
 R3
 R4
-Z21 DEx4 work 10 comparator 0 22 7cT1zR26BUoccYmEoPNUR2
-!i122 27
-l20
-L17 26
-VLlJ^mEBE?UB]>k7Sa:lRo3
-!s100 FT3d1j8a=_d=zmEF6_B0Z2
+Z22 DEx4 work 10 comparator 0 22 K8leXY745YjFi@O<eUdVd3
+!i122 25
+l13
+L12 19
+V17K^IHQ>Ql2UQCHLLiigB2
+!s100 IhkUOPB?5zHhj7ClC@XW;0
 R7
 32
-R8
+R18
 !i10b 1
 R9
 R19
 R20
 !i113 1
-R12
+R21
 R13
 Ectrl1
 R15
-R16
 R2
 R3
 R4
-!i122 28
+!i122 26
 R0
-Z22 8C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/valdezmendozajonathan/ctrl1.vhd
-Z23 FC:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/valdezmendozajonathan/ctrl1.vhd
+Z23 8C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/bhatyashasvi/ctrl1.vhd
+Z24 FC:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/bhatyashasvi/ctrl1.vhd
 l0
-L7 1
-Vz5UzDdolGZBdIf7I7H=i61
-!s100 >NUZdMjl8U[>Xj;Lm3]Wh2
+L5 1
+VQJ3BOWY<T8i8HbllU[DE62
+!s100 I_CY>8fY>eYGFaTFVKoVo1
 R7
 32
-Z24 !s110 1615410584
+R18
 !i10b 1
-R9
-Z25 !s90 -work|work|-2002|-quiet|-stats=none|C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/valdezmendozajonathan/ctrl1.vhd|
-Z26 !s107 C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/valdezmendozajonathan/ctrl1.vhd|
+Z25 !s108 1615995943.000000
+Z26 !s90 -work|work|-2002|-quiet|-stats=none|C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/bhatyashasvi/ctrl1.vhd|
+Z27 !s107 C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/bhatyashasvi/ctrl1.vhd|
 !i113 1
-R12
+R21
 R13
 Abhv
-R16
 R2
 R3
 R4
-Z27 DEx4 work 5 ctrl1 0 22 z5UzDdolGZBdIf7I7H=i61
-!i122 28
-l27
-L22 102
-VeD5f>3[cAQB^lc;b>^OV82
-!s100 5cYQTGMzRF=RmQB_4Uh>62
+Z28 DEx4 work 5 ctrl1 0 22 QJ3BOWY<T8i8HbllU[DE62
+!i122 26
+l15
+L12 83
+VO=DHl^E7?T<?QCCd;nX5L2
+!s100 Rg@<I=?S_?QCTZzZToL^E1
 R7
 32
-R24
+R18
 !i10b 1
-R9
 R25
 R26
+R27
 !i113 1
-R12
+R21
 R13
 Ectrl2
 R15
-R16
 R2
 R3
 R4
-!i122 29
+!i122 27
 R0
-Z28 8C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/valdezmendozajonathan/ctrl2.vhd
-Z29 FC:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/valdezmendozajonathan/ctrl2.vhd
+Z29 8C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/bhatyashasvi/ctrl2.vhd
+Z30 FC:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/bhatyashasvi/ctrl2.vhd
 l0
-L7 1
-V`6ZAOXLO^b?RHbd51l]2_1
-!s100 SlFc?7==QPV5YfL@eLjJd0
+L5 1
+Vj?TgRL_7oO4]fFD?:V]]h2
+!s100 kYHb?0i[VS:@`>o6A]PW53
 R7
 32
-R24
+R18
 !i10b 1
-Z30 !s108 1615410584.000000
-Z31 !s90 -work|work|-2002|-quiet|-stats=none|C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/valdezmendozajonathan/ctrl2.vhd|
-Z32 !s107 C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/valdezmendozajonathan/ctrl2.vhd|
+R25
+Z31 !s90 -work|work|-2002|-quiet|-stats=none|C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/bhatyashasvi/ctrl2.vhd|
+Z32 !s107 C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/bhatyashasvi/ctrl2.vhd|
 !i113 1
-R12
+R21
 R13
 Abhv
-R16
 R2
 R3
 R4
-Z33 DEx4 work 5 ctrl2 0 22 `6ZAOXLO^b?RHbd51l]2_1
-!i122 29
-l28
-L23 99
-VTB<]ZUU^e2iEDAY?n>>SE1
-!s100 9[:OOT_M`fBoAZd6Q>gjM1
+Z33 DEx4 work 5 ctrl2 0 22 j?TgRL_7oO4]fFD?:V]]h2
+!i122 27
+l15
+L12 89
+V`HH?]kdR6Q[I2d@13jO?j1
+!s100 Z7b7:EDYjab<M1mPQ5ilf1
 R7
 32
-R24
+R18
 !i10b 1
-R30
+R25
 R31
 R32
 !i113 1
-R12
+R21
 R13
 Edatapath1
 R15
-R16
-R2
 R3
 R4
-!i122 30
+!i122 28
 R0
-Z34 8C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/valdezmendozajonathan/datapath1.vhd
-Z35 FC:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/valdezmendozajonathan/datapath1.vhd
+Z34 8C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/bhatyashasvi/datapath1.vhd
+Z35 FC:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/bhatyashasvi/datapath1.vhd
 l0
-L8 1
-V6]MYW0Kho=9`1Fz6Qg7[D1
-!s100 j346CUBh5`bL1_LUgTI`M1
+L4 1
+VF[m@Lf^YD`UaTS_T14DR^1
+!s100 cDfROV]]LT[>aF`5OgKe50
 R7
 32
-R24
+R18
 !i10b 1
-R30
-Z36 !s90 -work|work|-2002|-quiet|-stats=none|C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/valdezmendozajonathan/datapath1.vhd|
-Z37 !s107 C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/valdezmendozajonathan/datapath1.vhd|
+R25
+Z36 !s90 -work|work|-2002|-quiet|-stats=none|C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/bhatyashasvi/datapath1.vhd|
+Z37 !s107 C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/bhatyashasvi/datapath1.vhd|
 !i113 1
-R12
+R21
 R13
 Astr
-R21
-Z38 DEx4 work 10 subtractor 0 22 mS`Q0MNYXDk[EF^NYmNzf2
-Z39 DEx4 work 7 mux_2x1 0 22 ^08UbomBT^[]_z2NfdW`z2
-Z40 DEx4 work 7 registr 0 22 @5>ZW@7>:oQH@fXOFbELV0
-R16
 R2
+Z38 DEx4 work 3 sub 0 22 AZHFT_H_Yek:8UH[26DE52
+R22
+Z39 DEx4 work 3 reg 0 22 c5na>9V[lVLN6:O`;3T9D2
+Z40 DEx4 work 3 mux 0 22 RM:bMQYXXN]i86me_1Yiz0
 R3
 R4
-Z41 DEx4 work 9 datapath1 0 22 6]MYW0Kho=9`1Fz6Qg7[D1
-!i122 30
-l28
-L23 94
-VblG@BlafeMR^Q4z7E>c8P2
-!s100 eFTSJ9=noaN@9BAbPDPQ53
+Z41 DEx4 work 9 datapath1 0 22 F[m@Lf^YD`UaTS_T14DR^1
+!i122 28
+l30
+L21 93
+V]1e^C[63]EjRd1HSOAHoJ1
+!s100 K@O<H@nYWPRXTX;6V_^`X2
 R7
 32
-R24
+R18
 !i10b 1
-R30
+R25
 R36
 R37
 !i113 1
-R12
+R21
 R13
 Edatapath2
 R15
-R16
-R2
 R3
 R4
-!i122 31
+!i122 29
 R0
-Z42 8C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/valdezmendozajonathan/datapath2.vhd
-Z43 FC:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/valdezmendozajonathan/datapath2.vhd
+Z42 8C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/bhatyashasvi/datapath2.vhd
+Z43 FC:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/bhatyashasvi/datapath2.vhd
 l0
-L8 1
-V]L8VNP9h=cgP2Q6?JzMO=0
-!s100 <IVb`5IKeSS;UGM64TbNR3
+L4 1
+VK>CdkBO9hTGi2hOiTW;@g3
+!s100 igDanZ^_EiA^e1_R;>nCL1
 R7
 32
-R24
+R18
 !i10b 1
-R30
-Z44 !s90 -work|work|-2002|-quiet|-stats=none|C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/valdezmendozajonathan/datapath2.vhd|
-Z45 !s107 C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/valdezmendozajonathan/datapath2.vhd|
+R25
+Z44 !s90 -work|work|-2002|-quiet|-stats=none|C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/bhatyashasvi/datapath2.vhd|
+Z45 !s107 C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/bhatyashasvi/datapath2.vhd|
 !i113 1
-R12
+R21
 R13
 Astr
-R21
+R2
 R38
+R22
 R39
 R40
-R16
-R2
 R3
 R4
-Z46 DEx4 work 9 datapath2 0 22 ]L8VNP9h=cgP2Q6?JzMO=0
-!i122 31
-l29
-L23 108
-VEf`>B;YK=eEnSKJl0N9Xe0
-!s100 A^Ao@kA9GSKE<3FZcEoX:3
+Z46 DEx4 work 9 datapath2 0 22 K>CdkBO9hTGi2hOiTW;@g3
+!i122 29
+l31
+L21 106
+VfXKRn=lV6XG^BBib_B=Q61
+!s100 f@R5NmGmdFQ]oV:jZ<0UI3
 R7
 32
-R24
+R18
 !i10b 1
-R30
+R25
 R44
 R45
 !i113 1
-R12
+R21
 R13
 Edecoder7seg
 R15
-R2
 R3
 R4
-!i122 32
+!i122 30
 R0
-Z47 8C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/valdezmendozajonathan/decoder7seg.vhd
-Z48 FC:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/valdezmendozajonathan/decoder7seg.vhd
+Z47 8C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/bhatyashasvi/decoder7seg.vhd
+Z48 FC:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/bhatyashasvi/decoder7seg.vhd
 l0
-L5 1
-VWT84OI5h@3i=FFznCl^Y82
-!s100 A?LP=MQ29@IHP_?8TPzGc3
+L4 1
+VO`>eaIH2iSeloi?QgB]8S2
+!s100 YcZUZ_i53Uj77:lcLc?>N0
 R7
 32
-R24
+R18
 !i10b 1
-R30
-Z49 !s90 -work|work|-2002|-quiet|-stats=none|C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/valdezmendozajonathan/decoder7seg.vhd|
-Z50 !s107 C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/valdezmendozajonathan/decoder7seg.vhd|
+R25
+Z49 !s90 -work|work|-2002|-quiet|-stats=none|C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/bhatyashasvi/decoder7seg.vhd|
+Z50 !s107 C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/bhatyashasvi/decoder7seg.vhd|
 !i113 1
-R12
+R21
 R13
 Abhv
-R2
 R3
 R4
-DEx4 work 11 decoder7seg 0 22 WT84OI5h@3i=FFznCl^Y82
-!i122 32
-l13
-L11 28
-VJhAmcmBmXiUS;7@zGL77_0
-!s100 WikIFT8bE0RYEXm6RLGJV3
+Z51 DEx4 work 11 decoder7seg 0 22 O`>eaIH2iSeloi?QgB]8S2
+!i122 30
+l12
+L10 24
+V]cJZ_AKn5HI>KPGU^jBU:0
+!s100 Z1^?5[zIb[G5OPOmg7bUZ1
 R7
 32
-R24
+R18
 !i10b 1
-R30
+R25
 R49
 R50
 !i113 1
-R12
+R21
 R13
 Egcd
 R15
 R2
 R3
 R4
-!i122 33
+!i122 31
 R0
-Z51 8C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/valdezmendozajonathan/gcd.vhd
-Z52 FC:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/valdezmendozajonathan/gcd.vhd
+Z52 8C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/bhatyashasvi/gcd.vhd
+Z53 FC:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/bhatyashasvi/gcd.vhd
 l0
-L6 1
-V5Ymc^XY8P2M6P]RU:[Xo<1
-!s100 O5K1F`DNL]QUV>X0aJ9a43
+L5 1
+V]@M?13LRk_46?Hz@Z1S733
+!s100 8A1flM3]Bg6kGeiS?]go=1
 R7
 32
-R24
+Z54 !s110 1615995944
 !i10b 1
-R30
-Z53 !s90 -work|work|-2002|-quiet|-stats=none|C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/valdezmendozajonathan/gcd.vhd|
-Z54 !s107 C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/valdezmendozajonathan/gcd.vhd|
+R25
+Z55 !s90 -work|work|-2002|-quiet|-stats=none|C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/bhatyashasvi/gcd.vhd|
+Z56 !s107 C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/bhatyashasvi/gcd.vhd|
 !i113 1
-R12
-R13
-Afsmd2
-R2
-R3
-R4
-R14
-!i122 33
-l181
-L179 7
-VX:@g>Va=0n@oTWm[cI^;I2
-!s100 I?DU0:6CHb_=3RU3H_7_l1
-R7
-32
-R24
-!i10b 1
-R30
-R53
-R54
-!i113 1
-R12
+R21
 R13
 Afsm_d2
 R33
-R16
 R46
 R2
 R3
 R4
 R14
-!i122 33
-l139
-L133 43
-VV07Pz7e[7nET0aHE<B9F^1
-!s100 mT9A@UDj@BWfzN[mPS?nG0
+!i122 31
+l144
+L132 54
+Vmd6m5PliZZEd<d4CCm00l0
+!s100 BjK1d:k2m^@_k2Lm9YLPU3
 R7
 32
-R24
-!i10b 1
-R30
-R53
 R54
+!i10b 1
+R25
+R55
+R56
 !i113 1
-R12
+R21
 R13
 Afsm_d1
-R27
-R16
+R28
 R41
 R2
 R3
 R4
 R14
-!i122 33
-l93
-L87 45
-VSSVFO3][HD8`eNPBS[R^D1
-!s100 IkNk`]YJkOnD]J;N5JEh=0
+!i122 31
+l92
+L82 49
+VULFo9SgL1OzdEGXh9mnX=2
+!s100 CQnig]36z2[1m7N9LWLUR0
 R7
 32
-R24
-!i10b 1
-R30
-R53
 R54
+!i10b 1
+R25
+R55
+R56
 !i113 1
-R12
+R21
 R13
 Afsmd
 R2
 R3
 R4
 R14
-!i122 33
-l25
-L19 67
-V@Z`bVacdU7RjZ9hnTJD]^0
-!s100 ZSPb`WRYbn:a8bd5m<FHa0
+!i122 31
+l22
+L18 63
+VEz2NZLd;EjE^G7jRP;;=d1
+!s100 ii[E`KcjP^[DU`bRHcO;I1
 R7
 32
-R24
-!i10b 1
-R30
-R53
 R54
+!i10b 1
+R25
+R55
+R56
 !i113 1
-R12
+R21
 R13
-Egcd_tb
+Emux
 R15
-R2
 R3
 R4
-!i122 34
+!i122 32
 R0
-Z55 8C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/valdezmendozajonathan/gcd_tb.vhd
-Z56 FC:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/valdezmendozajonathan/gcd_tb.vhd
-l0
-L6 1
-VRf6_^J`=X05O9Y12lEO1[3
-!s100 b<Nb47F:chG8YTMFCg78^0
-R7
-32
-Z57 !s110 1615410585
-!i10b 1
-Z58 !s108 1615410585.000000
-Z59 !s90 -work|work|-2002|-quiet|-stats=none|C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/valdezmendozajonathan/gcd_tb.vhd|
-Z60 !s107 C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/valdezmendozajonathan/gcd_tb.vhd|
-!i113 1
-R12
-R13
-Atb
-R14
-R2
-R3
-R4
-DEx4 work 6 gcd_tb 0 22 Rf6_^J`=X05O9Y12lEO1[3
-!i122 34
-l23
-L9 91
-VAm18BZ785560WYS=0eD`B1
-!s100 aMKNiQQb`zG5[^gk?jGoi1
-R7
-32
-R57
-!i10b 1
-R58
-R59
-R60
-!i113 1
-R12
-R13
-Emux_2x1
-Z61 w1615410561
-R2
-R3
-R4
-!i122 35
-R0
-Z62 8C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/valdezmendozajonathan/mux_2x1.vhd
-Z63 FC:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/valdezmendozajonathan/mux_2x1.vhd
-l0
-L5 1
-V^08UbomBT^[]_z2NfdW`z2
-!s100 DHJc@5hfdV868:k::Q][P0
-R7
-32
-R57
-!i10b 1
-R58
-Z64 !s90 -work|work|-2002|-quiet|-stats=none|C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/valdezmendozajonathan/mux_2x1.vhd|
-Z65 !s107 C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/valdezmendozajonathan/mux_2x1.vhd|
-!i113 1
-R12
-R13
-Abhv
-R2
-R3
-R4
-R39
-!i122 35
-l17
-L16 11
-VCofMc;RfDo17P^<YFL4S;3
-!s100 9ZDT58V3S7C4S>lj6LOkO1
-R7
-32
-R57
-!i10b 1
-R58
-R64
-R65
-!i113 1
-R12
-R13
-Eregistr
-R15
-R16
-R2
-R3
-R4
-!i122 36
-R0
-Z66 8C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/valdezmendozajonathan/registr.vhd
-Z67 FC:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/valdezmendozajonathan/registr.vhd
+Z57 8C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/bhatyashasvi/mux.vhd
+Z58 FC:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/bhatyashasvi/mux.vhd
 l0
 L7 1
-V@5>ZW@7>:oQH@fXOFbELV0
-!s100 Z><hkn9Ic44X@j@RWkePA3
+VRM:bMQYXXN]i86me_1Yiz0
+!s100 9F7T=g8T]bQ>IGM@QJ6z23
 R7
 32
-R57
+R54
 !i10b 1
-R58
-Z68 !s90 -work|work|-2002|-quiet|-stats=none|C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/valdezmendozajonathan/registr.vhd|
-Z69 !s107 C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/valdezmendozajonathan/registr.vhd|
+Z59 !s108 1615995944.000000
+Z60 !s90 -work|work|-2002|-quiet|-stats=none|C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/bhatyashasvi/mux.vhd|
+Z61 !s107 C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/bhatyashasvi/mux.vhd|
 !i113 1
-R12
+R21
 R13
 Abhv
-R16
-R2
 R3
 R4
 R40
-!i122 36
-l23
-L20 21
-VF7PT?hQ?ThNSU?a?=`2Tn2
-!s100 o5>=VZINTE6QSK[8lYZf01
+!i122 32
+l17
+Z62 L16 13
+VSZZ5H8Onjl1<LMCM<XOQ92
+!s100 >:SAWWaYnPW0gI2<OBiAW1
 R7
 32
-R57
+R54
 !i10b 1
-R58
-R68
-R69
+R59
+R60
+R61
 !i113 1
-R12
+R21
 R13
-Esubtractor
+Ereg
 R15
-R16
+R3
+R4
+!i122 33
+R0
+Z63 8C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/bhatyashasvi/reg.vhd
+Z64 FC:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/bhatyashasvi/reg.vhd
+l0
+L4 1
+Vc5na>9V[lVLN6:O`;3T9D2
+!s100 g<^5`k;ET0<gdFa:8dWHn1
+R7
+32
+R54
+!i10b 1
+R59
+Z65 !s90 -work|work|-2002|-quiet|-stats=none|C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/bhatyashasvi/reg.vhd|
+Z66 !s107 C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/bhatyashasvi/reg.vhd|
+!i113 1
+R21
+R13
+Abhv
+R3
+R4
+R39
+!i122 33
+l17
+R62
+V3Ncmb9CPSKAHZJA9Kd^dU3
+!s100 f;21U<:L]I6hU:JRDjjAB2
+R7
+32
+R54
+!i10b 1
+R59
+R65
+R66
+!i113 1
+R21
+R13
+Esub
+R15
 R2
 R3
 R4
-!i122 37
+!i122 34
 R0
-Z70 8C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/valdezmendozajonathan/subtractor.vhd
-Z71 FC:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/valdezmendozajonathan/subtractor.vhd
+Z67 8C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/bhatyashasvi/sub.vhd
+Z68 FC:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/bhatyashasvi/sub.vhd
 l0
-L8 1
-VmS`Q0MNYXDk[EF^NYmNzf2
-!s100 ?Q@iOi8S:BW=jGlZ8@d<j1
+L5 1
+VAZHFT_H_Yek:8UH[26DE52
+!s100 G7I]Cj3W^mWQO[g:1z;Y[1
 R7
 32
-R57
+R54
 !i10b 1
-R58
-Z72 !s90 -work|work|-2002|-quiet|-stats=none|C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/valdezmendozajonathan/subtractor.vhd|
-Z73 !s107 C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/valdezmendozajonathan/subtractor.vhd|
+R59
+Z69 !s90 -work|work|-2002|-quiet|-stats=none|C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/bhatyashasvi/sub.vhd|
+Z70 !s107 C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/bhatyashasvi/sub.vhd|
 !i113 1
-R12
+R21
 R13
 Abhv
-R16
 R2
 R3
 R4
 R38
-!i122 37
-l20
-L19 9
-VF@I^51`6G[QECTBZ_h@Rj2
-!s100 7_;MPij:Lm:h@D6QIQ0eL2
+!i122 34
+l14
+L13 10
+V<BIiKlT88K5a3@GJC5mgW1
+!s100 eTliBJWlV?`XNU>a<2<J12
 R7
 32
-R57
+R54
 !i10b 1
-R58
-R72
-R73
+R59
+R69
+R70
 !i113 1
-R12
+R21
 R13
 Etop_level
 R15
 R3
 R4
-!i122 38
+!i122 35
 R0
-8C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/valdezmendozajonathan/top_level.vhd
-FC:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/valdezmendozajonathan/top_level.vhd
+Z71 8C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/bhatyashasvi/top_level.vhd
+Z72 FC:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/bhatyashasvi/top_level.vhd
 l0
 L21 1
-VeMz_nZ4Y^b`N:WNJhSB_N0
-!s100 mJ9h9=C5LE=EfKN3jDONl1
+V>mXml@hMG>OJTfm]e<Bgl2
+!s100 _@Oga:0L@Y@Lm>YdHoi411
 R7
 32
-R57
+R54
 !i10b 1
-R58
-!s90 -work|work|-2002|-quiet|-stats=none|C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/valdezmendozajonathan/top_level.vhd|
-!s107 C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/valdezmendozajonathan/top_level.vhd|
+R59
+Z73 !s90 -work|work|-2002|-quiet|-stats=none|C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/bhatyashasvi/top_level.vhd|
+Z74 !s107 C:/Users/keeth/Desktop/TA folder/Spring 21/DD_Grader/Submissions/Lab5/bhatyashasvi/top_level.vhd|
 !i113 1
-R12
+R21
+R13
+Astr
+R3
+R4
+Z75 DEx4 work 9 top_level 0 22 >mXml@hMG>OJTfm]e<Bgl2
+!i122 35
+l73
+Z76 L42 95
+Z77 Vbloh:lJ3HhKzeN0[a89]R3
+Z78 !s100 ^iN?`_ENdI46czC6HK>bS2
+R7
+32
+R54
+!i10b 1
+R59
+R73
+R74
+!i113 1
+R21
+R13
+Ctop_level_cfg
+etop_level
+aSTR
+R51
+R2
+R14
+DAx4 work 9 top_level 3 str 22 bloh:lJ3HhKzeN0[a89]R3
+R3
+R4
+R75
+!i122 35
+R15
+R0
+R71
+R72
+l0
+L139 1
+V6W^gfh2:WLJ<?Y1AhUSVX2
+!s100 2M=TC]De??BF]76TEA4O<3
+R7
+32
+R54
+!i10b 1
+R59
+R73
+R74
+!i113 1
+R21
 R13
