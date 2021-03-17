@@ -12,7 +12,7 @@ def tcl_function(tclFile, project_mpf, resultList):
 
     tcl = 'project open {' + f'{os.path.abspath(project_mpf)}' + '}\n\n'
 
-    tcl += '''onElabError {resume}\nonerror {resume}\n#vdel -all\n'''
+    tcl += '''onElabError {resume}\nonerror {resume}\n\n'''
     
     tcl += '''proc currStudent {lines student} {
                 puts -nonewline "
@@ -40,13 +40,12 @@ Now working on $student Hit Enter to continue ==> "
                     }
                     vdel -all
                     vlib work
-                    project compileall
                 for {set i 1} {$i<=2} {incr i} {
                     foreach x $lines {
                     try {
                             eval $x
                         } on error {msg} {
-                            puts "FILE COMPILE ERRORS"
+                            puts ""
                         }
                     } 
                 }
@@ -72,7 +71,7 @@ foreach x $lines {
         tcl += x[0]
         tcl += '''
 quietly set ret [project compileall -n]
-quietly set result [string map {explicit quiet \\\ /} $ret]
+quietly set result [string map {explicit "quiet -suppress 1195,3009" \\\ / } $ret]
 quietly set lines [split $result "\\n"]'''
         tcl += f'''\ncurrStudent $lines {x[1]};\n\n'''
 
