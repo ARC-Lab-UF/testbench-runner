@@ -21,9 +21,14 @@ def zip_opener(lab, studentFile, submissions, delete_zip):
     with open(studentFile, "r") as f:
         studentList = f.read().splitlines()
         studentList = filter(None, studentList)
-        print(studentList)
+        # print(studentList)
         for x in studentList:
-            studentUserList.append( ''.join(x.lower().split()[::-1]) )
+            list_name = x.lower().split()
+            if (len(list_name) == 3):
+                studentUserList.append(list_name[1] + list_name[2] + list_name[0])
+
+            else:
+                studentUserList.append(list_name[1] + list_name[0])
 
     submissions_file_path = pathlib.Path(os.path.abspath(submissions))
 
@@ -94,5 +99,4 @@ def zip_opener(lab, studentFile, submissions, delete_zip):
         except:
             print("Couldn't Delete Zip File")
 
-    print("DONE")
 

@@ -21,9 +21,15 @@ def compile_modelsim(studentFile="studentList.txt", lab_dir = "Submissions/Lab4"
         studentList = f.read().splitlines()
         studentList = filter(None, studentList)
         for x in studentList:
-            studentUserList.append(''.join(x.lower().split()[::-1]) )
+            list_name = x.lower().split()
+            if (len(list_name) == 3):
+                studentUserList.append(list_name[1] + list_name[2] + list_name[0])
+
+            else:
+                studentUserList.append(list_name[1] + list_name[0])
 
     resultList=[]
+    print("\nStudents Found:")
     for x in studentUserList:
         try:
             realStudent = glob.glob(lab_dir+"/*"+x+"*")[0].split('\\''')[-1]
@@ -38,6 +44,7 @@ def compile_modelsim(studentFile="studentList.txt", lab_dir = "Submissions/Lab4"
         except:
             pass
 
+    print()
 
     tcl_out = tcl_function(tclFile, project_mpf, resultList)
         
