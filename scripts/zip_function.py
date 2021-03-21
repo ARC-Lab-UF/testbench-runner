@@ -17,6 +17,7 @@ def zip_opener(lab, studentFile, submissions, delete_zip):
 
     studentUserList=[]
     fileList=[]
+    print()
 
     with open(studentFile, "r") as f:
         studentList = f.read().splitlines()
@@ -28,7 +29,6 @@ def zip_opener(lab, studentFile, submissions, delete_zip):
 
             else:
                 studentUserList.append(list_name[1] + list_name[0])
-
 
     submissions_file_path = pathlib.Path(os.path.abspath(submissions))
 
@@ -54,7 +54,7 @@ def zip_opener(lab, studentFile, submissions, delete_zip):
 
 
     with zipfile.ZipFile(os.path.abspath(submissions)) as z:
-        z.extractall(pathDir, fileList)
+            z.extractall(pathDir, fileList)
 
     vhdl_list = []
 
@@ -66,15 +66,14 @@ def zip_opener(lab, studentFile, submissions, delete_zip):
         except:
             print("failed file List")
 
-
+        try:    
+        
             with zipfile.ZipFile( os.path.join(pathDir, x) ) as z:
                 z.extractall(newDir)
 
                 result = list(Path(newDir).rglob("*.[vV][hH][dD]*"))
                 y=[]
-
                 for x in result:
-
                     if 'vga_rom' in str(x):
                         continue
 
@@ -87,6 +86,10 @@ def zip_opener(lab, studentFile, submissions, delete_zip):
                 
             vhdl_list.append(y)
 
+
+        except:
+            print(f"{x}: falied zip")
+            pass
 
     for x in fileList:
         os.remove( os.path.join(pathDir, x) )
