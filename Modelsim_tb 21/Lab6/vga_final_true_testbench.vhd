@@ -293,28 +293,28 @@ begin -- TB
         wait for 20 ns;
         switch <= "0000000001";
 
-        wait until falling_edge(v_sync) for (100 * TIMEOUT);
-        wait until rising_edge(v_sync)  for (10  * ideal);
+        wait until falling_edge(v_sync) for (10 * TIMEOUT);
+        wait until rising_edge(v_sync)  for (2  * ideal);
 
         -- top right
         wait for 20 ns;
         switch <= "0000000010";
 
-        wait until falling_edge(v_sync) for (100 * TIMEOUT);
-        wait until rising_edge(v_sync)  for (10  * ideal);
+        wait until falling_edge(v_sync) for (10 * TIMEOUT);
+        wait until rising_edge(v_sync)  for (2  * ideal);
 
         -- bottom left
         wait for 20 ns;
         switch <= "0000000011";
 
-        wait until falling_edge(v_sync) for (100 * TIMEOUT);
-        wait until rising_edge(v_sync)  for (10  * ideal);
+        wait until falling_edge(v_sync) for (10 * TIMEOUT);
+        wait until rising_edge(v_sync)  for (2  * ideal);
 
         -- bottom right
         wait for 20 ns;
         switch <= "0000000100";
 
-        wait until falling_edge(v_sync) for (100 * TIMEOUT);
+        wait until falling_edge(v_sync) for (10 * TIMEOUT);
 
         clkEn <= '0';
 
