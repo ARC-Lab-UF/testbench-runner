@@ -15,6 +15,9 @@ def tcl_function(tclFile, project_mpf, resultList):
     tcl += '''onElabError {resume}\nonerror {resume}\n\n'''
     
     tcl += '''proc currStudent {lines student} {
+            set retry 1
+            while {$retry == 1} {
+                set retry 0
                 puts -nonewline "
 Enter 'q' to exit
 Enter 'n' for next student
@@ -57,7 +60,7 @@ Now working on $student Hit Enter to continue ==> "
                 }
                    
 '''
-    tcl += tclScript + '''\n}\n\n'''
+    tcl += tclScript + '''\n}\n}\n'''
 
     for x in resultList:
             
