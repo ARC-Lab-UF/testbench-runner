@@ -4,7 +4,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
-package VGA_LIB is
+package VGA_LIB_NOT is
 
   -----------------------------------------------------------------------------
   -- COUNTER VALUES FOR GENERATING H_SYNC AND V_SYNC
@@ -66,4 +66,4 @@ package VGA_LIB is
   constant BOTTOM_RIGHT : natural := 3;
   constant CENTER       : natural := 4;
 
-end VGA_LIB;
+end VGA_LIB_NOT;
