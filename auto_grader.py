@@ -1,31 +1,87 @@
-#!/usr/bin/env python
-__author__ = "Keeth Smith"
-
 import argparse
 import os
 from scripts.zip_function import zip_opener
 from scripts.sim_function import compile_modelsim
 
 
-if __name__ == '__main__':
+def main():
+    parser = argparse.ArgumentParser(
+        description="Interactive ModelSim testbench runner for Digital Design labs."
+    )
 
-    parser = argparse.ArgumentParser(description='automated random list generator for labs.')
+    # Required arguments
+    # TODO make some of these positional arguments (remove - and --)
 
-    parser.add_argument('-lab','--lab', type=str, help='', required=True)
-    parser.add_argument('-submissions','--submissions',default="submissions.zip",type=str,help='file of student names, separated by new line', required=False)
-    parser.add_argument('-tclOutFile','--tclOutFile', default="scripts/lab4_out.tcl", type=str, help='location of modified tcl file', required=True)
-    parser.add_argument('-tclFile','--tclFile', default="scripts/lab4.tcl", type=str, help='location of original tcl file', required=True)
-    parser.add_argument('-gui', '--gui', default=False, type=lambda x: (str(x).lower() in ['true','1', 'yes']), help='Option to enable GUI (True | False)')
-    parser.add_argument('-delete_zip', '--delete_zip', default= True, type=lambda x: (str(x).lower() in ['true','1', 'yes']), help='Option to enable zip deletion (True | False)')
-    parser.add_argument('-studentFile','--studentFile',default="studentList.txt",type=str,help='file of student names, separated by new line', required=False)
-    parser.add_argument('-project_mpf','--project_mpf',default="Modelsim_tb 21/Lab4/Lab4.mpf",type=str,help='location of modelsim tb project mpf file', required=True)
+    # Lab number
+    parser.add_argument("-l", "--lab", help='Example: "Lab5"', required=True)
+
+    parser.add_argument(
+        "--tcl-out-file", help="location of modified tcl file", required=True
+    )
+
+    parser.add_argument(
+        "--tcl-file", help="location of original tcl file", required=True
+    )
+
+    parser.add_argument(
+        "--project-mpf",
+        default="Modelsim_tb 21/Lab4/Lab4.mpf",
+        help="location of modelsim tb project mpf file",
+        required=True,
+    )
+
+    # Optional args
+
+    # submissions.zip location
+    parser.add_argument(
+        "-s",
+        "--submissions",
+        default="submissions.zip",
+        help='location of "submissions.zip" file',
+    )
+
+    parser.add_argument(
+        "--student-list",
+        default="students.txt",
+        help="Text file of student names to be graded. See studentList_EXAMPLE.txt.",
+    )
+
+    # Flags (True if included, otherwise False)
+
+    parser.add_argument(
+        "--gui", action="store_true", help="Show ModelSim window during simulation"
+    )
+
+    parser.add_argument(
+        "--delete-zip",
+        action="store_true",
+        help="Delete submissions.zip file when done",
+    )  # TODO consider removing, not that helpful
+
+    parser.add_argument(
+        "--debug", action="store_true", help="Display argparse tokens and exit"
+    )
 
     args = parser.parse_args()
 
- 
-    zip_opener(lab=args.lab, studentFile=args.studentFile, submissions=args.submissions, delete_zip=args.delete_zip)
 
-    compile_modelsim(studentFile=args.studentFile, lab_dir = (os.path.join("Submissions",args.lab)), tclFile = args.tclFile, tclOutFile = args.tclOutFile, project_mpf = args.project_mpf, gui = args.gui)
+    zip_opener(
+        lab=args.lab,
+        studentFile=args.student_list,
+        submissions=args.submissions,
+        delete_zip=args.delete_zip,
+    )
 
 
-# example: python auto_grader.py -lab Lab5 -submissions submissions.zip -tclOutFile "Modelsim_tb 21/Lab5/Lab5_out.tcl" -tclFile "lab_tcl/lab5.tcl" -studentFile "studentList.txt" -project_mpf "Modelsim_tb 21/Lab5/Lab5.mpf" -gui False
+    compile_modelsim(
+        studentFile=args.student_list,
+        lab_dir=(os.path.join("Submissions", args.lab)),
+        tclFile=args.tcl_file,
+        tclOutFile=args.tcl_out_file,
+        project_mpf=args.project_mpf,
+        gui=args.gui,
+    )
+
+
+if __name__ == "__main__":
+    main()
