@@ -2,12 +2,23 @@
 __pycache__/
 *.py[cod]
 
+# Temporary files created by the program
+/temp
+# TODO will be moved to /temp eventually
 /Submissions
-*studentList*.txt
-!studentList_TEMPLATE.txt
+
+# Student list text files
+*student*.txt
+# Keep the example file
+!students_example.txt
+
+# All zip files
 *.zip
+
+# ModelSim temporary files
 transcript
 *_out.tcl
 *.wlf
 *.mti
+# Not sure why this is here.
 Modelsim_tb 21/Lab6/vga_output.txt
