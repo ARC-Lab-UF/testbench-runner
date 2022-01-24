@@ -4,9 +4,9 @@ An interactive ModelSim testbench runner.
 
 ### Table of contents
 
-* Prerequisites
-* Usage
-* Using the interactive Testbench Runner
+* [Prerequisites](https://github.com/benjamin051000/DD_Grader#prerequisites)
+* [Usage](https://github.com/benjamin051000/DD_Grader#usage)
+* [Using the interactive Testbench Runner](https://github.com/benjamin051000/DD_Grader#using-the-interactive-testbench-runner)
 
 # Prerequisites
 
