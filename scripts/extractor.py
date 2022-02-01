@@ -11,10 +11,11 @@ from zipfile import ZipFile
 
 
 def _get_mangled_names(student_list_file: str) -> List[str]:
-    """
-    Format student names as they appear in their mangled submissions.zip directories.
+    """Format student names as they appear in their mangled submissions.zip directories.
+    
     Canvas submissions.zip name format is `[middle name(s)]<lastname><firstname>`.
     For example, the name "Albert Gator" becomes "gatoralbert".
+
     """
     with open(student_list_file, "r") as f:
         names = f.readlines()
@@ -36,9 +37,8 @@ def extract_submissions(
     student_list_file: str,
     submissions_zip_path: str,
     delete_zip: bool,
-):
-    """
-    Extracts specific student submissions out of a .zip of every student submission.
+) -> List[str]:
+    """Extracts specific student submissions out of a .zip of every student submission.
 
     Args:
         - lab_filename: Folder name to call the lab (e.g., "Lab5")
