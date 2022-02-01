@@ -1,6 +1,6 @@
 import argparse
 import os
-from scripts.zip_function import zip_opener
+from scripts.extractor import extract_submissions
 from scripts.sim_function import compile_modelsim
 
 
@@ -64,11 +64,10 @@ def main():
 
     args = parser.parse_args()
 
-
-    zip_opener(
-        lab=args.lab,
-        studentFile=args.student_list,
-        submissions=args.submissions,
+    extract_submissions(
+        lab_filename=args.lab,
+        student_list_file=args.student_list,
+        submissions_zip_path=args.submissions,
         delete_zip=args.delete_zip,
     )
 
