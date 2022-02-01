@@ -18,7 +18,6 @@ You can verify modelsim is working p roperly by running `vsim -version` in a ter
 ```bash
 $ vsim -version
 Model Technology ModelSim - INTEL FPGA STARTER EDITION vsim 2020.1 Simulator 2020.02 Feb 28 2020
-$
 ```
 
 **Note:** DD_Grader has been tested with vsim version **2020.1** and is not guaranteed to work on other versions.
@@ -31,7 +30,6 @@ You can verify Python is working properly by running `python -V` in a terminal w
 ```bash
 $ python -V
 Python 3.10.1
-$
 ```
 
 **Note:** DD_Grader has been tested with Python **3.10.1** and is not guaranteed to work on other versions.
