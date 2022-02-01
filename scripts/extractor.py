@@ -60,12 +60,12 @@ def extract_submissions(
 
     # Get mangled submission.zip filenames in students.txt
     ZIP_FILENAMES = [
-        zip_name 
-        for zip_name in all_zip_filenames # Iterate through all filenames in submissions.zip
-        for name in FORMATTED_NAMES # Iterate through all formatted names from students.txt
-        if name in zip_name  # Only keep zip_name if the formatted name appears somewhere in it's filename.
+        zip_name
+        for zip_name in all_zip_filenames  # Iterate through all filenames in submissions.zip
+        for name in FORMATTED_NAMES  # Iterate through all formatted names from students.txt
+        if name in zip_name  # Only keep zip_name if formatted name appears in its filename
     ]
-    
+
     # Create the unzipped Submissions directory, which will be used to store each students' source code.
     SUBS_UNZIP_PATH = Path("Submissions/", lab_filename)
     SUBS_UNZIP_PATH.mkdir(parents=True, exist_ok=True)
@@ -107,8 +107,9 @@ def extract_submissions(
     if delete_zip:
         try:
             Path(submissions_zip_path).unlink()  # Remove path
-        except:
+        except FileNotFoundError as e:
             print('An error occurred while attempting to delete "submissions.zip".')
+            print(e)
 
     # Return this so the other functions can know where to look for these files. TODO just send the paths directly.
     return FORMATTED_NAMES
