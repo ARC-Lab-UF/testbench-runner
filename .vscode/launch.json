@@ -1,0 +1,26 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Grade Lab 1",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/auto_grader.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--lab",
+                "Lab1",
+                "--tcl-out-file",
+                "Modelsim_tb 21/Lab1/Lab1_out.tcl",
+                "--tcl-file",
+                "lab_tcl/lab1.tcl",
+                "--project-mpf",
+                "Modelsim_tb 21/Lab1/Lab1.mpf",
+                // "--gui"
+            ]
+        },
+    ]
+}
