@@ -16,7 +16,7 @@
                 "--tcl-out-file",
                 "Modelsim_tb 21/Lab1/Lab1_out.tcl",
                 "--tcl-file",
-                "lab_tcl/lab1.tcl",
+                "tcl-templates/lab1.tcl",
                 "--project-mpf",
                 "Modelsim_tb 21/Lab1/Lab1.mpf",
                 // "--gui"
