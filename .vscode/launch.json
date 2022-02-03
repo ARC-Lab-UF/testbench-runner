@@ -14,11 +14,11 @@
                 "--lab",
                 "Lab1",
                 "--tcl-out-file",
-                "Modelsim_tb 21/Lab1/Lab1_out.tcl",
+                "modelsim-projects/Lab1/Lab1_out.tcl",
                 "--tcl-file",
                 "tcl-templates/lab1.tcl",
                 "--project-mpf",
-                "Modelsim_tb 21/Lab1/Lab1.mpf",
+                "modelsim-projects/Lab1/Lab1.mpf",
                 // "--gui"
             ]
         },
