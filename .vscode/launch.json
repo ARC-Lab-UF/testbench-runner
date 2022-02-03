@@ -8,7 +8,7 @@
             "name": "Grade Lab 1",
             "type": "python",
             "request": "launch",
-            "program": "${workspaceFolder}/auto_grader.py",
+            "program": "${workspaceFolder}/grader.py",
             "console": "integratedTerminal",
             "args": [
                 "--lab",
