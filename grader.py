@@ -4,6 +4,7 @@ import os
 from scripts.extractor import extract_submissions
 from scripts.sim_function import compile_modelsim
 from scripts.student_data import StudentData
+from pathlib import Path
 
 
 def main():
@@ -109,8 +110,8 @@ def main():
     compile_modelsim(
         student_data=students_with_submission,
         lab_dir=(os.path.join("Submissions", args.lab)),
-        tclFile=args.tcl_file,
-        tclOutFile=args.tcl_out_file,
+        tcl_file=args.tcl_file,
+        tcl_out_file=Path(args.tcl_out_file),
         project_mpf=args.project_mpf,
         gui=args.gui,
     )

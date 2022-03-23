@@ -15,8 +15,8 @@ from scripts.student_data import StudentData
 def compile_modelsim(
     student_data: List[StudentData],
     lab_dir: str,
-    tclFile: str,
-    tclOutFile: str,
+    tcl_file: str,
+    tcl_out_file: Path,
     project_mpf: str,
     gui: bool,
 ):
@@ -28,27 +28,21 @@ def compile_modelsim(
 
         fileList = ""
         for vhdl_file in student.vhdl_files:
-            fileList += (
-                "project addfile {"
-                + f"{vhdl_file.resolve()}".replace(os.sep, "/")
-                + "}\n"
-            )
+            fileList += f'project addfile "{vhdl_file.resolve()}"'
 
         resultList.append([fileList, student.name])
 
     print()
 
-    tcl_out = tcl_function(tclFile, project_mpf, resultList)
+    tcl_out = tcl_function(tcl_file, project_mpf, resultList)
 
-    with open(os.path.abspath(tclOutFile), "w+") as f:
+    with open(os.path.abspath(tcl_out_file), "w+") as f:
         f.write(tcl_out)
 
-    if gui:
-        cmd = f'''vsim -gui -l "" -do "{os.path.abspath(tclOutFile)}"'''
-    else:
-        cmd = f'''vsim -c -l "" -do "{os.path.abspath(tclOutFile)}"'''
-
-    try:
-        subprocess.run(cmd, shell=True, stdout=True, stderr=DEVNULL)
-    except:
-        print(""" Something didn't work... ¯\_(ツ)_/¯ """)
+    # Run modelsim (-l "" disables ModelSim logging)
+    cmd = f"vsim {'-gui' if gui else '-c'} -l \"\" -do \"{tcl_out_file.resolve()}\""
+    print(Path.cwd())
+    print(f"{cmd=}")
+    subprocess.run(
+        cmd, shell=True, stdout=True, stderr=DEVNULL
+    )  # TODO verify these arguments are what we want
