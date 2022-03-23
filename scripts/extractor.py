@@ -8,33 +8,15 @@ import shutil
 from pathlib import Path
 from typing import List
 from zipfile import ZipFile
-
-
-def _get_mangled_names(names: List[str]) -> List[str]:
-    """Format student names as they appear in their mangled submissions.zip directories.
-    
-    Canvas submissions.zip name format is `[middle name(s)]<lastname><firstname>`.
-    For example, the name "Albert Gator" becomes "gatoralbert".
-
-    """
-    formatted_names = []
-    for name in names:
-        # Name formatting is all lowercase, no spaces.
-        separated_names = name.lower().split()
-
-        # Formatting of submissions.zip simply puts first name in the back.
-        separated_names.append(separated_names.pop(0))
-        formatted_names.append("".join(separated_names))
-
-    return formatted_names
+from .student_data import StudentData
 
 
 def extract_submissions(
     lab_filename: str,
-    students: List[str],
+    students: List[StudentData],
     submissions_zip_path: str,
     delete_zip: bool,
-) -> List[str]:
+):
     """Extracts specific student submissions out of a .zip of every student submission.
 
     Args:
@@ -48,9 +30,6 @@ def extract_submissions(
                       extraction of pertinent students is finished.
     """
 
-    # Get list of formatted student namnes
-    FORMATTED_NAMES = _get_mangled_names(students)
-
     # Get list of all student submissions
     with ZipFile(submissions_zip_path, "r") as z:
         all_zip_filenames = z.namelist()
@@ -59,7 +38,7 @@ def extract_submissions(
     ZIP_FILENAMES = [
         zip_name
         for zip_name in all_zip_filenames  # Iterate through all filenames in submissions.zip
-        for name in FORMATTED_NAMES  # Iterate through all formatted names from students.txt
+        for name in [s.mangled_name for s in students]  # Iterate through all formatted names from students.txt
         if name in zip_name  # Only keep zip_name if formatted name appears in its filename
     ]
 
@@ -107,6 +86,3 @@ def extract_submissions(
         except FileNotFoundError as e:
             print('An error occurred while attempting to delete "submissions.zip".')
             print(e)
-
-    # Return this so the other functions can know where to look for these files. TODO just send the paths directly.
-    return FORMATTED_NAMES

@@ -3,6 +3,7 @@ import csv
 import os
 from scripts.extractor import extract_submissions
 from scripts.sim_function import compile_modelsim
+from scripts.student_data import StudentData
 
 
 def main():
@@ -89,14 +90,15 @@ def main():
             # Filter to just the students in the specified section
             students_in_section = [s for s in contents if args.section in s['Section']]
         # CSV file is formatted "<Last>, <First>". Format to "<First> <Last>" for consistency with students.txt file.
-        students = [' '.join(reversed(stu["Student"].split(', '))) for stu in students_in_section]
+        students = [StudentData(' '.join(reversed(stu["Student"].split(', ')))) for stu in students_in_section]
     else:
         with open(args.student_list) as f:
-            students = f.readlines()
+            students = [StudentData(name) for name in f.readlines()]
 
     print(f'{students=}')
+    print(f'length: {len(students)}')
     
-    formatted_stu_names = extract_submissions(
+    extract_submissions(
         lab_filename=args.lab,
         students=students,
         submissions_zip_path=args.submissions,
