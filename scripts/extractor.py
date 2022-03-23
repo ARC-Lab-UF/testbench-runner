@@ -23,7 +23,8 @@ def extract_submissions(
         - lab_filename: Folder name to call the lab (e.g., "Lab5")
 
         - section_students: List of StudentData objects representing the students enrolled
-                            in the CLI-supplied class section.
+                            in the CLI-supplied class section. WARNING: section_students will 
+                            be modified as a side effect of extract_submissions()!
 
         - submissions_zip_path: Path to submissions.zip
 
