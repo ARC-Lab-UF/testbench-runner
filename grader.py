@@ -1,4 +1,5 @@
 import argparse
+import csv
 import os
 from scripts.extractor import extract_submissions
 from scripts.sim_function import compile_modelsim
@@ -10,7 +11,6 @@ def main():
     )
 
     # Required arguments
-    # TODO make some of these positional arguments (remove - and --)
 
     # Lab number
     parser.add_argument("-l", "--lab", help='Example: "Lab5"', required=True)
@@ -40,10 +40,27 @@ def main():
         help='location of "submissions.zip" file',
     )
 
-    parser.add_argument(
+    mutex_group = parser.add_mutually_exclusive_group()
+
+    mutex_group.add_argument(
         "--student-list",
         default="students.txt",
         help="Text file of student names to be graded. See studentList_EXAMPLE.txt.",
+    )
+
+    mutex_group.add_argument(
+        "--section",
+        help='Section number of student section to be graded (e.g., "12345")',
+    )
+
+    # --all-students-file is only necessary when --section is used.
+    # However, due to current Python STL limitations, I can't include
+    # it as a subgroup to the mutex_group. Weird.
+    # Just ignore it if --section is None.
+    parser.add_argument(
+        "--all-students-file",
+        help="CSV file of all students, from Canvas.",
+        default="all_students.csv",
     )
 
     # Flags (True if included, otherwise False)
@@ -63,17 +80,32 @@ def main():
     )
 
     args = parser.parse_args()
+    
+    # Get list of students, either via section number, or a students.txt file.
+    if args.section:
+        # Read the all_students.csv file
+        with open(args.all_students_file) as f:
+            contents = csv.DictReader(f)
+            # Filter to just the students in the specified section
+            students_in_section = [s for s in contents if args.section in s['Section']]
+        # CSV file is formatted "<Last>, <First>". Format to "<First> <Last>" for consistency with students.txt file.
+        students = [' '.join(reversed(stu["Student"].split(', '))) for stu in students_in_section]
+    else:
+        with open(args.student_list) as f:
+            students = f.readlines()
 
-    extract_submissions(
+    print(f'{students=}')
+    
+    formatted_stu_names = extract_submissions(
         lab_filename=args.lab,
-        student_list_file=args.student_list,
+        students=students,
         submissions_zip_path=args.submissions,
         delete_zip=args.delete_zip,
     )
 
-
+    # TODO use `students` here instead of `args.student_list` because student_list isn't always used.
     compile_modelsim(
-        studentFile=args.student_list,
+        student_names=formatted_stu_names,
         lab_dir=(os.path.join("Submissions", args.lab)),
         tclFile=args.tcl_file,
         tclOutFile=args.tcl_out_file,

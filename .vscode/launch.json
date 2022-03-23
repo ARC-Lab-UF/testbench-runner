@@ -22,5 +22,27 @@
                 // "--gui"
             ]
         },
+        {
+            "name": "Test section num",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/grader.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--lab",
+                "Lab3",
+                "--tcl-out-file",
+                "modelsim-projects/Lab3/Lab3_out.tcl",
+                "--tcl-file",
+                "tcl-templates/lab3.tcl",
+                "--project-mpf",
+                "modelsim-projects/Lab3/Lab3.mpf",
+                "--section", // Using section number instead of students.txt
+                "11626",
+                "--submission",
+                "submissions_lab3.zip"
+                // "--gui"
+            ]
+        },
     ]
 }
