@@ -28,7 +28,7 @@ def compile_modelsim(
 
         fileList = ""
         for vhdl_file in student.vhdl_files:
-            fileList += f'project addfile "{vhdl_file.resolve()}"'
+            fileList += f'project addfile "{vhdl_file.resolve().as_posix()}"\n'  # Posix paths work with Modelsim (uses / instead of \\)
 
         resultList.append([fileList, student.name])
 
