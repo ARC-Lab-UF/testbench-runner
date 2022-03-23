@@ -3,6 +3,8 @@ import csv
 import os
 from scripts.extractor import extract_submissions
 from scripts.sim_function import compile_modelsim
+from scripts.student_data import StudentData
+from pathlib import Path
 
 
 def main():
@@ -89,26 +91,27 @@ def main():
             # Filter to just the students in the specified section
             students_in_section = [s for s in contents if args.section in s['Section']]
         # CSV file is formatted "<Last>, <First>". Format to "<First> <Last>" for consistency with students.txt file.
-        students = [' '.join(reversed(stu["Student"].split(', '))) for stu in students_in_section]
+        students = [StudentData(' '.join(reversed(stu["Student"].split(', ')))) for stu in students_in_section]
     else:
         with open(args.student_list) as f:
-            students = f.readlines()
+            students = [StudentData(name) for name in f.readlines()]
 
     print(f'{students=}')
+    print(f'length: {len(students)}')
     
-    formatted_stu_names = extract_submissions(
+    students_with_submission = extract_submissions(
         lab_filename=args.lab,
-        students=students,
+        section_students=students,
         submissions_zip_path=args.submissions,
         delete_zip=args.delete_zip,
     )
 
     # TODO use `students` here instead of `args.student_list` because student_list isn't always used.
     compile_modelsim(
-        student_names=formatted_stu_names,
+        student_data=students_with_submission,
         lab_dir=(os.path.join("Submissions", args.lab)),
-        tclFile=args.tcl_file,
-        tclOutFile=args.tcl_out_file,
+        tcl_file=args.tcl_file,
+        tcl_out_file=Path(args.tcl_out_file),
         project_mpf=args.project_mpf,
         gui=args.gui,
     )
