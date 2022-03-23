@@ -98,7 +98,7 @@ def main():
     print(f'{students=}')
     print(f'length: {len(students)}')
     
-    extract_submissions(
+    students_with_submission = extract_submissions(
         lab_filename=args.lab,
         section_students=students,
         submissions_zip_path=args.submissions,
@@ -107,7 +107,7 @@ def main():
 
     # TODO use `students` here instead of `args.student_list` because student_list isn't always used.
     compile_modelsim(
-        student_names=formatted_stu_names,
+        student_data=students_with_submission,
         lab_dir=(os.path.join("Submissions", args.lab)),
         tclFile=args.tcl_file,
         tclOutFile=args.tcl_out_file,

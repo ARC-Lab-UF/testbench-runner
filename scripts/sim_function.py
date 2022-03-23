@@ -9,10 +9,10 @@ from pathlib    import Path
 from subprocess import DEVNULL
 
 from scripts.tcl_function import tcl_function
-
+from scripts.student_data import StudentData
 
 def compile_modelsim(
-    student_names: List[str], 
+    student_data: List[StudentData], 
     lab_dir: str, 
     tclFile: str,
     tclOutFile: str, 

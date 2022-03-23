@@ -4,7 +4,6 @@
     Extracts student submissions from a 
     Canvas submissions.zip file.
 """
-import shutil
 from pathlib import Path
 from typing import List
 from zipfile import ZipFile
@@ -16,7 +15,7 @@ def extract_submissions(
     section_students: List[StudentData],
     submissions_zip_path: str,
     delete_zip: bool,
-):
+) -> List[StudentData]:
     """Extracts specific student submissions out of a .zip of every student submission.
 
     Args:
@@ -30,24 +29,11 @@ def extract_submissions(
 
         - delete_zip: Whether submissions.zip should be deleted once
                       extraction of pertinent students is finished.
+    Returns:
+        A new list of StudentData, which is a subset of section_students, that contains
+        student information of those who submitted a .zip file for the current Lab, and
+        therefore have an unzipped directory with their submission in Submissions/Labx.
     """
-
-    # # Get list of all student submissions
-    # with ZipFile(submissions_zip_path, "r") as z:
-    #     all_zip_filenames = z.namelist()
-
-    # # Get subset of students in the section that have zip files in the submissions.zip.
-    # # In layman's terms, get the subset of students who submitted something for this assignment.
-    # STUDENTS_WITH_SUBMISSION = [
-    #     student
-    #     for student in section_students
-    #     for zip_filename in all_zip_filenames
-    #     if student.mangled_name in zip_filename
-    # ]
-
-    
-
-
     # Create the unzipped Submissions directory, which will be used to store each students' source code.
     SUBS_UNZIP_PATH = Path("Submissions/", lab_filename)
     SUBS_UNZIP_PATH.mkdir(parents=True, exist_ok=True)
@@ -65,8 +51,6 @@ def extract_submissions(
         print(f"There should be {len(students_with_submission)} zip files in the submission dir.")
         # Extract those students' .zip files into the Submissions/Labx dir.
         z.extractall(SUBS_UNZIP_PATH, [s.zipped_submission for s in students_with_submission])
-
-
 
     # For each student submission subdir, extract contents and copy all VHDL files to the top.
     for student in students_with_submission:
@@ -94,3 +78,6 @@ def extract_submissions(
         except FileNotFoundError as e:
             print('An error occurred while attempting to delete "submissions.zip".')
             print(e)
+
+    # Return student data of students with submissions (and VHDL path info filled out)
+    return students_with_submission
