@@ -11,7 +11,6 @@ def main():
     )
 
     # Required arguments
-    # TODO make some of these positional arguments (remove - and --)
 
     # Lab number
     parser.add_argument("-l", "--lab", help='Example: "Lab5"', required=True)
@@ -97,7 +96,7 @@ def main():
 
     print(f'{students=}')
     
-    extract_submissions(
+    formatted_stu_names = extract_submissions(
         lab_filename=args.lab,
         students=students,
         submissions_zip_path=args.submissions,
@@ -106,7 +105,7 @@ def main():
 
     # TODO use `students` here instead of `args.student_list` because student_list isn't always used.
     compile_modelsim(
-        studentFile=args.student_list,
+        student_names=formatted_stu_names,
         lab_dir=(os.path.join("Submissions", args.lab)),
         tclFile=args.tcl_file,
         tclOutFile=args.tcl_out_file,
