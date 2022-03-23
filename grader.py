@@ -100,7 +100,7 @@ def main():
     
     extract_submissions(
         lab_filename=args.lab,
-        students=students,
+        section_students=students,
         submissions_zip_path=args.submissions,
         delete_zip=args.delete_zip,
     )

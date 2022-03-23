@@ -13,7 +13,7 @@ from .student_data import StudentData
 
 def extract_submissions(
     lab_filename: str,
-    students: List[StudentData],
+    section_students: List[StudentData],
     submissions_zip_path: str,
     delete_zip: bool,
 ):
@@ -22,7 +22,8 @@ def extract_submissions(
     Args:
         - lab_filename: Folder name to call the lab (e.g., "Lab5")
 
-        - student_list_file: Path to student list text file.
+        - section_students: List of StudentData objects representing the students enrolled
+                            in the CLI-supplied class section.
 
         - submissions_zip_path: Path to submissions.zip
 
@@ -30,54 +31,60 @@ def extract_submissions(
                       extraction of pertinent students is finished.
     """
 
-    # Get list of all student submissions
-    with ZipFile(submissions_zip_path, "r") as z:
-        all_zip_filenames = z.namelist()
+    # # Get list of all student submissions
+    # with ZipFile(submissions_zip_path, "r") as z:
+    #     all_zip_filenames = z.namelist()
 
-    # Get mangled submission.zip filenames in students.txt
-    ZIP_FILENAMES = [
-        zip_name
-        for zip_name in all_zip_filenames  # Iterate through all filenames in submissions.zip
-        for name in [s.mangled_name for s in students]  # Iterate through all formatted names from students.txt
-        if name in zip_name  # Only keep zip_name if formatted name appears in its filename
-    ]
+    # # Get subset of students in the section that have zip files in the submissions.zip.
+    # # In layman's terms, get the subset of students who submitted something for this assignment.
+    # STUDENTS_WITH_SUBMISSION = [
+    #     student
+    #     for student in section_students
+    #     for zip_filename in all_zip_filenames
+    #     if student.mangled_name in zip_filename
+    # ]
+
+    
+
 
     # Create the unzipped Submissions directory, which will be used to store each students' source code.
     SUBS_UNZIP_PATH = Path("Submissions/", lab_filename)
     SUBS_UNZIP_PATH.mkdir(parents=True, exist_ok=True)
 
-    # Extract only the mangled names we selected into the new submission directory.
     with ZipFile(submissions_zip_path) as z:
-        z.extractall(SUBS_UNZIP_PATH, ZIP_FILENAMES)
+        all_zip_filenames = z.namelist()
+
+        # Figure out which ones we need based on the section_students
+        students_with_submission: List[StudentData] = []
+        for student in section_students:
+            for zip_filename in all_zip_filenames:
+                if student.mangled_name in zip_filename:
+                    student.zipped_submission = zip_filename
+                    students_with_submission.append(student)
+        print(f"There should be {len(students_with_submission)} zip files in the submission dir.")
+        # Extract those students' .zip files into the Submissions/Labx dir.
+        z.extractall(SUBS_UNZIP_PATH, [s.zipped_submission for s in students_with_submission])
+
+
 
     # For each student submission subdir, extract contents and copy all VHDL files to the top.
-    for zip_filename in ZIP_FILENAMES:
+    for student in students_with_submission:
 
         # Create a directory for this student's submission.  # TODO this could just use the normal name.
-        STU_UNZIP_PATH = Path(SUBS_UNZIP_PATH, zip_filename.split("_")[0])
-        STU_UNZIP_PATH.mkdir(parents=True, exist_ok=True)
+        student.submission_dir = SUBS_UNZIP_PATH / student.name  # Path / operator concatenates/appends paths
+        student.submission_dir.mkdir(parents=True, exist_ok=True)
 
         # Extract all of the submission's contents into the new directory.
-        with ZipFile(Path(SUBS_UNZIP_PATH, zip_filename)) as z:
-            z.extractall(STU_UNZIP_PATH)
+        with ZipFile(Path(SUBS_UNZIP_PATH, student.zipped_submission)) as z:
+            z.extractall(student.submission_dir)
 
         # Find all the VHDL files in this submission
-        vhdl_files = list(Path(STU_UNZIP_PATH).rglob("*.[vV][hH][dD]*"))
+        student.vhdl_files = list(Path(student.submission_dir).rglob("*.[vV][hH][dD]*"))
 
-        # Copy them to the top of the dir
-        for f in vhdl_files:
-            if "vga_rom" in str(f):  # TODO why skip vga_rom?
-                continue
-
-            try:
-                shutil.copy2(f, STU_UNZIP_PATH)
-            except shutil.SameFileError:
-                pass
-
-    # Remove the old student submission .zip files
-    for zip_filename in ZIP_FILENAMES:
+    # Remove the student submission .zip files from Submissions/Labx
+    for student in students_with_submission:
         # Path.unlink() removes the file
-        Path(SUBS_UNZIP_PATH, zip_filename).unlink()
+        Path(SUBS_UNZIP_PATH, student.zipped_submission).unlink()
 
     # If user chooses, delete submissions.zip
     if delete_zip:
