@@ -96,9 +96,6 @@ def main():
         with open(args.student_list) as f:
             students = [StudentData(name) for name in f.readlines()]
 
-    print(f'{students=}')
-    print(f'length: {len(students)}')
-    
     students_with_submission = extract_submissions(
         lab_filename=args.lab,
         section_students=students,
