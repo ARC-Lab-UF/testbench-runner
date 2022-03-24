@@ -1,8 +1,7 @@
 import argparse
 import csv
-import os
 from scripts.extractor import extract_submissions
-from scripts.sim_function import compile_modelsim
+from scripts.sim_function import generate_tcl
 from scripts.student_data import StudentData
 from pathlib import Path
 
@@ -18,16 +17,17 @@ def main():
     parser.add_argument("-l", "--lab", help='Example: "Lab5"', required=True)
 
     parser.add_argument(
-        "--tcl-out-file", help="location of modified tcl file", required=True
+        "--tcl-out-file", type=Path, help="location of modified tcl file", required=True
     )
 
     parser.add_argument(
-        "--tcl-file", help="location of original tcl file", required=True
+        "--tcl-file", type=Path, help="location of original tcl file", required=True
     )
 
     parser.add_argument(
         "--project-mpf",
-        default="Modelsim_tb 21/Lab4/Lab4.mpf",
+        type=Path,
+        # default="Modelsim_tb 21/Lab4/Lab4.mpf",
         help="location of modelsim tb project mpf file",
         required=True,
     )
@@ -38,6 +38,7 @@ def main():
     parser.add_argument(
         "-s",
         "--submissions",
+        type=Path,
         default="submissions.zip",
         help='location of "submissions.zip" file',
     )
@@ -46,6 +47,7 @@ def main():
 
     mutex_group.add_argument(
         "--student-list",
+        type=Path,
         default="students.txt",
         help="Text file of student names to be graded. See studentList_EXAMPLE.txt.",
     )
@@ -61,8 +63,9 @@ def main():
     # Just ignore it if --section is None.
     parser.add_argument(
         "--all-students-file",
-        help="CSV file of all students, from Canvas.",
+        type=Path,
         default="all_students.csv",
+        help="CSV file of all students, from Canvas.",
     )
 
     # Flags (True if included, otherwise False)
@@ -104,11 +107,10 @@ def main():
     )
 
     # TODO use `students` here instead of `args.student_list` because student_list isn't always used.
-    compile_modelsim(
+    generate_tcl(
         student_data=students_with_submission,
-        lab_dir=(os.path.join("Submissions", args.lab)),
         tcl_file=args.tcl_file,
-        tcl_out_file=Path(args.tcl_out_file),
+        tcl_out_file=args.tcl_out_file,
         project_mpf=args.project_mpf,
         gui=args.gui,
     )
