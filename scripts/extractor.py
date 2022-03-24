@@ -14,7 +14,7 @@ from .student_data import StudentData
 def extract_submissions(
     lab_filename: str,
     section_students: List[StudentData],
-    submissions_zip_path: str,
+    submissions_zip_path: Path,
     delete_zip: bool,
 ) -> List[StudentData]:
     """Extracts specific student submissions out of a .zip of every student submission.
