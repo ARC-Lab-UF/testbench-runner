@@ -1,12 +1,15 @@
 from dataclasses import dataclass, field
 from pathlib import Path
-from typing import List
+from typing import List, Optional
 
 
 @dataclass
 class StudentData:
     # Normal name ("First Last")
     name: str
+
+    # Non-zip archive files (e.g., if student submits a PDF)
+    other_file: Optional[str] = None
 
     # Zipped submission filename
     zipped_submission: str = ""

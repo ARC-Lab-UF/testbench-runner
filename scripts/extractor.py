@@ -5,6 +5,7 @@
     Canvas submissions.zip file.
 """
 from pathlib import Path
+import shutil
 from typing import List
 from zipfile import ZipFile
 from .student_data import StudentData
@@ -43,14 +44,21 @@ def extract_submissions(
 
         # Figure out which ones we need based on the section_students
         students_with_submission: List[StudentData] = []
+        
+        non_zip_files = []  # In case a student submitted a PDF or something, still extract it.
         for student in section_students:
-            for zip_filename in all_zip_filenames:
-                if student.mangled_name in zip_filename:
-                    student.zipped_submission = zip_filename
-                    students_with_submission.append(student)
+            for file in all_zip_filenames:
+                if student.mangled_name in file:  # Ignore non-zip archives
+                    if file.endswith('.zip'):
+                        student.zipped_submission = file
+                        students_with_submission.append(student)
+                    else:
+                        student.other_file = file
+                        non_zip_files.append(file)
+                
         print(f"There should be {len(students_with_submission)} zip files in the submission dir.")
         # Extract those students' .zip files into the Submissions/Labx dir.
-        z.extractall(SUBS_UNZIP_PATH, [s.zipped_submission for s in students_with_submission])
+        z.extractall(SUBS_UNZIP_PATH, [s.zipped_submission for s in students_with_submission] + non_zip_files)
 
     # For each student submission subdir, extract contents and copy all VHDL files to the top.
     for student in students_with_submission:
@@ -66,8 +74,12 @@ def extract_submissions(
         # Find all the VHDL files in this submission
         student.vhdl_files = list(Path(student.submission_dir).rglob("*.[vV][hH][dD]*"))
 
+        # If student has non zip-archive submissions, move them into the submission directory.
+        if student.other_file:
+            shutil.move(SUBS_UNZIP_PATH / student.other_file, student.submission_dir)
+
     # Remove the student submission .zip files from Submissions/Labx
-    for student in students_with_submission:
+    for student in students_with_submission:  # TODO bug, in lab4 alexander barrera shows up twice. For some reason alex has two submissions, a zip and a pdf. weird.
         # Path.unlink() removes the file
         Path(SUBS_UNZIP_PATH, student.zipped_submission).unlink()
 
