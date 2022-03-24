@@ -1,0 +1,50 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Lab 4",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/grader.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--lab",
+                "Lab4",
+                "--tcl-out-file",
+                "modelsim-projects/Lab4/Lab4_out.tcl",
+                "--tcl-file",
+                "tcl-templates/lab4.tcl",
+                "--project-mpf",
+                "modelsim-projects/Lab4/Lab4.mpf",
+                "--section",
+                "11626"
+                // "--gui"
+            ]
+        },
+        {
+            "name": "Test section num",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/grader.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--lab",
+                "Lab3",
+                "--tcl-out-file",
+                "modelsim-projects/Lab3/Lab3_out.tcl",
+                "--tcl-file",
+                "tcl-templates/lab3.tcl",
+                "--project-mpf",
+                "modelsim-projects/Lab3/Lab3.mpf",
+                "--section", // Using section number instead of students.txt
+                "11626",
+                "--submission",
+                "submissions_lab3.zip"
+                // "--gui"
+            ]
+        },
+    ]
+}

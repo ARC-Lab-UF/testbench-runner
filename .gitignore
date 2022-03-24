@@ -12,6 +12,11 @@ __pycache__/
 # Keep the example file
 !students_example.txt
 
+# All students CSV file from Canvas
+*all*student*.csv
+# Keep example file
+!all_students_example.csv
+
 # All zip files
 *.zip
 

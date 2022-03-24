@@ -83,7 +83,7 @@ foreach x $lines {
 quietly set ret [project compileall -n]
 quietly set result [string map {explicit "quiet -suppress 1195,1194" \\\ / } $ret]
 quietly set lines [split $result "\\n"]'''
-        tcl += f'''\ncurrStudent $lines {x[1]};\n\n'''
+        tcl += f'''\ncurrStudent $lines "{x[1]}";\n\n'''
 
 
     tcl += 'exit'
