@@ -1,48 +1,78 @@
-#!/usr/bin/env python
-__author__ = "Keeth Smith"
-
-import os
 from typing import List
-import glob
 import subprocess
-from pathlib import Path
 from subprocess import DEVNULL
+from pathlib import Path
 
-from scripts.tcl_function import tcl_function
 from scripts.student_data import StudentData
 
 
-def compile_modelsim(
+def generate_tcl(
     student_data: List[StudentData],
-    lab_dir: str,
-    tcl_file: str,
+    tcl_file: Path,
     tcl_out_file: Path,
-    project_mpf: str,
+    project_mpf: Path,
     gui: bool,
 ):
+    """generate_tcl creates a TCL script for ModelSim that
+    grades each students' lab via the given true testbenches."""
 
     resultList = []
-    print("\nStudents Found:")
-    for student in student_data:
-        print(student.name)
+    print("-" * 18)
+    print("Students to grade:")
+    for i, student in enumerate(student_data, start=1):
+        print(f"{i}. {student.name}")
 
         fileList = ""
         for vhdl_file in student.vhdl_files:
-            fileList += f'project addfile "{vhdl_file.resolve().as_posix()}"\n'  # Posix paths work with Modelsim (uses / instead of \\)
+            fileList += f'project addfile "{vhdl_file.resolve().as_posix()}"\n'  # Posix paths work with Modelsim (/ instead of \)
 
         resultList.append([fileList, student.name])
 
-    print()
+    print("-" * 18)
 
-    tcl_out = tcl_function(tcl_file, project_mpf, resultList)
+    # tcl_out = tcl_function(tcl_file, project_mpf, resultList)
+    with open(tcl_file) as f:
+        tclScript = f.read()
 
-    with open(os.path.abspath(tcl_out_file), "w+") as f:
-        f.write(tcl_out)
+    with open("tcl-templates/common.tcl") as f:
+        # tcl = f.read().format(PY_PROJ_MPF_PATH=project_mpf.resolve(), PY_LAB_TCL=tclScript)
+        tcl = (
+            f.read()
+            .replace("PY_PROJ_MPF_PATH", project_mpf.resolve().as_posix())
+            .replace("PY_LAB_TCL", tclScript)
+        )
+
+    for x in resultList:
+
+        tcl += """ 
+quietly set result [string map -nocase {"\} \{" "\}\\n\{" "\} " "\}\\n" ".vhd " ".vhd\\n"} [project filenames]] 
+quietly set lines [split $result "\\n"]
+
+foreach x $lines {
+   if {[string match *true_testbench.vhd* $x] == 1} {
+      set z 1
+   } else {
+    #   puts "REMOVED"
+      eval project removefile $x
+   }
+} 
+
+"""
+        tcl += x[0]
+        tcl += """
+quietly set ret [project compileall -n]
+quietly set result [string map {explicit "quiet -suppress 1195,1194" \\\ / } $ret]
+quietly set lines [split $result "\\n"]"""
+        tcl += f"""\ncurrStudent $lines "{x[1]}";\n\n"""
+
+    tcl += "exit"
+
+    # Write resulting TCL script to a file
+    with open(tcl_out_file, "w") as f:
+        f.write(tcl)
 
     # Run modelsim (-l "" disables ModelSim logging)
     cmd = f"vsim {'-gui' if gui else '-c'} -l \"\" -do \"{tcl_out_file.resolve()}\""
-    print(Path.cwd())
-    print(f"{cmd=}")
     subprocess.run(
         cmd, shell=True, stdout=True, stderr=DEVNULL
     )  # TODO verify these arguments are what we want
