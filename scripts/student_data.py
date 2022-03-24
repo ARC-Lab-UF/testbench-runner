@@ -20,6 +20,8 @@ class StudentData:
     # Name that appears in canvas zip files ("lastfirstmiddle(s)")
     @property
     def mangled_name(self) -> str:
+        """Returns Canvas-autoformatted name for a student.
+        The formatting is [middle name(s)]<lastname><firstname>."""
         separated_names = self.name.lower().split()
-        separated_names = reversed(separated_names)  # Reverse first,last
-        return "".join(separated_names)
+        middles_last_first = "".join(separated_names[1:] + [separated_names[0]])
+        return middles_last_first
