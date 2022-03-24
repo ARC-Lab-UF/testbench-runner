@@ -1,3 +1,4 @@
+from textwrap import dedent
 from typing import List
 import subprocess
 from subprocess import DEVNULL
@@ -30,39 +31,45 @@ def generate_tcl(
 
     print("-" * 18)
 
-    # tcl_out = tcl_function(tcl_file, project_mpf, resultList)
     with open(tcl_file) as f:
-        tclScript = f.read()
+        lab_tcl = f.read()
 
     with open("tcl-templates/common.tcl") as f:
-        # tcl = f.read().format(PY_PROJ_MPF_PATH=project_mpf.resolve(), PY_LAB_TCL=tclScript)
         tcl = (
             f.read()
             .replace("PY_PROJ_MPF_PATH", project_mpf.resolve().as_posix())
-            .replace("PY_LAB_TCL", tclScript)
+            .replace("PY_LAB_TCL", lab_tcl)
         )
 
     for x in resultList:
 
-        tcl += """ 
-quietly set result [string map -nocase {"\} \{" "\}\\n\{" "\} " "\}\\n" ".vhd " ".vhd\\n"} [project filenames]] 
-quietly set lines [split $result "\\n"]
+        tcl += dedent(
+            """
+            quietly set result [string map -nocase {"\} \{" "\}\\n\{" "\} " "\}\\n" ".vhd " ".vhd\\n"} [project filenames]] 
+            quietly set lines [split $result "\\n"]
 
-foreach x $lines {
-   if {[string match *true_testbench.vhd* $x] == 1} {
-      set z 1
-   } else {
-    #   puts "REMOVED"
-      eval project removefile $x
-   }
-} 
+            foreach x $lines {
+            if {[string match *true_testbench.vhd* $x] == 1} {
+                set z 1
+            } else {
+                #   puts "REMOVED"
+                eval project removefile $x
+            }
+            } 
 
-"""
+        """
+        )
+
         tcl += x[0]
-        tcl += """
-quietly set ret [project compileall -n]
-quietly set result [string map {explicit "quiet -suppress 1195,1194" \\\ / } $ret]
-quietly set lines [split $result "\\n"]"""
+
+        tcl += dedent(
+            """
+            quietly set ret [project compileall -n]
+            quietly set result [string map {explicit "quiet -suppress 1195,1194" \\\ / } $ret]
+            quietly set lines [split $result "\\n"]
+        """
+        )
+
         tcl += f"""\ncurrStudent $lines "{x[1]}";\n\n"""
 
     tcl += "exit"
