@@ -1,9 +1,7 @@
 import argparse
 import csv
-from scripts.extractor import extract_submissions
-from scripts.sim_function import generate_tcl
-from scripts.student_data import StudentData
 from pathlib import Path
+from scripts import extract_submissions, generate_tcl, StudentData
 
 
 def main():
