@@ -5,20 +5,20 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Lab 4",
+            "name": "Lab 5",
             "type": "python",
             "request": "launch",
             "program": "${workspaceFolder}/grader.py",
             "console": "integratedTerminal",
             "args": [
                 "--lab",
-                "Lab4",
+                "Lab5",
                 "--tcl-out-file",
-                "modelsim-projects/Lab4/Lab4_out.tcl",
+                "modelsim-projects/Lab5/Lab5_out.tcl",
                 "--tcl-file",
-                "tcl-templates/lab4.tcl",
+                "tcl-templates/lab5.tcl",
                 "--project-mpf",
-                "modelsim-projects/Lab4/Lab4.mpf",
+                "modelsim-projects/Lab5/Lab5.mpf",
                 "--section",
                 "11626"
                 // "--gui"
