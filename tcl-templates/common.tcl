@@ -3,6 +3,26 @@ project open {PY_PROJ_MPF_PATH}
 onElabError {resume}
 onerror {resume}
 
+proc pause {{message "\nHit Enter to continue ==> "}} {
+    puts -nonewline $message
+    flush stdout
+    gets stdin
+}
+
+proc runSimulation {testbench_filename} {
+    try {
+        vsim -c -quiet $testbench_filename
+        add wave *
+        run -all
+    } on error {msg} {
+        puts "SIMULATION FAILED"
+        puts $msg
+        set retry 1
+        quit -sim
+        puts "\n----------------------RETRY STUDENT SIMULATION-------------------------"
+    }
+}
+
 proc currStudent {lines student} {
     set retry 1
     while {$retry == 1} {
@@ -48,7 +68,9 @@ proc currStudent {lines student} {
             }
         }
 
+        # Beginning of lab-specific tcl
         PY_LAB_TCL
+        # End of lab-specific tcl
     }
 }
-
+# End of currStudent
