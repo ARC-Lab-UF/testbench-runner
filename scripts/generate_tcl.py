@@ -45,7 +45,7 @@ def generate_tcl(
 
         tcl += dedent(
             """
-            quietly set result [string map -nocase {"\} \{" "\}\\n\{" "\} " "\}\\n" ".vhd " ".vhd\\n"} [project filenames]] 
+            quietly set result [string map -nocase {"\\} \\{" "\\}\\n\\{" "\\} " "\\}\\n" ".vhd " ".vhd\n"} [project filenames]] 
             quietly set lines [split $result "\\n"]
 
             foreach x $lines {
@@ -65,7 +65,7 @@ def generate_tcl(
         tcl += dedent(
             """
             quietly set ret [project compileall -n]
-            quietly set result [string map {explicit "quiet -suppress 1195,1194" \\\ / } $ret]
+            quietly set result [string map {explicit "quiet -suppress 1195,1194" \\\\ / } $ret]
             quietly set lines [split $result "\\n"]
         """
         )
