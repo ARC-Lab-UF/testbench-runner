@@ -28,10 +28,10 @@ proc currStudent {lines student} {
     while {$retry == 1} {
         set retry 0
         puts -nonewline "
-        Enter 'q' to exit
-        Enter 'n' for next student
-        Press Control-C to break out if stuck
-        Now working on $student Hit Enter to continue ==> "
+Enter 'q' to exit
+Enter 'n' for next student
+Press Control-C to break out if stuck
+Now working on $student Hit Enter to continue ==> "
         flush stdout
         set in [gets stdin]
         if {$in == "q"} {
