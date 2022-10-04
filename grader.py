@@ -10,21 +10,6 @@ from scripts.sim_function import compile_modelsim
 from scripts.student_data import StudentData
 from pathlib import Path
 
-
-"""
-Example commands
-
-python grader.py --lab Lab1 --tcl-out-file modelsim-projects/Lab1/Lab1_out.tcl --tcl-file tcl-templates/lab1.tcl --project-mpf modelsim-projects/Lab1/Lab1.mpf
-
-python grader.py --lab Lab2 --tcl-out-file modelsim-projects/Lab2/Lab2_out.tcl --tcl-file tcl-templates/lab2.tcl --project-mpf modelsim-projects/Lab2/Lab2.mpf --gui
-
-python grader.py --lab Lab5 --tcl-out-file modelsim-projects/Lab5/Lab5_out.tcl --tcl-file tcl-templates/lab5.tcl --project-mpf modelsim-projects/Lab5/Lab5.mpf
-
-
-"""
-
-
-
 # ----------------------------------------------------------
 #                           METHODS
 # ----------------------------------------------------------
