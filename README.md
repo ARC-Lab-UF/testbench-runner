@@ -84,6 +84,11 @@ To run the testbenches for Lab 1 with all default values (a "submissions.zip" fo
 ```bash
 python grader.py --lab 1
 ```
+If you want to use a section, you must provide the `--section` flag:
+
+```bash
+python grader.py --lab 1 --section 12345
+```
 
 Be sure to supply values for `--submissions`, `--student-list`, or `--all-students-file` if they do not use the default file name.
 
