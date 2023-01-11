@@ -19,8 +19,8 @@ def read_student_csv(csv_file, section):
     with open(csv_file) as file:
         contents = csv.DictReader(file)
 
-    # Filter to just the students in the specified section
-    students_in_section = [stu_obj for stu_obj in contents if section in stu_obj['Section']]
+        # Filter to just the students in the specified section
+        students_in_section = [stu_obj for stu_obj in contents if section in stu_obj['Section']]
 
     # CSV file is formatted "<Last>, <First>". Format to "<First> <Last>" for consistency with students.txt file.
     students = [StudentData(' '.join(reversed(stu_obj["Student"].split(', ')))) for stu_obj in students_in_section]
