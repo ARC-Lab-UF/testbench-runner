@@ -53,22 +53,6 @@ def main():
     # Lab number
     parser.add_argument("-l", "--lab", type=int, help='Example: "5"', required=True)
 
-    # parser.add_argument(
-    #     "--tcl-out-file", type=Path, help="location of modified tcl file", required=True
-    # )
-
-    # parser.add_argument(
-    #     "--tcl-file", type=Path, help="location of original tcl file", required=True
-    # )
-
-    # parser.add_argument(
-    #     "--project-mpf",
-    #     type=Path,
-    #     # default="Modelsim_tb 21/Lab4/Lab4.mpf",
-    #     help="location of modelsim tb project mpf file",
-    #     required=True,
-    # )
-
     # Optional arguments
     # ----------------------------------------------------------
 
