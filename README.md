@@ -6,9 +6,9 @@ An interactive ModelSim testbench runner.
 
 * [Prerequisites](https://github.com/benjamin051000/DD_Grader#prerequisites)
 * [Usage](https://github.com/benjamin051000/DD_Grader#usage)
-  * [1. Select Students to Grade](https://github.com/benjamin051000/DD_Grader/tree/dev#1-select-students-to-grade)
-  * [2. Download Canvas Submissions](https://github.com/benjamin051000/DD_Grader/tree/dev#2-download-canvas-submissions)
-  * [3. Run grader.py](https://github.com/benjamin051000/DD_Grader/tree/dev#3-run-graderpy)
+  * [1. Select Students to Grade](https://github.com/benjamin051000/DD_Grader#1-select-students-to-grade)
+  * [2. Download Canvas Submissions](https://github.com/benjamin051000/DD_Grader#2-download-canvas-submissions)
+  * [3. Run grader.py](https://github.com/benjamin051000/DD_Grader#3-run-graderpy)
 * [Using the interactive Testbench Runner](https://github.com/benjamin051000/DD_Grader#using-the-interactive-testbench-runner)
 
 # Prerequisites

@@ -1,16 +1,44 @@
+# ----------------------------------------------------------
+#                           IMPORTS
+# ----------------------------------------------------------
+
 import argparse
 import csv
 from pathlib import Path
 from scripts import extract_submissions, generate_tcl, StudentData
 
+# ----------------------------------------------------------
+#                           METHODS
+# ----------------------------------------------------------
+
+def read_student_csv(csv_file, section):
+    # Read the all_students.csv file
+    with open(csv_file) as file:
+        contents = csv.DictReader(file)
+
+        # Filter to just the students in the specified section
+        students_in_section = [stu_obj for stu_obj in contents if section in stu_obj['Section']]
+
+    # CSV file is formatted "<Last>, <First>". Format to "<First> <Last>" for consistency with students.txt file.
+    students = [StudentData(' '.join(reversed(stu_obj["Student"].split(', ')))) for stu_obj in students_in_section]
+    return students
+
+def read_student_text(text_file):
+    # Read the students.txt file
+    with open(text_file) as file:
+        students = [StudentData(name.strip(' \n')) for name in file.readlines()]
+    return students
+
+# ----------------------------------------------------------
+#                           MAIN
+# ----------------------------------------------------------
 
 def main():
-    parser = argparse.ArgumentParser(
-        description="Interactive ModelSim testbench runner for Digital Design labs."
-    )
+
+    parser = argparse.ArgumentParser(description="Interactive ModelSim testbench runner for Digital Design labs.")
 
     # Required arguments
-
+    # ----------------------------------------------------------
     # Lab number
     parser.add_argument("-l", "--lab", help='Example: "Lab5"', required=True)
 
@@ -30,7 +58,8 @@ def main():
         required=True,
     )
 
-    # Optional args
+    # Optional arguments
+    # ----------------------------------------------------------
 
     # submissions.zip location
     parser.add_argument(
@@ -50,10 +79,9 @@ def main():
         help="Text file of student names to be graded. See studentList_EXAMPLE.txt.",
     )
 
-    mutex_group.add_argument(
-        "--section",
-        help='Section number of student section to be graded (e.g., "12345")',
-    )
+
+
+    mutex_group.add_argument("--section", help='Section number of student section to be graded (e.g., "12345")')
 
     # --all-students-file is only necessary when --section is used.
     # However, due to current Python STL limitations, I can't include
@@ -66,36 +94,17 @@ def main():
         help="CSV file of all students, from Canvas.",
     )
 
-    # Flags (True if included, otherwise False)
+    # Optional Flags (True if included, otherwise False)
+    # ----------------------------------------------------------
+    parser.add_argument("--gui", action="store_true", help="Show ModelSim window during simulation")
+    parser.add_argument("--delete-zip", action="store_true", help="Delete submissions.zip file when done")
+    parser.add_argument("--debug", action="store_true", help="Display argparse tokens and exit")
 
-    parser.add_argument(
-        "--gui", action="store_true", help="Show ModelSim window during simulation"
-    )
-
-    parser.add_argument(
-        "--delete-zip",
-        action="store_true",
-        help="Delete submissions.zip file when done",
-    )  # TODO consider removing, not that helpful
-
-    parser.add_argument(
-        "--debug", action="store_true", help="Display argparse tokens and exit"
-    )
-
+    # ----------------------------------------------------------
     args = parser.parse_args()
-    
+
     # Get list of students, either via section number, or a students.txt file.
-    if args.section:
-        # Read the all_students.csv file
-        with open(args.all_students_file) as f:
-            contents = csv.DictReader(f)
-            # Filter to just the students in the specified section
-            students_in_section = [s for s in contents if args.section in s['Section']]
-        # CSV file is formatted "<Last>, <First>". Format to "<First> <Last>" for consistency with students.txt file.
-        students = [StudentData(' '.join(reversed(stu["Student"].split(', ')))) for stu in students_in_section]
-    else:
-        with open(args.student_list) as f:
-            students = [StudentData(name) for name in f.readlines()]
+    students = read_student_csv(args.all_students_file, args.section) if args.section else read_student_text(args.student_list)
 
     students_with_submission = extract_submissions(
         lab_filename=args.lab,
