@@ -14,7 +14,7 @@ from .student_data import StudentData
 def extract_submissions(
     lab_filename: str,
     section_students: List[StudentData],
-    submissions_zip_path: str,
+    submissions_zip_path: Path,
     delete_zip: bool,
 ) -> List[StudentData]:
     """Extracts specific student submissions out of a .zip of every student submission.
@@ -76,8 +76,12 @@ def extract_submissions(
 
         # If student has non zip-archive submissions, move them into the submission directory.
         if student.other_file:
-            shutil.move(SUBS_UNZIP_PATH / student.other_file, student.submission_dir)
-
+            try:
+                shutil.move(SUBS_UNZIP_PATH / student.other_file, student.submission_dir)
+            except shutil.Error as e:
+                print(e)
+                pass
+        
     # Remove the student submission .zip files from Submissions/Labx
     for student in students_with_submission:  # TODO bug, in lab4 alexander barrera shows up twice. For some reason alex has two submissions, a zip and a pdf. weird.
         # Path.unlink() removes the file

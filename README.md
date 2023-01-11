@@ -79,21 +79,18 @@ Copy `submissions.zip` into the project directory, or specify the zip archive pa
 
 ## 3. Run `grader.py`
 
-### Example commands:
-
 To run the testbenches for Lab 1 with all default values (a "submissions.zip" folder and a "students.txt" file in the project root directory), run the following command:
 
 ```bash
-python grader.py --lab Lab1 --tcl-out-file modelsim-projects/Lab1/Lab1_out.tcl --tcl-file tcl-templates/lab1.tcl --project-mpf modelsim-projects/Lab1/Lab1.mpf
+python grader.py --lab 1
 ```
-
-To run Lab 5 with the exact same setup, use the following command:
+If you want to use a section, you must provide the `--section` flag:
 
 ```bash
-python grader.py --lab Lab5 --tcl-out-file modelsim-projects/Lab5/Lab5_out.tcl --tcl-file tcl-templates/lab5.tcl --project-mpf modelsim-projects/Lab5/Lab5.mpf
+python grader.py --lab 1 --section 12345
 ```
 
-Notice the flags `--lab`, `--tcl-out-file`, `--tcl-file`, and `--project-mpf` all use different file paths representing Lab 5.
+Be sure to supply values for `--submissions`, `--student-list`, or `--all-students-file` if they do not use the default file name.
 
 ## Other options and flags
 ### GUI
