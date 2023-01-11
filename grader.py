@@ -51,7 +51,7 @@ def main():
     # Required arguments
     # ----------------------------------------------------------
     # Lab number
-    parser.add_argument("-l", "--lab", type=int, help='Example: "5"', required=True)
+    parser.add_argument("-l", "--lab", type=int, help='Lab number (e.g., "5").', required=True)
 
     # Optional arguments
     # ----------------------------------------------------------
@@ -62,7 +62,7 @@ def main():
         "--submissions",
         type=Path,
         default="submissions.zip",
-        help='location of "submissions.zip" file',
+        help='Path to "submissions.zip" file.',
     )
 
     mutex_group = parser.add_mutually_exclusive_group()
@@ -71,12 +71,10 @@ def main():
         "--student-list",
         type=Path,
         default="students.txt",
-        help="Text file of student names to be graded. See studentList_EXAMPLE.txt.",
+        help="Text file of student names to be graded. See students_example.txt.",
     )
 
-
-
-    mutex_group.add_argument("--section", help='Section number of student section to be graded (e.g., "12345")')
+    mutex_group.add_argument("--section", help='Section number to be graded (e.g., "12345"). Used instead of --student-list.')
 
     # --all-students-file is only necessary when --section is used.
     # However, due to current Python STL limitations, I can't include
@@ -86,14 +84,14 @@ def main():
         "--all-students-file",
         type=Path,
         default="all_students.csv",
-        help="CSV file of all students, from Canvas.",
+        help="Path to CSV file of all students enrolled in the course, from Canvas (see README.md for instructions on obtaining).",
     )
 
     # Optional Flags (True if included, otherwise False)
     # ----------------------------------------------------------
-    parser.add_argument("--gui", action="store_true", help="Show ModelSim window during simulation")
-    parser.add_argument("--delete-zip", action="store_true", help="Delete submissions.zip file when done")
-    parser.add_argument("--debug", action="store_true", help="Display argparse tokens and exit")
+    parser.add_argument("--gui", action="store_true", help="Show ModelSim window during simulation.")
+    parser.add_argument("--delete-zip", action="store_true", help="WARNING: Delete submissions.zip file when done.")
+    parser.add_argument("--debug", action="store_true", help="Developer: Display argparse tokens and exit.")
 
     # ----------------------------------------------------------
     args = parser.parse_args()
