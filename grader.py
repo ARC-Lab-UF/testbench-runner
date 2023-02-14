@@ -32,7 +32,7 @@ def read_student_text(text_file):
 def generate_tcl_mpf_filenames(lab_num: int):
     """Given a lab number, generate the filepaths 
     to relevant tcl files and modelsim project files."""
-    lab = "Lab{}".format(lab_num)
+    lab = "lab{}".format(lab_num)
     project_mpf = "modelsim-projects/Lab{}/Lab{}.mpf".format(lab_num, lab_num)
     tcl_file = "tcl-templates/lab{}.tcl".format(lab_num)
     tcl_out_file = "modelsim-projects/Lab{}/Lab{}_out.tcl".format(lab_num, lab_num)
@@ -112,8 +112,7 @@ def main():
     generate_tcl(
         student_data=students_with_submission,
         tcl_file=tcl_file,
-        tcl_out_file=tcl_out_file,
-        project_mpf=project_mpf,
+        lab_name=lab,
         gui=args.gui,
     )
 
