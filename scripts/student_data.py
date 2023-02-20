@@ -17,8 +17,13 @@ class StudentData:
     # Unzipped submission directory
     submission_dir: Path = Path()
 
+    # Path to this student's simulation .do script.
+    sim_script: Path = Path()
+
     # Path of each VHDL file for this student
     vhdl_files: List[Path] = field(default_factory=list)
+
+
 
     # Name that appears in canvas zip files ("lastfirstmiddle(s)")
     @property

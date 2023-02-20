@@ -5,7 +5,7 @@
 import argparse
 import csv
 from pathlib import Path
-from scripts import extract_submissions, generate_tcl, StudentData
+from scripts import extract_submissions, generate_tcl, StudentData, run_simulations
 
 # ----------------------------------------------------------
 #                           METHODS
@@ -111,9 +111,13 @@ def main():
     # TODO use `students` here instead of `args.student_list` because student_list isn't always used.
     generate_tcl(
         student_data=students_with_submission,
-        tcl_file=tcl_file,
+        lab_tcl_file=tcl_file,
         lab_name=lab,
-        gui=args.gui,
+    )
+
+    run_simulations(
+        students=students_with_submission,
+        gui=args.gui
     )
 
 
