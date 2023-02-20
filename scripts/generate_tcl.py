@@ -1,18 +1,18 @@
-from textwrap import dedent
 from typing import List
-import subprocess
-from subprocess import DEVNULL
 from pathlib import Path
 
-from scripts.student_data import StudentData
+from .student_data import StudentData
 
+
+def get_testbench_paths(lab_name: str) -> List[str]:
+    lab_tb_dir = Path("lab-testbenches") / lab_name
+    tb_paths = [str(path.resolve()) for path in lab_tb_dir.glob("*.vhd")]
+    return tb_paths
 
 def generate_tcl(
     student_data: List[StudentData],
-    tcl_file: Path,
-    tcl_out_file: Path,
-    project_mpf: Path,
-    gui: bool,
+    lab_tcl_file: Path,
+    lab_name: str,
 ):
     """generate_tcl creates a TCL script for ModelSim that
     grades each students' lab via the given true testbenches."""
@@ -23,63 +23,44 @@ def generate_tcl(
     for i, student in enumerate(student_data, start=1):
         print(f"{i}. {student.name}")
 
-        fileList = ""
-        for vhdl_file in student.vhdl_files:
-            fileList += f'project addfile "{vhdl_file.resolve().as_posix()}"\n'  # Posix paths work with Modelsim (/ instead of \)
+        file_list = "\n".join(f'project addfile "{vhdl_file.resolve().as_posix()}"' for vhdl_file in student.vhdl_files)
 
-        resultList.append([fileList, student.name])
+        resultList.append([file_list, student.name])
 
     print("-" * 18)
 
-    with open(tcl_file) as f:
-        lab_tcl = f.read()
+    with open(lab_tcl_file) as f:
+        LAB_TCL = f.read()
 
     with open("tcl-templates/common.tcl") as f:
-        tcl = (
-            f.read()
-            .replace("PY_PROJ_MPF_PATH", project_mpf.resolve().as_posix())
-            .replace("PY_LAB_TCL", lab_tcl)
+        ORIGINAL_TCL = f.read()
+
+    # Add tcl to add students' source files to the project
+    for student, (file_add_cmds, tcl_name) in zip(student_data, resultList):
+        # Insert project path and name
+        SIM_DIR = student.submission_dir / "modelsim"
+        SIM_DIR.mkdir(exist_ok=True)  # Make the modelsim directory
+
+        # Insert testbench files
+        lab_testbench_paths = get_testbench_paths(lab_name)
+        lab_testbench_cmds = [f"project addfile \"{p}\"" for p in lab_testbench_paths]
+
+        # Insert all relevant text into script
+        tcl = ( 
+            ORIGINAL_TCL
+            .replace("<PY_LAB_TESTBENCHES>", LAB_TCL) 
+            .replace("<PY_PROJ_HOMEDIR>", str(SIM_DIR)) 
+            .replace("<PY_PROJ_NAME>", f"{student.name}_{lab_name}")
+            .replace("<PY_STUDENT_SRC_FILES>", file_add_cmds)
+            .replace("<PY_STUDENT_NAME>", tcl_name)
+            .replace("<PY_ADD_TB_SRC_FILES>", "\n".join(lab_testbench_cmds))
         )
 
-    for x in resultList:
+        # Write resulting TCL script to a file
+        SIM_SCRIPT_PATH = SIM_DIR / "run.do"
+        with open(SIM_SCRIPT_PATH, "w") as f:
+            f.write(tcl)
 
-        tcl += dedent(
-            """
-            quietly set result [string map -nocase {"\\} \\{" "\\}\\n\\{" "\\} " "\\}\\n" ".vhd " ".vhd\n"} [project filenames]] 
-            quietly set lines [split $result "\\n"]
+        # Give the student their tcl filepath.
+        student.sim_script = SIM_SCRIPT_PATH
 
-            foreach x $lines {
-            if {[string match *true_testbench.vhd* $x] == 1} {
-                set z 1
-            } else {
-                #   puts "REMOVED"
-                eval project removefile $x
-            }
-            } 
-
-        """
-        )
-
-        tcl += x[0]
-
-        tcl += dedent(
-            """
-            quietly set ret [project compileall -n]
-            quietly set result [string map {explicit "quiet -suppress 1195,1194" \\\\ / } $ret]
-            quietly set lines [split $result "\\n"]
-        """
-        )
-
-        tcl += f"""\ncurrStudent $lines "{x[1]}";\n\n"""
-
-    tcl += "exit"
-
-    # Write resulting TCL script to a file
-    with open(tcl_out_file, "w") as f:
-        f.write(tcl)
-
-    # Run modelsim (-l "" disables ModelSim logging)
-    cmd = f"vsim {'-gui' if gui else '-c'} -l \"\" -do \"{tcl_out_file.resolve()}\""
-    subprocess.run(
-        cmd, shell=True, stdout=True, stderr=DEVNULL
-    )  # TODO verify these arguments are what we want
