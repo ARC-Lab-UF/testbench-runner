@@ -5,8 +5,7 @@
 import argparse
 import csv
 from pathlib import Path
-import shutil
-from scripts import extract_submissions, generate_tcl, StudentData
+from scripts import extract_submissions, generate_tcl, StudentData, run_simulations
 from shutil import which
 
 # ----------------------------------------------------------
@@ -34,7 +33,7 @@ def read_student_text(text_file):
 def generate_tcl_mpf_filenames(lab_num: int):
     """Given a lab number, generate the filepaths 
     to relevant tcl files and modelsim project files."""
-    lab = "Lab{}".format(lab_num)
+    lab = "lab{}".format(lab_num)
     project_mpf = "modelsim-projects/Lab{}/Lab{}.mpf".format(lab_num, lab_num)
     tcl_file = "tcl-templates/lab{}.tcl".format(lab_num)
     tcl_out_file = "modelsim-projects/Lab{}/Lab{}_out.tcl".format(lab_num, lab_num)
@@ -124,10 +123,13 @@ def main():
 
     generate_tcl(
         student_data=students_with_submission,
-        tcl_file=tcl_file,
-        tcl_out_file=tcl_out_file,
-        project_mpf=project_mpf,
-        gui=args.gui,
+        lab_tcl_file=tcl_file,
+        lab_name=lab,
+    )
+
+    run_simulations(
+        students=students_with_submission,
+        gui=args.gui
     )
 
 

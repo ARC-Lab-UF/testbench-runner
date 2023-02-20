@@ -1,7 +1,24 @@
-project open {PY_PROJ_MPF_PATH}
+# New modelsim template tcl
 
-onElabError {resume}
-onerror {resume}
+##############################
+# Variable declarations
+# (filled in from script)
+##############################
+set proj_homedir "<PY_PROJ_HOMEDIR>"
+set proj_name "<PY_PROJ_NAME>"
+
+# make the directory first, so that GUI mode (if used)
+# doesn't prompt you asking to create it.
+mkdir -p $proj_homedir
+
+# Create a new project
+project new $proj_homedir $proj_name 
+
+##############################
+# Function definitions
+##############################
+# onElabError {resume}
+# onerror {resume}
 
 proc pause {{message "\nHit Enter to continue ==> "}} {
     puts -nonewline $message
@@ -23,54 +40,36 @@ proc runSimulation {testbench_filename} {
     }
 }
 
-proc currStudent {lines student} {
+proc currStudent {student} {
+    puts "Now working on $student..."
     set retry 1
     while {$retry == 1} {
         set retry 0
-        puts -nonewline "
-Enter 'q' to exit
-Enter 'n' for next student
-Press Control-C to break out if stuck
-Now working on $student Hit Enter to continue ==> "
-        flush stdout
-        set in [gets stdin]
-        if {$in == "q"} {
-            set result [string map -nocase {"\} \{" "\}\n\{" "\} " "\}\n" ".vhd " ".vhd\n"} [project filenames]]
-            set lines [split $result "\n"]
 
-            foreach x $lines {
-                if {[string match *true_testbench.vhd* $x] == 1} {
-                    set z 1
-                } else {
-                    eval project removefile [string map -nocase { "\{\{" "\{" "\}\}" "\}" } $x]
-                }
-            }
-            quit -f
-        }
-        if {$in == "n"} {
-            return
-        }
+        # TODO what do these lines do? Are they still required?
         vdel -all
         vlib work
-        for {set i 1} {$i<=2} {incr i} {
-            puts "\n--------------COMPILE ATTEMPT: $i--------------\n"
-            foreach x $lines {
-                try {
-                    eval $x
 
-                } on error {msg} {
-                    puts ""
-                }
-
-            }
-            if {$i == 2} {
-                puts "COMPILE PASSED SUCCESSFULLY\n\n--------------STARTING SIMULATION--------------\n"
-            }
-        }
+        project calculateorder
 
         # Beginning of lab-specific tcl
-        PY_LAB_TCL
+        <PY_LAB_TESTBENCHES>
         # End of lab-specific tcl
     }
+    puts "Done with $student."
 }
 # End of currStudent
+
+# Student source files
+<PY_STUDENT_SRC_FILES>
+
+# Lab testbench files
+<PY_ADD_TB_SRC_FILES>
+
+currStudent "<PY_STUDENT_NAME>";
+
+
+
+puts "Goodbye."
+quit
+
