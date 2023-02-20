@@ -6,6 +6,7 @@ import argparse
 import csv
 from pathlib import Path
 from scripts import extract_submissions, generate_tcl, StudentData, run_simulations
+from shutil import which
 
 # ----------------------------------------------------------
 #                           METHODS
@@ -38,6 +39,15 @@ def generate_tcl_mpf_filenames(lab_num: int):
     tcl_out_file = "modelsim-projects/Lab{}/Lab{}_out.tcl".format(lab_num, lab_num)
 
     return lab, Path(project_mpf), Path(tcl_file), Path(tcl_out_file)
+
+def check_vsim_command():
+    """Verify that `vsim` is an operable command.
+    Otherwise, the tool will crash."""
+    if which("vsim") is None:
+        print("!"*30)
+        print("WARNING: `vsim` executable not found.")
+        print("The autograder will fail when it attempts to run `vsim` later!")
+        print("!"*30)
 
 
 # ----------------------------------------------------------
@@ -96,6 +106,7 @@ def main():
     # ----------------------------------------------------------
     args = parser.parse_args()
 
+
     lab, project_mpf, tcl_file, tcl_out_file = generate_tcl_mpf_filenames(args.lab)
 
     # Get list of students, either via section number, or a students.txt file.
@@ -108,7 +119,8 @@ def main():
         delete_zip=args.delete_zip,
     )
 
-    # TODO use `students` here instead of `args.student_list` because student_list isn't always used.
+    check_vsim_command()
+
     generate_tcl(
         student_data=students_with_submission,
         lab_tcl_file=tcl_file,
