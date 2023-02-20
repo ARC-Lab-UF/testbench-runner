@@ -16,9 +16,9 @@ architecture TB of adder_true_testbench is
             WIDTH : positive := 8);
         port (
             x, y : in  std_logic_vector(WIDTH-1 downto 0);
-            cin  : in  std_logic;
+            carry_in  : in  std_logic;
             s    : out std_logic_vector(WIDTH-1 downto 0);
-            cout : out std_logic);
+            carry_out : out std_logic);
     end component;
 
     constant TEST_WIDTH  : positive := 8;
@@ -44,9 +44,9 @@ begin  -- TB
         port map (
             x    => x,
             y    => y,
-            cin  => cin,
+            carry_in  => cin,
             s    => s_rc,
-            cout => cout_rc);
+            carry_out => cout_rc);
 
     U_RIPPLE_CARRY2 : adder
         generic map (
@@ -54,9 +54,9 @@ begin  -- TB
         port map (
             x    => x2,
             y    => y2,
-            cin  => cin,
+            carry_in  => cin,
             s    => s_rc2,
-            cout => cout_rc2);
+            carry_out => cout_rc2);
 
     U_CARRY_LOOKAHEAD1 : adder
         generic map (
@@ -64,9 +64,9 @@ begin  -- TB
         port map (
             x    => x,
             y    => y,
-            cin  => cin,
+            carry_in  => cin,
             s    => s_cl,
-            cout => cout_cl);
+            carry_out => cout_cl);
 
     U_CARRY_LOOKAHEAD2 : adder
         generic map (
@@ -74,9 +74,9 @@ begin  -- TB
         port map (
             x    => x2,
             y    => y2,
-            cin  => cin,
+            carry_in  => cin,
             s    => s_cl2,
-            cout => cout_cl2);
+            carry_out => cout_cl2);
 
     U_HIERARCHICAL : adder
         generic map (
@@ -85,9 +85,9 @@ begin  -- TB
         port map (
             x    => x,
             y    => y,
-            cin  => cin,
+            carry_in  => cin,
             s    => s_h,
-            cout => cout_h);
+            carry_out => cout_h);
 
     process
         variable error_rc        : integer;
