@@ -7,26 +7,38 @@ def run_simulations(students: List[StudentData], gui: bool) -> None:
     # Run modelsim (-l "" disables ModelSim logging)
     cmd = lambda gui, do_file: f"vsim {'-gui' if gui else '-c'} -l \"\" -do \"{do_file}\""
 
-    for i, student in enumerate(students, start=1): 
+    total_num_students = len(students)
 
-        restart = True
-        while restart:
+    for i, student in enumerate(students, start=1): 
+        # restart = True
+        ran_once = False
+        while True:
             print()
             print("-"*40)
-            print(f"{i}. {student.name}")
-            print("- Press return to (re)run simulation")
-            print("- Press n to move to next student")
-            print("- Press q to quit the autograder")
+            print(f"({i}/{total_num_students}) {student.name}")
+            if ran_once:
+                print("- Press return to move to next student")
+                print("- Press r to rerun simulation")  # Technically any unused key works too
+            else:
+                print("- Press return to run simuation")
+            print("- Press n to skip this student")
+            print("- Press q to quit")
             print("-"*40)
 
             choice = input()
-            if choice == "n":
-                restart = False
-                continue
-            elif choice == "q":
-                exit()
+            if choice == "q":
+                return
+            elif ran_once and choice == "":  # Pressed enter
+                break
+            elif choice == "n":  # Skip this student
+                break
 
+            # Run the simulation
             subprocess.run(
                 cmd(gui, student.sim_script), shell=True, stdout=True
             )
+
+            ran_once = True
+
+
 
