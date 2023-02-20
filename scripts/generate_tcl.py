@@ -39,7 +39,7 @@ def generate_tcl(
     for student, (file_add_cmds, tcl_name) in zip(student_data, resultList):
         # Insert project path and name
         SIM_DIR = student.submission_dir / "modelsim"
-        SIM_DIR.mkdir()  # Make the modelsim directory
+        SIM_DIR.mkdir(exist_ok=True)  # Make the modelsim directory
 
         # Insert testbench files
         lab_testbench_paths = get_testbench_paths(lab_name)
