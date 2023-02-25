@@ -6,7 +6,7 @@ from .student_data import StudentData
 
 def get_testbench_paths(lab_name: str) -> List[str]:
     lab_tb_dir = Path("lab-testbenches") / lab_name
-    tb_paths = [str(path.resolve()) for path in lab_tb_dir.glob("*.vhd")]
+    tb_paths = [str(path.resolve().as_posix()) for path in lab_tb_dir.glob("*.vhd")]
     return tb_paths
 
 def generate_tcl(
@@ -49,7 +49,7 @@ def generate_tcl(
         tcl = ( 
             ORIGINAL_TCL
             .replace("<PY_LAB_TESTBENCHES>", LAB_TCL) 
-            .replace("<PY_PROJ_HOMEDIR>", str(SIM_DIR)) 
+            .replace("<PY_PROJ_HOMEDIR>", SIM_DIR.resolve().as_posix())
             .replace("<PY_PROJ_NAME>", f"{student.name}_{lab_name}")
             .replace("<PY_STUDENT_SRC_FILES>", file_add_cmds)
             .replace("<PY_STUDENT_NAME>", tcl_name)
