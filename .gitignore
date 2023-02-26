@@ -200,7 +200,7 @@ poetry.toml
 # Temporary files created by the program
 /temp
 # TODO will be moved to /temp eventually
-/Submissions
+/submissions
 
 # Student list text files
 *student*.txt
