@@ -9,7 +9,9 @@ set proj_name "<PY_PROJ_NAME>"
 
 # make the directory first, so that GUI mode (if used)
 # doesn't prompt you asking to create it.
-mkdir -p $proj_homedir
+if {[catch {mkdir $proj_homedir}]} {
+    puts "Dir already exists. Moving on..."
+}
 
 # Create a new project
 project new $proj_homedir $proj_name 
@@ -51,6 +53,10 @@ proc currStudent {student} {
         vlib work
 
         project calculateorder
+
+        puts "==============================================================="
+        puts "Running simulations..."
+        puts "==============================================================="
 
         # Beginning of lab-specific tcl
         <PY_LAB_TESTBENCHES>
