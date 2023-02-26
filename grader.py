@@ -1,3 +1,4 @@
+__version__ = '0.3'
 # ----------------------------------------------------------
 #                           IMPORTS
 # ----------------------------------------------------------
@@ -74,6 +75,8 @@ def check_vsim_command():
 def main():
 
     parser = argparse.ArgumentParser(description="Interactive ModelSim testbench runner for Digital Design labs.")
+
+    parser.add_argument('-v', '--version', action='version', version=f'DD_Grader {__version__}')
 
     # Required arguments
     # ----------------------------------------------------------
