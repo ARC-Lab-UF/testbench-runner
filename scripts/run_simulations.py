@@ -41,7 +41,7 @@ def run_simulations(students: List[StudentData]) -> None:
                 gui = True
                 print("Notes about the GUI:")
                 print('- If prompted with "A project of this name already exists. Do you want to overwrite it?", select "Yes".')
-                print('- To spend more time in the GUI, select "No" when prompted to quit. The grader will continue to new students whenever you choose to quit the GUI.')
+                print('- To spend more time in the GUI, select "No" when prompted to quit. The grader will continue to new students whenever you choose to quit the GUI.\n')
 
             # Create the command to run modelsim
             # Run modelsim (-l "" disables ModelSim logging)
