@@ -119,7 +119,7 @@ def main():
 
     # Optional Flags (True if included, otherwise False)
     # ----------------------------------------------------------
-    parser.add_argument("--gui", action="store_true", help="Show ModelSim window during simulation.")
+    # parser.add_argument("--gui", action="store_true", help="Show ModelSim window during simulation.")
     parser.add_argument("--delete-zip", action="store_true", help="WARNING: Delete submissions.zip file when done.")
     parser.add_argument("--debug", action="store_true", help="Developer: Display argparse tokens and exit.")
 
@@ -149,7 +149,6 @@ def main():
 
     run_simulations(
         students=students_with_submission,
-        gui=args.gui
     )
 
 
