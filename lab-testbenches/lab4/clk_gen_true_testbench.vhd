@@ -26,7 +26,7 @@ begin  -- TB
 
     U_CLK_GEN : entity work.clk_gen
         generic map (
-            ms_period => MS_PERIOD)
+            milliseconds => MS_PERIOD)
         port map (
             clk50MHz => clk50MHz,
             rst      => rst,
