@@ -33,10 +33,10 @@ def extract_submissions(
     Returns:
         A new list of StudentData, which is a subset of section_students, that contains
         student information of those who submitted a .zip file for the current Lab, and
-        therefore have an unzipped directory with their submission in Submissions/Labx.
+        therefore have an unzipped directory with their submission in submissions/Labx.
     """
-    # Create the unzipped Submissions directory, which will be used to store each students' source code.
-    SUBS_UNZIP_PATH = Path("Submissions/", lab_filename)
+    # Create the unzipped submissions directory, which will be used to store each students' source code.
+    SUBS_UNZIP_PATH = Path("submissions/", lab_filename)
     SUBS_UNZIP_PATH.mkdir(parents=True, exist_ok=True)
 
     with ZipFile(submissions_zip_path) as z:
@@ -57,7 +57,7 @@ def extract_submissions(
                         non_zip_files.append(file)
                 
         print(f"There should be {len(students_with_submission)} zip files in the submission dir.")
-        # Extract those students' .zip files into the Submissions/Labx dir.
+        # Extract those students' .zip files into the submissions/Labx dir.
         z.extractall(SUBS_UNZIP_PATH, [s.zipped_submission for s in students_with_submission] + non_zip_files)
 
     # For each student submission subdir, extract contents and copy all VHDL files to the top.
@@ -82,7 +82,7 @@ def extract_submissions(
                 print(e)
                 pass
         
-    # Remove the student submission .zip files from Submissions/Labx
+    # Remove the student submission .zip files from submissions/Labx
     for student in students_with_submission:  # TODO bug, in lab4 alexander barrera shows up twice. For some reason alex has two submissions, a zip and a pdf. weird.
         # Path.unlink() removes the file
         Path(SUBS_UNZIP_PATH, student.zipped_submission).unlink()
