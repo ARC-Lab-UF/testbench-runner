@@ -36,14 +36,14 @@ jobs:
     strategy:
       matrix:
         include:
-          - os: macos-latest
-            TARGET: macos
-            CMD_BUILD: >
-                pyinstaller -F grader.py &&
-                cd dist/ &&
-                zip -r9 grader grader.app/                
-            OUT_FILE_NAME: grader.zip
-            ASSET_MIME: application/zip
+          # - os: macos-latest
+          #   TARGET: macos
+          #   CMD_BUILD: >
+          #       pyinstaller -F grader.py &&
+          #       cd dist/ &&
+          #       zip -r9 grader grader.app/                
+          #   OUT_FILE_NAME: grader.zip
+          #   ASSET_MIME: application/zip
           - os: windows-latest
             TARGET: windows
             CMD_BUILD: pyinstaller -F grader.py 
