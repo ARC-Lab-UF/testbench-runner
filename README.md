@@ -93,9 +93,6 @@ python grader.py --lab 1 --section 12345
 Be sure to supply values for `--submissions`, `--student-list`, or `--all-students-file` if they do not use the default file name.
 
 ## Other options and flags
-### GUI
-
-To run the ModelSim GUI, use the `--gui` flag. This will open a ModelSim instance and simulate with ModelSim's waveform window.
 
 ### `submissions.zip` path
 
