@@ -1,6 +1,6 @@
-# DD_Grader
+# testbench-runner
 
-An interactive ModelSim testbench runner.
+An interactive testbench runner for HDL. Uses ModelSim under the hood. Integrates with Canvas assignments for easy grading.
 
 ### Table of contents
 
@@ -17,13 +17,8 @@ An interactive ModelSim testbench runner.
 
 Install ModelSim via [this link](https://fpgasoftware.intel.com/20.1/?edition=lite&product=modelsim_ae&platform=windows)
 
-You can verify modelsim is working p roperly by running `vsim -version` in a terminal window. It should print something similar to: 
-```bash
-$ vsim -version
-Model Technology ModelSim - INTEL FPGA STARTER EDITION vsim 2020.1 Simulator 2020.02 Feb 28 2020
-```
+The tool will verify ModelSim is installed and an appropriate version on startup.
 
-**Note:** DD_Grader has been tested with vsim version **2020.1** and is not guaranteed to work on other versions.
 
 ### 2. Python
 
@@ -104,18 +99,17 @@ This can be useful if you want to maintain multiple labs' worth of submissions. 
 After running a command to start the grader, the program will print the students it was able to find in the `submissions.zip` file.
 Then, ModelSim will begin running, and a prompt will appear:
 
-> Enter 'q' to exit\
-> Enter 'n' for next student\
-> Press Control-C to break out if stuck\
-> Now working on albertegator Hit Enter to continue ==>
+> ----------------------------------------
+> (1/9) Student name
+> - Press return to move to next student
+> - Press r to rerun simulation
+> - Press g to rerun simulation in the ModelSim GUI
+> - Press n to skip this student
+> - Press q to quit
+> ----------------------------------------
+> > <type your response here>
 
-At this point, the user has three options:
-
-* Enter `q` to exit the testbench runner.
-* Enter `n` to skip the simulation for the current student.
-* Press `Enter` to begin the simulation for the current student.
-    * The results of the simulation will be printed to the terminal (or transcript window if running with `--gui`)
+Pressing return will either run the simulation for the first time, or move to the next student.
 
 If multiple testbenches are used to grade a particular lab, the simulator will ask the user to press `Enter` to continue on to the next testbench.
 
-Once the simulation is complete (or the user enters `n` to skip the student), the prompt will reappear with the next Student's name, until the list of students is exhausted.
