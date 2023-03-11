@@ -1,19 +1,11 @@
-__version__ = '0.3'
-# ----------------------------------------------------------
-#                           IMPORTS
-# ----------------------------------------------------------
-
+__version__ = '1.0'
 import argparse
 import csv
 from pathlib import Path
-from pickle import encode_long
 from scripts import extract_submissions, generate_tcl, StudentData, run_simulations
 from shutil import which
 import subprocess
 
-# ----------------------------------------------------------
-#                           METHODS
-# ----------------------------------------------------------
 
 def read_student_csv(csv_file, section):
     # Read the all_students.csv file
@@ -67,10 +59,6 @@ def check_vsim_command():
             print("The autograder may fail when it attempts to run `vsim` later!")
             print("!"*30)
 
-
-# ----------------------------------------------------------
-#                           MAIN
-# ----------------------------------------------------------
 
 def main():
 
@@ -154,3 +142,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
