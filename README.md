@@ -98,17 +98,17 @@ This can be useful if you want to maintain multiple labs' worth of submissions. 
 
 After running a command to start the grader, the program will print the students it was able to find in the `submissions.zip` file.
 Then, ModelSim will begin running, and a prompt will appear:
-
-> ----------------------------------------
-> (1/9) Student name
-> - Press return to move to next student
-> - Press r to rerun simulation
-> - Press g to rerun simulation in the ModelSim GUI
-> - Press n to skip this student
-> - Press q to quit
-> ----------------------------------------
-> > <type your response here>
-
+```
+----------------------------------------
+(1/9) Student name
+- Press return to move to next student
+- Press r to rerun simulation
+- Press g to rerun simulation in the ModelSim GUI
+- Press n to skip this student
+- Press q to quit
+----------------------------------------
+> <type your response here>
+```
 Pressing return will either run the simulation for the first time, or move to the next student.
 
 If multiple testbenches are used to grade a particular lab, the simulator will ask the user to press `Enter` to continue on to the next testbench.
