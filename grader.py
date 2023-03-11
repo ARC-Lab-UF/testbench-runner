@@ -1,3 +1,4 @@
+__version__ = '0.3'
 # ----------------------------------------------------------
 #                           IMPORTS
 # ----------------------------------------------------------
@@ -7,6 +8,7 @@ import csv
 from pathlib import Path
 from scripts import extract_submissions, generate_tcl, StudentData, run_simulations
 from shutil import which
+import subprocess
 
 # ----------------------------------------------------------
 #                           METHODS
@@ -43,11 +45,26 @@ def generate_tcl_mpf_filenames(lab_num: int):
 def check_vsim_command():
     """Verify that `vsim` is an operable command.
     Otherwise, the tool will crash."""
+
+    SUPPORTED_VSIM = [
+        "Model Technology ModelSim - INTEL FPGA STARTER EDITION vsim 2020.1 Simulator 2020.02 Feb 28 2020\n\n"
+    ]
+
     if which("vsim") is None:
         print("!"*30)
         print("WARNING: `vsim` executable not found.")
         print("The autograder will fail when it attempts to run `vsim` later!")
         print("!"*30)
+
+    else:
+        stdout = subprocess.run(["vsim", "-version"], capture_output=True, encoding="utf-8").stdout
+
+        if stdout not in SUPPORTED_VSIM:
+            print("!"*30)
+            print("WARNING: `vsim` is not a supported version for the grader tool.")
+            print(f"You're using version: {repr(stdout)}")
+            print("The autograder may fail when it attempts to run `vsim` later!")
+            print("!"*30)
 
 
 # ----------------------------------------------------------
@@ -57,6 +74,8 @@ def check_vsim_command():
 def main():
 
     parser = argparse.ArgumentParser(description="Interactive ModelSim testbench runner for Digital Design labs.")
+
+    parser.add_argument('-v', '--version', action='version', version=f'DD_Grader {__version__}')
 
     # Required arguments
     # ----------------------------------------------------------
@@ -99,7 +118,7 @@ def main():
 
     # Optional Flags (True if included, otherwise False)
     # ----------------------------------------------------------
-    parser.add_argument("--gui", action="store_true", help="Show ModelSim window during simulation.")
+    # parser.add_argument("--gui", action="store_true", help="Show ModelSim window during simulation.")
     parser.add_argument("--delete-zip", action="store_true", help="WARNING: Delete submissions.zip file when done.")
     parser.add_argument("--debug", action="store_true", help="Developer: Display argparse tokens and exit.")
 
@@ -129,7 +148,6 @@ def main():
 
     run_simulations(
         students=students_with_submission,
-        gui=args.gui
     )
 
 

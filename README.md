@@ -43,7 +43,7 @@ There are two methods to select students to grade: By section number, or via a l
 
 <details><summary>Select by Section Number</summary>
 
-To use the `--section` flag, a file named `students.csv` must be downloaded to the project directory. This file contains information about students in the course, including each students' section number.
+To use the `--section` flag, a file named `all_students.csv` must be downloaded to the project directory. This file contains information about students in the course, including each students' section number.
 ### Download Student Data
 
 1. Navigate to the course gradebook on Canvas.
@@ -51,7 +51,7 @@ To use the `--section` flag, a file named `students.csv` must be downloaded to t
 
 ![Image showing the highlighted export button the user should press in the Canvas gradebook to download a CSV of students in the course](images/export-students.png)
 
-Save this file as `students.csv` in the root directory (the same directory as this README file). It should be structured similarly to `all_students_example.csv`, but may include additional information, like assignment grades.
+Save this file as `all_students.csv` in the root directory (the same directory as this README file). It should be structured similarly to `all_students_example.csv`, but may include additional information, like assignment grades.
 
 When running the grader, use `--section <section number>` to specify a section number you wish to grade. Section numbers are 5-digit numbers seen in the parentheses on a students' section ID string. For example, in the class/section identifier `EEL4712C-0001(11624)`, `11624` is the section number.
 </details>
@@ -93,9 +93,6 @@ python grader.py --lab 1 --section 12345
 Be sure to supply values for `--submissions`, `--student-list`, or `--all-students-file` if they do not use the default file name.
 
 ## Other options and flags
-### GUI
-
-To run the ModelSim GUI, use the `--gui` flag. This will open a ModelSim instance and simulate with ModelSim's waveform window.
 
 ### `submissions.zip` path
 
