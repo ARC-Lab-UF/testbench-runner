@@ -83,7 +83,7 @@ def extract_submissions(
                 pass
         
     # Remove the student submission .zip files from submissions/Labx
-    for student in students_with_submission:  # TODO bug, in lab4 alexander barrera shows up twice. For some reason alex has two submissions, a zip and a pdf. weird.
+    for student in students_with_submission: 
         # Path.unlink() removes the file
         Path(SUBS_UNZIP_PATH, student.zipped_submission).unlink()
 
