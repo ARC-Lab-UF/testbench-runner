@@ -1,0 +1,3 @@
+[submodule "lab-testbenches"]
+	path = lab-testbenches
+	url = git@github.com:ARC-Lab-UF/digital-design-grading-tbs.git
