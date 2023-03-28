@@ -2,7 +2,7 @@ __version__ = '1.0'
 import argparse
 import csv
 from pathlib import Path
-from scripts import extract_submissions, generate_tcl, StudentData, run_simulations
+from scripts import extract_submissions, generate_tcl, StudentData, run_parallel, run_simulations
 from shutil import which
 import subprocess
 
@@ -135,9 +135,10 @@ def main():
         lab_name=lab,
     )
 
-    run_simulations(
-        students=students_with_submission,
-    )
+    # run_simulations(
+    #     students=students_with_submission,
+    # )
+    run_parallel(students=students_with_submission)
 
 
 if __name__ == "__main__":
