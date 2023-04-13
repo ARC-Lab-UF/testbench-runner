@@ -1,3 +1,4 @@
+import shutil
 from typing import List
 from pathlib import Path
 
@@ -8,6 +9,14 @@ def get_testbench_paths(lab_name: str) -> List[str]:
     lab_tb_dir = Path("lab-testbenches") / lab_name
     tb_paths = [str(path.resolve().as_posix()) for path in lab_tb_dir.glob("*.vhd")]
     return tb_paths
+
+
+def copy_mif_files(lab_name: str, dest: Path):
+    lab_tb_dir = Path("lab-testbenches") / lab_name
+    mif_paths = [str(path.resolve().as_posix()) for path in lab_tb_dir.glob("*.mif")]
+    for mif_path in mif_paths:
+        shutil.copy2(mif_path, dest)
+
 
 def generate_tcl(
     student_data: List[StudentData],
@@ -63,4 +72,7 @@ def generate_tcl(
 
         # Give the student their tcl filepath.
         student.sim_script = SIM_SCRIPT_PATH
+
+        # If any mif files exist in the lab folder, copy them into each modelsim project.
+        copy_mif_files(lab_name, SIM_DIR)
 
