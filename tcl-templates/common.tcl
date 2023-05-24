@@ -1,5 +1,3 @@
-# New modelsim template tcl
-
 ##############################
 # Variable declarations
 # (filled in from script)
@@ -22,7 +20,7 @@ project new $proj_homedir $proj_name
 # onElabError {resume}
 # onerror {resume}
 
-proc pause {{message "\nHit Enter to continue ==> "}} {
+proc pause {{message "\nPress Return to continue..."}} {
     puts -nonewline $message
     flush stdout
     gets stdin
@@ -52,6 +50,7 @@ proc currStudent {student} {
         vdel -all
         vlib work
 
+        # Compile sources. This command automatically resolves compile dependencies. 
         project calculateorder
 
         puts "==============================================================="
