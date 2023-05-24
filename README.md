@@ -38,10 +38,7 @@ There are two ways to download the tool.
 For those who only plan to use the tool (and will not contribute), follow option 1. 
 For those interested in contributing, follow option 2.
 
-<details><summary>
-
-Download from the [Releases](https://github.com/benjamin051000/DD_Grader/releases) page (**recommended**)
-
+<details><summary>Download from the [Releases](https://github.com/benjamin051000/DD_Grader/releases) page (**recommended**)
 </summary>
 
 - Download a released version as a zip file.
