@@ -12,6 +12,7 @@ class StudentData:
     other_file: Optional[str] = None
 
     # Zipped submission filename
+    # TODO explain why this has a default value of "". Probably in case of `other_file is not None`?
     zipped_submission: str = ""
 
     # Unzipped submission directory
@@ -22,8 +23,6 @@ class StudentData:
 
     # Path of each VHDL file for this student
     vhdl_files: List[Path] = field(default_factory=list)
-
-
 
     # Name that appears in canvas zip files ("lastfirstmiddle(s)")
     @property
