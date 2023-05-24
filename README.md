@@ -38,15 +38,27 @@ There are two ways to download the tool.
 For those who only plan to use the tool (and will not contribute), follow option 1. 
 For those interested in contributing, follow option 2.
 
-<details><summary>Download from the [Releases](https://github.com/benjamin051000/DD_Grader/releases) page (**recommended**)</summary>
+<details><summary>
+
+Download from the [Releases](https://github.com/benjamin051000/DD_Grader/releases) page (**recommended**)
+
+</summary>
+
 - Download a released version as a zip file.
 - Be sure to also download a supported release of the lab testbenches you plan to use. EEL4712C Digital Design's are [here](https://github.com/ARC-Lab-UF/digital-design-grading-tbs).
+
 </details>
 
-<details><summary>Clone the repository</summary>
+<details><summary>
+
+Clone the repository
+
+</summary>
+
 Use the following command to clone the repository: `git clone --recurse-submodules https://github.com/ARC-Lab-UF/testbench-runner.git`
 - The `--recurse-submodules` flag will also clone the `lab-testbenches/` private repository for you, if you have access to it.
 - Optionally, use the SSH url rather than the HTTPS url (shown above).
+
 </details>
 
 # Usage
